@@ -30,7 +30,7 @@ def getChi2(percentages):
 def Decoder(chipertext):
 	percentages = Frequency_Analysis(chipertext)
 	error = getChi2(percentages)
-	print(error)
+	return error
 
 text = """Perhaps the most well-publicized tech tool in Russia's arsenal for fighting coronavirus is Moscow's massive facial-recognition system. Rolled out earlier this year, the surveillance system had originally prompted an unusual public backlash, with privacy advocates filing lawsuits over unlawful surveillance.
 Coronavirus, however, has given an unexpected public-relations boost to the system.

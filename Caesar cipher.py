@@ -15,8 +15,3 @@ def CaesarDecreptor(ciphertext):
 	for i in range(26):
 		plaintexts.append(CaesarDecoder(ciphertext, i+1))
 	return plaintexts
-
-
-
-ciphertext = 'Up fodpef tusjoht dpoubjojoh tqbdft boe vqqfs dbtf mfuufst, vtf uif cvjmu-jo dpefdt mjcsbsz.'
-CaesarDecreptor(ciphertext)
