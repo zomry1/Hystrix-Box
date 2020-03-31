@@ -1,2 +1,2 @@
 def ReverseDecoder(ciphertext):
-	return ciphertext[::-1]
+	return [ciphertext[::-1]]
