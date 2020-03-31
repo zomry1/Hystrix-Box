@@ -1,7 +1,5 @@
 from CaesarCipher import CaesarDecreptor
-from SanityCheck import evaluation
-from WordCheck import evaluateSentence
-from FormatCheck import checkFormat,returnFlags
+from evaluator import evaluate
 
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
 Pbebanivehf, ubjrire, unf tvira na harkcrpgrq choyvp-eryngvbaf obbfg gb gur flfgrz.
@@ -19,13 +17,4 @@ rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 '''
 #ciphertext = 'FNQFN QNF NF NFQ NFQ NQ JDNQ JNQ JN SPGS2020{QFNQFNQQFQNFQNF} NFQNFQF NQNF NFQ NF QDQ FNQ DJ QFNIQF ERSTJR NQJD '
 plaintexts = CaesarDecreptor(ciphertext)
-
-evaluations = []
-#Evaluate each plaintext and calculate error
-for plaintext in plaintexts:
-	evaluations.append((plaintext[:20], returnFlags('CTF2020{}',plaintext)))
-
-#Sort plaintext by error level
-evaluations = sorted(evaluations, key=lambda x: x[1])
-#Print summery of each plaintext and error
-print('\n'.join([str(element) for element in evaluations]))
+print(evaluate(plaintexts, 'TFT')[0])
