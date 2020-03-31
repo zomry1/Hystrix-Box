@@ -1,4 +1,7 @@
-from CaesarCipher import CaesarDecreptor
+from Decoders.ASCIICipher import ASCIIDecoder
+from Decoders.Base64Cipher import Base64Decoder
+from Decoders.CaesarCipher import CaesarDecoder
+from Decoders.ReverseCipher import ReverseDecoder
 from evaluator import evaluate
 
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
@@ -11,5 +14,10 @@ Coronavirus, however, has given an unexpected public-relations boost to the syst
 Last week, Moscow police claimed to have caught and fined 200 people who violated quarantine and self-isolation using facial recognition CTF2020{DSADASDASDAS} and a 170,000-camera system. According to a Russian media report some of the alleged violators who were fined had been outside for less than half a minute before they were picked up by a camera.
 "We want there to be even more cameras so that that there is no dark corner or side street left," Oleg Baranov, Moscow's police chief, said in a recent briefing, adding that the service is currently working to install an additional 9,000 cameras."""
 
-plaintexts = CaesarDecreptor(ciphertext)
-print(evaluate(plaintexts, 'TTT', 'CTF2020{}')[0])
+plaintexts = []
+plaintexts += CaesarDecoder(ciphertext)
+plaintexts += ASCIIDecoder(ciphertext)
+plaintexts += Base64Decoder(ciphertext)
+plaintexts += ReverseDecoder(ciphertext)
+
+print(evaluate(plaintexts, 'TFT', 'CTF2020{}')[0])
