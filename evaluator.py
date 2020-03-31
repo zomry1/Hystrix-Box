@@ -2,9 +2,9 @@ from Checkers.letter_check import evaluation
 from Checkers.word_check import evaluateSentence
 from Checkers.flag_check import checkFormat
 
-letterPriority = 1000
-wordPriority = 1000
-formatPriority = 2000
+LETTER_PRIORITY = 1000
+WORD_PRIORITY = 1000
+FORMAT_PRIORITY = 2000
 
 
 def evaluate(plaintexts, functionsString, formatString=''):
@@ -23,7 +23,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
         score = len(evaluations)
         for plaintext in evaluations:
-            scoresDictionary[plaintext[0]] += (score * letterPriority)
+            scoresDictionary[plaintext[0]] += (score * LETTER_PRIORITY)
             score -= 1
 
     # Evaluate with wordCheck
@@ -38,7 +38,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
         score = len(evaluations)
         for plaintext in evaluations:
-            scoresDictionary[plaintext[0]] += (score * wordPriority)
+            scoresDictionary[plaintext[0]] += (score * WORD_PRIORITY)
             score -= 1
 
     # Evaluate with formatCheck
@@ -53,7 +53,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
         score = len(evaluations)
         for plaintext in evaluations:
-            scoresDictionary[plaintext[0]] += (score * formatPriority)
+            scoresDictionary[plaintext[0]] += (score * FORMAT_PRIORITY)
             score -= 1
 
     scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)
