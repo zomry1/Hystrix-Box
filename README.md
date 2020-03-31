@@ -16,7 +16,7 @@ Tools:
 * Vigenere
 * Caesar  (ROT - Shift) - ☑️
 * Flip keypad
-* Md5 (known hashes)
+* Hashes (md5,md4,sha1,sha256,sha384,sha512,ntlm) - ☑
 * Base64 - ☑️
 * All bases
 * Ascii - ☑️
