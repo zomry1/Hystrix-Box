@@ -5,13 +5,13 @@ Tools:
 * Ultimate Extractor
 
 ## UltimateDecrypter
- 
-results quality check by parameters:
+
+###results quality check:
 1) English words analysis - ☑️
 2) Flag format - ☑️
 3) Frequency analysis - ☑️
 
-Codecs:
+###Codecs:
 * Reverse - ☑️
 * Vigenere
 * Caesar  (ROT - Shift) - ☑️
