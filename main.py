@@ -3,7 +3,84 @@ from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 from evaluator import evaluate
+import argparse
 
+DECODERS_MAP = {'ascii': ASCIIDecoder,
+                'base64': Base64Decoder,
+                'caesar': CaesarDecoder,
+                'reverse': ReverseDecoder}
+
+parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
+                                 description="Ultimate Decoder, just give me your ciphertext",
+                                 epilog='Good luck hacker')
+parser.version = '1.0'
+
+# ciphertext (input) arg
+inputGroup = parser.add_mutually_exclusive_group(required=True)
+inputGroup.add_argument('-c', '--ciphertext')
+inputGroup.add_argument('-f', '--filename', type=argparse.FileType('r'))
+#parser.add_argument('ciphertext')
+
+# Specific decoder flag
+parser.add_argument('-s', '--specific',
+                    help='Choose specific decoder, {%(choices)s}',
+                    choices=DECODERS_MAP.keys(),
+                    metavar='DECODER')
+
+# Evaluators flags
+parser.add_argument('-cl', '--checkLetter',
+                    help='Evaluate results by letter analysis check',
+                    action='store_true')
+
+parser.add_argument('-cw', '--checkWord',
+                    help='Evaluate results by word analysis check',
+                    action='store_true')
+
+parser.add_argument('-cf', '--checkFlag',
+                    help='Evaluate results by flag format check',
+                    metavar='FORMAT')
+
+parser.add_argument('-v', '--version', action='version')
+
+# Read arguments
+args = parser.parse_args()
+
+# Get the ciphertext from CLI or file
+if args.ciphertext is not None:
+    ciphertext = args.ciphertext
+else: #It's a file
+    ciphertext = args.filename.read()
+
+# If specific decoder set
+if args.specific is not None:
+    decoder = DECODERS_MAP[args.specific]
+    print(decoder(ciphertext))
+    exit()
+
+# Create the evaluators string
+functionsString = ['F', 'F', 'F']
+flagFormat = ''
+if args.checkLetter or args.checkWord or args.checkFlag:
+    if args.checkLetter:
+        functionsString[0] = 'T'
+    if args.checkWord:
+        functionsString[1] = 'T'
+    if args.checkFlag:
+        functionsString[2] = 'T'
+        flagFormat = args.checkFlag
+    functionsString = ''.join(functionsString)
+else:
+    functionsString = 'TFT' ##############Change this to TTT!!!!!!!!!!!!
+
+
+plaintexts = []
+plaintexts += CaesarDecoder(ciphertext)
+plaintexts += ASCIIDecoder(ciphertext)
+plaintexts += Base64Decoder(ciphertext)
+plaintexts += ReverseDecoder(ciphertext)
+print(evaluate(plaintexts, functionsString, flagFormat)[0])
+
+'''
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
 Pbebanivehf, ubjrire, unf tvira na harkcrpgrq choyvp-eryngvbaf obbfg gb gur flfgrz.
 Ynfg jrrx, Zbfpbj cbyvpr pynvzrq gb unir pnhtug naq svarq 200 crbcyr jub ivbyngrq dhnenagvar naq frys-vfbyngvba hfvat snpvny erpbtavgvba naq n 170,000-pnzren flfgrz. Nppbeqvat gb n Ehffvna zrqvn ercbeg fbzr bs gur nyyrtrq ivbyngbef jub jrer svarq unq orra bhgfvqr sbe yrff guna unys n zvahgr orsber gurl jrer cvpxrq hc ol n pnzren.
@@ -22,3 +99,4 @@ plaintexts += Base64Decoder(ciphertext)
 plaintexts += ReverseDecoder(ciphertext)
 
 print(evaluate(plaintexts, 'TFT', 'CTF2020{}')[0])
+'''
