@@ -33,3 +33,4 @@ EXIFTOOL
 
 All cyberchef tools
 
+Fix when english like this H1 40R (english with symbols and numbers) 
