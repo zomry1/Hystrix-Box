@@ -13,7 +13,7 @@ def sentenceScore(sentence):
 	sentence = r2.sub('', sentence)
 	#All to lower case
 	sentence = sentence.lower()
-	print(sentence)
+	#print(sentence)
 	score = 0
 	headers = {
 	    'Accept': 'application/json',
@@ -26,8 +26,8 @@ def sentenceScore(sentence):
     	('trueCases', sentence.split()),
      	('collate', 'trueCase')
      )
-	print(len(sentence))
-	print(len(sentence.split()))
+	#print(len(sentence))
+	#print(len(sentence.split()))
 
 	response = requests.get('https://od-api.oxforddictionaries.com/api/v2/stats/frequency/words/en/', headers=headers, params=params)
 	try:
@@ -44,10 +44,19 @@ def sentenceScore(sentence):
 		print(sentence)
 
 	#Reduce missing word by 30: number of words is sentence minus number of return results multiply by missing error
-	print(score)
+	#print(score)
 	score -= (len(sentence.split()) - len(response['results'])) * MISSING_ERROR
 	return score
 
+
+def evaluateSentence(sentence):
+	score = 0
+	sentence = sentence.split()
+	n = 80 #Split for groups of 80 words in group
+	parts = [' '.join(sentence[i:i+n]) for i in range(0,len(sentence),n)]
+	for part in parts:
+		score += sentenceScore(part)
+	return score
 #Max split 98 words, length of 671
 #https://www.wordsapi.com/
 #https://wordsapiv1.p.mashape.com/words/sea/frequency
