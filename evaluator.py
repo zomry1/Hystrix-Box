@@ -3,9 +3,9 @@ from WordCheck import evaluateSentence
 from FormatCheck import checkFormat,returnFlags
 import collections
 
-letterPriority = 1
-wordPriority = 1
-formatPriority = 2
+letterPriority = 1000
+wordPriority = 1000
+formatPriority = 2000
 
 def evaluate(plaintexts, functionsString, formatString=''):
 	#Make plaintext tuple (plaintext, score)
@@ -20,7 +20,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
 		#Sort plaintext by error level
 		evaluations = sorted(evaluations, key=lambda x: x[1])
-
+		
 		score = len(evaluations)
 		for plaintext in evaluations:
 			scoresDictionary[plaintext[0]] += (score*letterPriority)
@@ -34,7 +34,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
 			evaluations.append((plaintext, evaluateSentence(plaintext)))
 
 		#Sort plaintext by error level
-		evaluations = sorted(evaluations, key=lambda x: x[1])
+		evaluations = sorted(evaluations, key=lambda x: x[1], reverse=True)
 
 		score = len(evaluations)
 		for plaintext in evaluations:
@@ -46,10 +46,10 @@ def evaluate(plaintexts, functionsString, formatString=''):
 		evaluations = []
 		#Evaluate each plaintext and calculate error
 		for plaintext in plaintexts:
-			evaluations.append((plaintext, checkFormat(plaintext,formatString)))
+			evaluations.append((plaintext, checkFormat(formatString, plaintext)))
 
 		#Sort plaintext by error level
-		evaluations = sorted(evaluations, key=lambda x: x[1])
+		evaluations = sorted(evaluations, key=lambda x: x[1], reverse=True)
 
 		score = len(evaluations)
 		for plaintext in evaluations:
@@ -58,4 +58,3 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
 	scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)		
 	return scoresDictionary
-
