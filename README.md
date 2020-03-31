@@ -28,4 +28,8 @@ Frequency analysis
 extract mails or ips
 strings
 file
+recursive compression, file header repairs, LSB Stego, hidden files,
+EXIFTOOL
+
+All cyberchef tools
 

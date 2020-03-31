@@ -34,5 +34,3 @@ def evaluation(chipertext):
 	return error
 
 #https://crypto.stackexchange.com/questions/30209/developing-algorithm-for-detecting-plain-text-via-frequency-analysis
-#https://www.wordsapi.com/
-#https://wordsapiv1.p.mashape.com/words/sea/frequency
