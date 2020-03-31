@@ -47,66 +47,14 @@ def evaluate(plaintexts, functionsString, formatString=''):
     # Evaluate with letterCheck
     if functionsString[0] == 'T':
         evaluate_fun(evaluation, plaintexts, scoresDictionary, False)
-        #############################################################
-        '''
-        evaluations = []
-        # Evaluate each plaintext and calculate error
-        for plaintext in plaintexts:
-            evaluations.append((plaintext, evaluation(plaintext)))
-
-        # Sort plaintext by error level
-        evaluations = sorted(evaluations, key=lambda x: x[1])
-
-        score = len(evaluations)
-        for plaintext in evaluations:
-            scoresDictionary[plaintext[0]] += (score * LETTER_PRIORITY)
-            score -= 1
-        '''
 
     # Evaluate with wordCheck
     if functionsString[1] == 'T':
         evaluate_fun(evaluateSentence, plaintexts, scoresDictionary)
-        '''
-        evaluations = []
-        # Evaluate each plaintext and calculate error
-        for plaintext in plaintexts:
-            evaluations.append((plaintext, evaluateSentence(plaintext)))
-
-        # Sort plaintext by error level
-        evaluations = sorted(evaluations, key=lambda x: x[1], reverse=True)
-
-        score = len(evaluations)
-        for plaintext in evaluations:
-            scoresDictionary[plaintext[0]] += (score * WORD_PRIORITY)
-            score -= 1
-        '''
 
     # Evaluate with formatCheck
     if functionsString[2] == 'T' and formatString != '':
         evaluate_fun(checkFormat, plaintexts, scoresDictionary, formatString=formatString)
-        '''
-        evaluations = []
-        # Evaluate each plaintext and calculate error
-        for plaintext in plaintexts:
-            evaluations.append((plaintext, checkFormat(formatString, plaintext)))
-
-        # Sort plaintext by error level
-        # evaluations = sorted(evaluations, key=lambda x: x[1], reverse=True)
-        group_evaluations = {}
-
-        for ciphertext, score in evaluations:
-            if score in group_evaluations:
-                group_evaluations[score].append(ciphertext)
-            else:
-                group_evaluations[score] = [ciphertext]
-
-        score = len(group_evaluations)
-        # Need to be sorted
-        for group in group_evaluations.values():
-            for plaintext in group:
-                scoresDictionary[plaintext] += (score * FORMAT_PRIORITY)
-            score -= 1
-        '''
 
     scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)
     return scoresDictionary

@@ -1,23 +1,27 @@
-# UltimateDecreptor
- 
-Sainty by 3 things:
-1) api of english words
-2) flag format
-3) Frequency analysis - Done
+#Ultimate CTF Tool
+Tools:
+* Ultimate Decrypter
+* Ultimate Forensics
+* Ultimate Extractor
 
-verbose option
-show precent of sentiy
+## UltimateDecrypter
+ 
+results quality check by parameters:
+1) English words analysis - ☑️
+2) Flag format - ☑️
+3) Frequency analysis - ☑️
 
 Codecs:
-Reverse - Done
-Vigenere
-Shift (ROT - Ceasar) - Done
-Flip keypad
-Md5 (known hash)
-base64 - Done
-all bases
-Ascii - Done
-URL encode
+* Reverse - ☑️
+* Vigenere
+* Caesar  (ROT - Shift) - ☑️
+* Flip keypad
+* Md5 (known hashes)
+* Base64 - ☑️
+* All bases
+* Ascii - ☑️
+* URL encode
+
 
 
 
