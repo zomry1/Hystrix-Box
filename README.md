@@ -15,7 +15,7 @@ Tools:
 * Reverse - ☑️
 * Vigenere
 * Caesar  (ROT - Shift) - ☑️
-* Flip keypad
+* phone keypad (T9)
 * Hashes (md5,md4,sha1,sha256,sha384,sha512,ntlm) - ☑
 * Base64 - ☑️
 * All bases
@@ -27,17 +27,17 @@ Tools:
 
 ### Extract
 * IP (v4,v6) - ☑️
-* Email
-* URL
+* Email - ☑️
+* URL - ☑️
 * Hashes
 * 64base code
 * CTF-Flags
+* Comments (from code files)
 
 
 More:
 * find == at the end so it's base64
 * Frequency analysis
-* extract mails or ips
 * strings
 * file
 * recursive compression
@@ -47,4 +47,5 @@ More:
 * EXIFTOOL
 * Analysis email header
 * All Cyberchef tools
+* email header analysis
 * Fix when english like this H1 0R instead hi or (english with symbols and numbers) 
