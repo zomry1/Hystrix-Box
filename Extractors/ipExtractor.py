@@ -7,7 +7,7 @@ IPv6_PATTERN = re.compile('\b(?:[a-f0-9]{1,4}:|:){2,7}(?:[a-f0-9]{1,4}|:)\b', re
 
 
 def extractIP(data):
-    # It's more efficent to use 2 patterns instead use OR between 2 regex
+    # It's more efficient to use 2 patterns instead use OR between 2 regex
     ips = IPv4_PATTERN.findall(data)
     ips += IPv6_PATTERN.findall(data)
     return ips
