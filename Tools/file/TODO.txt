@@ -1,0 +1,6 @@
+Get header of the file
+add regex for each file type
+search the header in the database
+
+#https://www.garykessler.net/library/file_sigs.html
+#https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
