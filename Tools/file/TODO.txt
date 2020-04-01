@@ -2,5 +2,12 @@ Get header of the file
 add regex for each file type
 search the header in the database
 
-#https://www.garykessler.net/library/file_sigs.html
-#https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+like file command:
+https://unix.stackexchange.com/questions/151008/linux-file-command-classifying-files
+
+list of magic numbers:
+https://www.garykessler.net/library/file_sigs.html
+https://github.com/file/file/tree/master/magic/Magdir
+
+Mime:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types

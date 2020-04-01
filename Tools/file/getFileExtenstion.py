@@ -4,6 +4,7 @@ HEADER_BYTES = 262
 
 
 def get_header(filePath):
+	#Need to add checking for file with zero lenght
 	try:
 		with open(filePath, 'rb') as file:
 			return bytearray(file.read(HEADER_BYTES))
@@ -19,8 +20,8 @@ def getFileExtension(filePath):
 
 	for extension in EXTENSIONS:
 		if extension.check(header):
-			return extension.extensionName
+			return extension
 	return 'Extension not found'
 
 
-print(getFileExtension("Examples/Gif.gif"))
+print(getFileExtension("Examples/CR2.CR2"))

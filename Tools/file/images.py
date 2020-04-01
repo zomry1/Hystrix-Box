@@ -3,10 +3,14 @@ from extenstion import Extension
 
 class Jpeg(Extension):
 	EXTENSION = 'jpg'
+	MIME = 'image/jpeg'
+	DESCRIPTION = 'Generic JPEGimage file'
 
 	def __init__(self):
 		super(Jpeg, self).__init__(
-			extensionName=Jpeg.EXTENSION
+			extension=Jpeg.EXTENSION,
+			mime=Jpeg.MIME,
+			description=Jpeg.DESCRIPTION
 		)
 
 	def check(self, buf):
@@ -18,10 +22,14 @@ class Jpeg(Extension):
 
 class Png(Extension):
 	EXTENSION = 'png'
+	MIME = 'image/png'
+	DESCRIPTION = 'Portable Network Graphics file'
 
 	def __init__(self):
 		super(Png, self).__init__(
-			extensionName=Png.EXTENSION
+			extension=Png.EXTENSION,
+			mime=Png.MIME,
+			description=Png.DESCRIPTION
 		)
 
 	def check(self, buf):
@@ -34,10 +42,14 @@ class Png(Extension):
 
 class Gif(Extension):
 	EXTENSION = 'gif'
+	MIME = 'image/gif'
+	DESCRIPTION = 'Graphics interchange format file'
 
 	def __init__(self):
 		super(Gif, self).__init__(
-			extensionName=Gif.EXTENSION
+			extension=Gif.EXTENSION,
+			mime=Gif.MIME,
+			description=Gif.DESCRIPTION
 		)
 
 	def check(self, buf):
@@ -55,3 +67,53 @@ class Gif(Extension):
 				 buf[3] == 0x38 and
 				 buf[4] == 0x39 and
 				 buf[5] == 0x61))
+
+
+class Webp(Extension):
+	EXTENSION = 'webp'
+	MIME = 'image/webp'
+	DESCRIPTION = 'Google WebP image file'
+
+	def __init__(self):
+		super(Webp, self).__init__(
+			extension=Webp.EXTENSION,
+			mime=Webp.MIME,
+			description=Webp.DESCRIPTION
+		)
+
+	def check(self, buf):  # Add checking for file size in bytes 4-7
+		return (len(buf) > 12 and
+				buf[0] == 0x52 and
+				buf[1] == 0x49 and
+				buf[2] == 0x46 and
+				buf[3] == 0x46 and
+				buf[8] == 0x57 and
+				buf[9] == 0x45 and
+				buf[10] == 0x42 and
+				buf[11] == 0x50)
+
+
+class Cr2(Extension):
+	EXTENSION = 'cr2'
+	MIME = 'image/x-canon-cr2'
+	DESCRIPTION = 'Canon digital camera RAW file'
+
+	def __init__(self):
+		super(Cr2, self).__init__(
+			extension=Cr2.EXTENSION,
+			mime=Cr2.MIME,
+			description=Cr2.DESCRIPTION
+		)
+
+	def check(self, buf):  # Add checking for file size in bytes 4-7
+		return (len(buf) > 10 and
+				buf[0] == 0x49 and
+				buf[1] == 0x49 and
+				buf[2] == 0x2A and
+				buf[3] == 0x00 and
+				buf[4] == 0x10 and
+				buf[5] == 0x00 and
+				buf[6] == 0x00 and
+				buf[7] == 0x00 and
+				buf[8] == 0x43 and
+				buf[9] == 0x52)
