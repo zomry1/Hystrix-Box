@@ -49,3 +49,7 @@ More:
 * All Cyberchef tools
 * email header analysis
 * Fix when english like this H1 0R instead hi or (english with symbols and numbers) 
+
+### Requirements
+* requests
+* PIL
