@@ -8,9 +8,10 @@ HEADER_BYTES = 262
 def timing(f):
 	def wrap(*args):
 		time1 = time.time()
-		ret = f(*args)
+		for i in range(2000):
+			ret = f(*args)
 		time2 = time.time()
-		print('{:s} function took {:.3f} ms'.format(f.__name__, (time2 - time1) * 1000.0))
+		print('{:s} function took {:.3f} ms'.format(f.__name__, (time2 - time1) / 2))
 		return ret
 
 	return wrap
@@ -38,4 +39,4 @@ def getFileExtension(filePath):
 	return None
 
 
-print(getFileExtension("Examples/ICO.ico"))
+print(getFileExtension("Examples/ELF.elf"))
