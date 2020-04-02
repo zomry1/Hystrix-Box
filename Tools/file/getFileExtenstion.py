@@ -12,6 +12,7 @@ def timing(f):
 		time2 = time.time()
 		print('{:s} function took {:.3f} ms'.format(f.__name__, (time2 - time1) * 1000.0))
 		return ret
+
 	return wrap
 
 
@@ -23,6 +24,7 @@ def get_header(filePath):
 	except:
 		print('Cant read the file')
 		return None
+
 
 @timing
 def getFileExtension(filePath):
@@ -36,4 +38,4 @@ def getFileExtension(filePath):
 	return None
 
 
-print(getFileExtension("Examples/BMP.BMP"))
+print(getFileExtension("Examples/ICO.ico"))

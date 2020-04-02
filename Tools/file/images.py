@@ -148,16 +148,17 @@ class Tiff(Extension):
 				 buf[3] == 0x2A)
 				or
 				(buf[0] == 0x4D and
-				buf[1] == 0x4D and
-				buf[2] == 0x00 and
-				buf[3] == 0x2B)
+				 buf[1] == 0x4D and
+				 buf[2] == 0x00 and
+				 buf[3] == 0x2B)
 				)
 
 
+# https://tools.ietf.org/html/rfc7903
 class Bmp(Extension):
 	EXTENSION = 'bmp'
 	MIME = 'image/bmp'
-	DESCRIPTION = '	Windows (or device-independent) bitmap image'
+	DESCRIPTION = 'Windows (or device-independent) bitmap image'
 
 	def __init__(self):
 		super(Bmp, self).__init__(
@@ -166,7 +167,96 @@ class Bmp(Extension):
 			description=Bmp.DESCRIPTION
 		)
 
-	def check(self, buf): #Bytes 2-5 are for file lenght in little endian
+	def check(self, buf):  # Bytes 2-5 are for file lenght in little endian
 		return (len(buf) > 2 and
 				buf[0] == 0x42 and
 				buf[1] == 0x4D)
+
+
+# https://www.iana.org/assignments/media-types/image/vnd.adobe.photoshop
+class Psd(Extension):
+	EXTENSION = 'psd'
+	MIME = 'image/vnd.adobe.photoshop'
+	DESCRIPTION = 'Photoshop image file'
+
+	def __init__(self):
+		super(Psd, self).__init__(
+			extension=Psd.EXTENSION,
+			mime=Psd.MIME,
+			description=Psd.DESCRIPTION
+		)
+
+	def check(self, buf):
+		return (len(buf) > 4 and
+				buf[0] == 0x38 and
+				buf[1] == 0x42 and
+				buf[2] == 0x50 and
+				buf[3] == 0x53)
+
+
+# https://tools.ietf.org/html/rfc4047
+class Fits(Extension):
+	EXTENSION = 'fits'
+	MIME = 'image/fits'
+	DESCRIPTION = 'Flexible Image Transport System (FITS), Version 3.0 file'
+
+	def __init__(self):
+		super(Fits, self).__init__(
+			extension=Fits.EXTENSION,
+			mime=Fits.MIME,
+			description=Fits.DESCRIPTION
+		)
+
+	def check(self, buf):
+		return (len(buf) > 30 and
+				buf[0] == 0x53 and
+				buf[1] == 0x49 and
+				buf[2] == 0x4D and
+				buf[3] == 0x50 and
+				buf[4] == 0x4C and
+				buf[5] == 0x45 and
+				buf[6] == 0x20 and
+				buf[7] == 0x20 and
+				buf[8] == 0x3D and
+				buf[9] == 0x20 and
+				buf[10] == 0x20 and
+				buf[11] == 0x20 and
+				buf[12] == 0x20 and
+				buf[13] == 0x20 and
+				buf[14] == 0x20 and
+				buf[15] == 0x20 and
+				buf[16] == 0x20 and
+				buf[17] == 0x20 and
+				buf[18] == 0x20 and
+				buf[19] == 0x20 and
+				buf[20] == 0x20 and
+				buf[21] == 0x20 and
+				buf[22] == 0x20 and
+				buf[23] == 0x20 and
+				buf[24] == 0x20 and
+				buf[25] == 0x20 and
+				buf[26] == 0x20 and
+				buf[27] == 0x20 and
+				buf[28] == 0x20 and
+				buf[29] == 0x54)
+
+
+# https://www.iana.org/assignments/media-types/image/vnd.microsoft.icon
+class Ico(Extension):
+	EXTENSION = 'ico'
+	MIME = 'image/vnd.microsoft.icon'
+	DESCRIPTION = 'Windows icon file'
+
+	def __init__(self):
+		super(Ico, self).__init__(
+			extension=Ico.EXTENSION,
+			mime=Ico.MIME,
+			description=Ico.DESCRIPTION
+		)
+
+	def check(self, buf):
+		return (len(buf) > 4 and
+				buf[0] == 0x00 and
+				buf[1] == 0x00 and
+				buf[2] == 0x01 and
+				buf[3] == 0x00)
