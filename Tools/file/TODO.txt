@@ -11,3 +11,6 @@ https://github.com/file/file/tree/master/magic/Magdir
 
 Mime:
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+
+file samples:
+https://www.fileformat.info/format/tiff/sample/index.htm

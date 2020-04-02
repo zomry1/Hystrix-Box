@@ -1,10 +1,22 @@
 from extenstionDB import EXTENSIONS
+import time
 
 HEADER_BYTES = 262
 
 
+# Add this function to add decorator of @timing to measure function runtime
+def timing(f):
+	def wrap(*args):
+		time1 = time.time()
+		ret = f(*args)
+		time2 = time.time()
+		print('{:s} function took {:.3f} ms'.format(f.__name__, (time2 - time1) * 1000.0))
+		return ret
+	return wrap
+
+
 def get_header(filePath):
-	#Need to add checking for file with zero lenght
+	# Need to add checking for file with zero lenght
 	try:
 		with open(filePath, 'rb') as file:
 			return bytearray(file.read(HEADER_BYTES))
@@ -12,7 +24,7 @@ def get_header(filePath):
 		print('Cant read the file')
 		return None
 
-
+@timing
 def getFileExtension(filePath):
 	header = get_header(filePath)
 	if not header:
@@ -21,7 +33,7 @@ def getFileExtension(filePath):
 	for extension in EXTENSIONS:
 		if extension.check(header):
 			return extension
-	return 'Extension not found'
+	return None
 
 
-print(getFileExtension("Examples/CR2.CR2"))
+print(getFileExtension("Examples/BMP.BMP"))

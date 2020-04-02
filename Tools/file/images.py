@@ -117,3 +117,56 @@ class Cr2(Extension):
 				buf[7] == 0x00 and
 				buf[8] == 0x43 and
 				buf[9] == 0x52)
+
+
+class Tiff(Extension):
+	EXTENSION = 'tif'
+	MIME = 'image/tiff'
+	DESCRIPTION = 'Tagged Image File Format file'
+
+	def __init__(self):
+		super(Tiff, self).__init__(
+			extension=Tiff.EXTENSION,
+			mime=Tiff.MIME,
+			description=Tiff.DESCRIPTION
+		)
+
+	def check(self, buf):
+		return (len(buf) > 3 and
+				(buf[0] == 0x49 and
+				 buf[1] == 0x20 and
+				 buf[2] == 0x49)
+				or
+				(buf[0] == 0x49 and
+				 buf[1] == 0x49 and
+				 buf[2] == 0x2A and
+				 buf[3] == 0x00)
+				or
+				(buf[0] == 0x4D and
+				 buf[1] == 0x4D and
+				 buf[2] == 0x00 and
+				 buf[3] == 0x2A)
+				or
+				(buf[0] == 0x4D and
+				buf[1] == 0x4D and
+				buf[2] == 0x00 and
+				buf[3] == 0x2B)
+				)
+
+
+class Bmp(Extension):
+	EXTENSION = 'bmp'
+	MIME = 'image/bmp'
+	DESCRIPTION = '	Windows (or device-independent) bitmap image'
+
+	def __init__(self):
+		super(Bmp, self).__init__(
+			extension=Bmp.EXTENSION,
+			mime=Bmp.MIME,
+			description=Bmp.DESCRIPTION
+		)
+
+	def check(self, buf): #Bytes 2-5 are for file lenght in little endian
+		return (len(buf) > 2 and
+				buf[0] == 0x42 and
+				buf[1] == 0x4D)

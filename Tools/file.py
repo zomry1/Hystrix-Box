@@ -1,15 +1,13 @@
 import filetype
 
 #Need to install file type = pip install filetype
+from Tools.file.getFileExtenstion import getFileExtension
 
-def fileExtension():
-	kind = filetype.guess('me.txt')
-	if kind is None:
+
+def fileExtension(filename):
+	extension = getFileExtension("Examples/CR2.CR2")
+	if extension is None:
 		print('Cannot guess file type!')
 		return
 
-	print('File extension: %s' % kind.extension)
-	print('File MIME type: %s' % kind.mime)
-
-
-fileExtension()
+	print(extension)
