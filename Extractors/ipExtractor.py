@@ -11,4 +11,3 @@ def extractIP(data):
     ips = IPv4_PATTERN.findall(data)
     ips += IPv6_PATTERN.findall(data)
     return ips
-
