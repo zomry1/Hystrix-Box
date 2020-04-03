@@ -14,23 +14,36 @@ LOGO = """
 ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
 """
 
+ARGS_STR = """
+    ___                                                 __       
+   /   |   _____ ____ _ __  __ ____ ___   ___   ____   / /_ _____
+  / /| |  / ___// __ `// / / // __ `__ \ / _ \ / __ \ / __// ___/
+ / ___ | / /   / /_/ // /_/ // / / / / //  __// / / // /_ (__  ) 
+/_/  |_|/_/    \__, / \__,_//_/ /_/ /_/ \___//_/ /_/ \__//____/  
+              /____/                                             
+"""
 
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
+# argparse + info
 parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
-                                 description= LOGO +  '\nUltimate Decoder, just give me your ciphertext',
+                                 description=LOGO + '\nThe Ultimate Decoder, Drop your Cipher-text here\n'
+                                                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
                                  epilog='Just boring epilogue',
-                                 formatter_class = argparse.RawTextHelpFormatter)
+                                 formatter_class=argparse.RawTextHelpFormatter)
+# removes the annoying title
 parser.version = '1.1'
-
+parser._optionals.title = None
 # ciphertext (input) arg
+
+# add arguments to argparse
 inputGroup = parser.add_mutually_exclusive_group(required=True)
 inputGroup.add_argument('-c', '--ciphertext')
 inputGroup.add_argument('-f', '--filename', type=argparse.FileType('r'))
-#parser.add_argument('ciphertext')
+# parser.add_argument('ciphertext')
 
 # Specific decoder flag
 parser.add_argument('-s', '--specific',
@@ -59,7 +72,7 @@ args = parser.parse_args()
 # Get the ciphertext from CLI or file
 if args.ciphertext is not None:
     ciphertext = args.ciphertext
-else: #It's a file
+else:  # It's a file
     ciphertext = args.filename.read()
 
 # If specific decoder set
@@ -81,8 +94,7 @@ if args.checkLetter or args.checkWord or args.checkFlag:
         flagFormat = args.checkFlag
     functionsString = ''.join(functionsString)
 else:
-    functionsString = 'TFT' ##############Change this to TTT!!!!!!!!!!!!
-
+    functionsString = 'TFT'  ##############Change this to TTT!!!!!!!!!!!!
 
 plaintexts = []
 plaintexts += CaesarDecoder(ciphertext)
@@ -111,4 +123,3 @@ plaintexts += ReverseDecoder(ciphertext)
 
 print(evaluate(plaintexts, 'TFT', 'CTF2020{}')[0])
 '''
-
