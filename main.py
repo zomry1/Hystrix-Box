@@ -28,80 +28,90 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
-# argparse + info
-parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
-                                 description=LOGO + '\nThe Ultimate Decoder, Drop your Cipher-text here\n'
-                                                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-                                 epilog='Just boring epilogue',
-                                 formatter_class=argparse.RawTextHelpFormatter)
-# removes the annoying title
-parser.version = '1.1'
-parser._optionals.title = None
-# ciphertext (input) arg
 
-# add arguments to argparse
-inputGroup = parser.add_mutually_exclusive_group(required=True)
-inputGroup.add_argument('-c', '--ciphertext')
-inputGroup.add_argument('-f', '--filename', type=argparse.FileType('r'))
-# parser.add_argument('ciphertext')
+def app_starter():
+    #  ARGPARSE SECTION
 
-# Specific decoder flag
-parser.add_argument('-s', '--specific',
-                    help='Choose specific decoder, {%(choices)s}',
-                    choices=DECODERS_MAP.keys(),
-                    metavar='DECODER')
+    # intro of argparse
+    parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
+                                     description=LOGO + '\nThe Ultimate Decoder, Drop your Cipher-text here\n'
+                                                        'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+                                     epilog='Just boring epilogue',
+                                     formatter_class=argparse.RawTextHelpFormatter)
+    # removes the annoying title
+    parser.version = '1.1'
+    parser._optionals.title = None
+    # ciphertext (input) arg
 
-# Evaluators flags
-parser.add_argument('-cl', '--checkLetter',
-                    help='Evaluate results by letter analysis check',
-                    action='store_true')
+    # add arguments to argparse
+    input_group = parser.add_mutually_exclusive_group(required=True)
+    input_group.add_argument('-c', '--ciphertext')
+    input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
+    # parser.add_argument('ciphertext')
 
-parser.add_argument('-cw', '--checkWord',
-                    help='Evaluate results by word analysis check',
-                    action='store_true')
+    # Specific decoder flag
+    parser.add_argument('-s', '--specific',
+                        help='Choose specific decoder, {%(choices)s}',
+                        choices=DECODERS_MAP.keys(),
+                        metavar='DECODER')
 
-parser.add_argument('-cf', '--checkFlag',
-                    help='Evaluate results by flag format check',
-                    metavar='FORMAT')
+    # Evaluators flags
+    parser.add_argument('-cl', '--checkLetter',
+                        help='Evaluate results by letter analysis check',
+                        action='store_true')
 
-parser.add_argument('-v', '--version', action='version')
+    parser.add_argument('-cw', '--checkWord',
+                        help='Evaluate results by word analysis check',
+                        action='store_true')
 
-# Read arguments
-args = parser.parse_args()
+    parser.add_argument('-cf', '--checkFlag',
+                        help='Evaluate results by flag format check',
+                        metavar='FORMAT')
 
-# Get the ciphertext from CLI or file
-if args.ciphertext is not None:
-    ciphertext = args.ciphertext
-else:  # It's a file
-    ciphertext = args.filename.read()
+    parser.add_argument('-v', '--version', action='version')
 
-# If specific decoder set
-if args.specific is not None:
-    decoder = DECODERS_MAP[args.specific]
-    print(decoder(ciphertext))
-    exit()
+    #  GET ARGS SECTION
 
-# Create the evaluators string
-functionsString = ['F', 'F', 'F']
-flagFormat = ''
-if args.checkLetter or args.checkWord or args.checkFlag:
-    if args.checkLetter:
-        functionsString[0] = 'T'
-    if args.checkWord:
-        functionsString[1] = 'T'
-    if args.checkFlag:
-        functionsString[2] = 'T'
-        flagFormat = args.checkFlag
-    functionsString = ''.join(functionsString)
-else:
-    functionsString = 'TFT'  ##############Change this to TTT!!!!!!!!!!!!
+    # Read arguments
+    args = parser.parse_args()
 
-plaintexts = []
-plaintexts += CaesarDecoder(ciphertext)
-plaintexts += ASCIIDecoder(ciphertext)
-plaintexts += Base64Decoder(ciphertext)
-plaintexts += ReverseDecoder(ciphertext)
-print(evaluate(plaintexts, functionsString, flagFormat)[0])
+    # Get the ciphertext from CLI or file
+    if args.ciphertext is not None:
+        cipher_txt = args.ciphertext
+    else:  # It's a file
+        cipher_txt = args.filename.read()
+
+    # If specific decoder set
+    if args.specific is not None:
+        decoder = DECODERS_MAP[args.specific]
+        print(decoder(cipher_txt))
+        exit()
+    # Create the evaluators string
+    functions_string = ['F', 'F', 'F']
+    flag_format = ''
+    if args.checkLetter or args.checkWord or args.checkFlag:
+        if args.checkLetter:
+            functions_string[0] = 'T'
+        if args.checkWord:
+            functions_string[1] = 'T'
+        if args.checkFlag:
+            functions_string[2] = 'T'
+            flag_format = args.checkFlag
+        functions_string = ''.join(functions_string)
+    else:
+        functions_string = 'TFT'  ##############Change this to TTT!!!!!!!!!!!!
+
+    #  DECODER SECTION
+
+    plaintexts = []
+    plaintexts += CaesarDecoder(cipher_txt)
+    plaintexts += ASCIIDecoder(cipher_txt)
+    plaintexts += Base64Decoder(cipher_txt)
+    plaintexts += ReverseDecoder(cipher_txt)
+    print(evaluate(plaintexts, functions_string, flag_format)[0])
+
+
+app_starter()
 
 '''
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
