@@ -5,15 +5,26 @@ from Decoders.ReverseCipher import ReverseDecoder
 from evaluator import evaluate
 import argparse
 
+LOGO = """
+██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
+██║  ██║╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔══██╗██║╚██╗██╔╝     ██╔══██╗██╔═══██╗╚██╗██╔╝
+███████║ ╚████╔╝ ███████╗   ██║   ██████╔╝██║ ╚███╔╝█████╗██████╔╝██║   ██║ ╚███╔╝ 
+██╔══██║  ╚██╔╝  ╚════██║   ██║   ██╔══██╗██║ ██╔██╗╚════╝██╔══██╗██║   ██║ ██╔██╗ 
+██║  ██║   ██║   ███████║   ██║   ██║  ██║██║██╔╝ ██╗     ██████╔╝╚██████╔╝██╔╝ ██╗
+╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
+"""
+
+
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
 parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
-                                 description="Ultimate Decoder, just give me your ciphertext",
-                                 epilog='Good luck hacker')
-parser.version = '1.0'
+                                 description= LOGO +  '\nUltimate Decoder, just give me your ciphertext',
+                                 epilog='Just boring epilogue',
+                                 formatter_class = argparse.RawTextHelpFormatter)
+parser.version = '1.1'
 
 # ciphertext (input) arg
 inputGroup = parser.add_mutually_exclusive_group(required=True)
@@ -100,3 +111,4 @@ plaintexts += ReverseDecoder(ciphertext)
 
 print(evaluate(plaintexts, 'TFT', 'CTF2020{}')[0])
 '''
+

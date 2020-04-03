@@ -48,7 +48,8 @@ More:
 * Analysis email header
 * All Cyberchef tools
 * email header analysis
-* Fix when english like this H1 0R instead hi or (english with symbols and numbers) 
+* Fix when english like this H1 0R instead hi or (english with symbols and numbers)
+* Analyze sound files
 
 ### Requirements
 * requests
