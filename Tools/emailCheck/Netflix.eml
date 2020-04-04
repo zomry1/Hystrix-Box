@@ -1,0 +1,1014 @@
+Received: from VI1EUR04HT047.eop-eur04.prod.protection.outlook.com
+ (2603:10b6:208:51::34) by MN2PR05MB6573.namprd05.prod.outlook.com with HTTPS
+ via BL0PR02CA0093.NAMPRD02.PROD.OUTLOOK.COM; Tue, 24 Mar 2020 18:02:12 +0000
+Received: from VI1EUR04FT022.eop-eur04.prod.protection.outlook.com
+ (2a01:111:e400:7e0e::33) by
+ VI1EUR04HT047.eop-eur04.prod.protection.outlook.com (2a01:111:e400:7e0e::349)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2814.13; Tue, 24 Mar
+ 2020 18:02:11 +0000
+Authentication-Results: spf=pass (sender IP is 75.117.114.116)
+ smtp.mailfrom=mailer.netflix.com; hotmail.com; dkim=pass (signature was
+ verified) header.d=netflix.com;hotmail.com; dmarc=pass action=none
+ header.from=mailer.netflix.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mailer.netflix.com
+ designates 75.117.114.116 as permitted sender) receiver=protection.outlook.com;
+ client-ip=75.117.114.116; helo=a41-20.smtp-out.amazonses.com;
+Received: from a41-20.smtp-out.amazonses.com (75.117.114.116) by
+ VI1EUR04FT022.mail.protection.outlook.com (10.152.28.70) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2814.13 via Frontend Transport; Tue, 24 Mar 2020 18:02:10 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:9AEE860F6DCEDB05F3CE02942FF81BDD9CD5976776B0B86CF7643D6B7C5ACEB4;UpperCasedChecksum:2D0E96770B3DB4823F737D30A496F0B14C51C6F646D50AFE4BE7B451FBE74C3B;SizeAsReceived:2519;Count:23
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=wsh2ycm5iultkbdysii4ijqi22uurzvv; d=netflix.com; t=1585072930;
+	i=@mailer.netflix.com;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe;
+	bh=ZswqY9kteio+EKU9PyG00kTImF5AF20mpJr3RfNHyW4=;
+	b=SnoC6hHvwxPm+na/LArJp6LkJtL6g8Rl1lkyIvV8/W/EPBPYuqWkfOPzbzmpZYII
+	hnyPWOaIOtmfms9HUhCTpuhP0zPK0yNYw0iRtdYmk1vfXdT2sQvazn4k7+zR+Tc6i2q
+	HRT3w9SMkNlB9l0vv4PKvNMRaID9o+ton0o5WtQQ=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1585072930;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe:Feedback-ID;
+	bh=ZswqY9kteio+EKU9PyG00kTImF5AF20mpJr3RfNHyW4=;
+	b=YKoMkppEw1ODqNGtTTvTf65QmrDnZboSLjIHfgPu1IqCZR0u/CeEcEnwEFrBvEpS
+	JOy/UMCYgGP4TYYuWkWGJH5mjan04/u8BQYMz7yg0WtcpOUdN5QYmK3GRnZiV6lypl4
+	X3FYkXn8jl9/HAuZG0BLnnyNs6fvJ6SaMpytZKhA=
+Date: Tue, 24 Mar 2020 18:02:10 +0000
+From: Netflix <info@mailer.netflix.com>
+Sender: Netflix <info@mailer.netflix.com>
+To: JohnSmlth@hotmail.com
+Message-ID: <010001710db57e6f-f9850d85-346e-4249-9551-71042c80ff5b-000000@email.amazonses.com>
+Subject: Coming Wednesday, April 1st... Nailed It! Season 4
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_87580_587082350.1585072930404"
+X-To: JohnSmlth@hotmail.com
+Precedence: bulk
+X-AppInfo: Netflix Mercury S s.c461c6e.4033
+X-ProcEnc: BQAtAAEBEIO0XZXrujAWA5wbD24cb1AQzQunTx0rQcVTZyYD+IbeQw==
+X-MailingID: mercury::LOW_RISK::12186::6FC25E49D319EB4AA660C1B1805B3646645512D8::6A5F6B01C976E12BCF1F50C0AA5062A9645262CD::<1710DB57E64@netflix.com>
+X-GroupId: 4
+X-localeCountry: en::US
+X-ProcInfo: mercuryfigment::mercuryfigment::mercuryecsqs::mercuryecsqs-figment-i-0f062e579564c54ce::mercurymp-engagement6-i-00f285e69119c381c::01:04:34:46.511
+X-EvCacheKey: 12186.EMAIL.EMAIL_ORIGINALS_PREPROMOTE.-0005.-5.en.US
+X-Version: 8400
+List-Unsubscribe: <mailto:S0VXTkIzSUUyRkMzTkMyQ05KWktVSzZHRUFDNURF@unsubscribe.netflix.com>, <https://www.netflix.com/EmailUnsubscribe?id=BQE0AAEBENqyIWqRNrh%2B7%2FV5HCi4iKmAgHeFZDEnVSyIsgyi0afmQoJVpj1JX60NWdqEnhgc3v9rrhZtAXKmQ753EK64gUYakH9o2rLLGZ8FOuUc7NFjeE8eVPV1VNWyPgpBek7I3PeXlxgnc7bKneIOw51NZHKVY89Q%2BChey9LRE13FZe4%2Bo5C3KPNazPc%2BK7TzskJElw15&lnktrk=EMP&g=6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&lkid=unsubscribe_link>
+X-SES-Outgoing: 2020.03.24-75.117.114.116
+Feedback-ID: 1.us-east-1.TW2kQXBPKzEfHzcyZOUFPUd4i/tuZQjQCCDIsBA/Brk=:AmazonSES
+X-IncomingHeaderCount: 23
+Return-Path:
+ 010001710db57e6f-f9850d85-346e-4249-9551-71042c80ff5b-000000@mailer.netflix.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Mar 2020 18:02:11.3011
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ca43690b-7a60-4d0b-85dc-08d7d01d79d7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ VI1EUR04FT022.eop-eur04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 3/24/2020 5:30:30 PM
+X-MS-Office365-Filtering-Correlation-Id: ca43690b-7a60-4d0b-85dc-08d7d01d79d7
+X-MS-TrafficTypeDiagnostic: VI1EUR04HT047:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 75.117.114.116
+X-SID-PRA: INFO@MAILER.NETFLIX.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-Microsoft-Antispam: BCL:1;
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Mar 2020 18:02:10.8327
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ca43690b-7a60-4d0b-85dc-08d7d01d79d7
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VI1EUR04HT047
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6563394
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2835.023
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000262)(9000001)(9030001)(5061607266)(5061608174)(4900115)(98391011)(4920090)(6253095)(4950130)(4990090);
+5vMbyqxGkdcLJjE54gSN+s9+4IVF4Bont3XePIkE6xoz2Fl8EaoRAvzruu2BeJ5M6uB51mj3PGVp+hgG8tNzbdFyYLcyxQ8civkiBOQ6gphN91hg8LrqStTaU57ONxpgBfvlX69iPOkA3O9vxOrOxvtW2jxfAr9gcuquLaao2hecdDbdX6eWcM5rwLtlb1IVp5zM3jhu/u3xb8HHRfTKfQ==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?R3dNT2pKOVdTRnYxWGdCQmFPeUsrSEIybTIvT1dlakhCSlF5L2VzNXAzQWdB?=
+ =?utf-8?B?a0pNL1NQeTVDcG01YjJPY3Z1ejkxOGxkS3lrY1pva1Z5UnFjWW9lVDJGTmRY?=
+ =?utf-8?B?ZFNqMnRweFdMeE5sRGEvaDJnRVMrdVltSEN5T21zUThTbmNIRzMwSVZPTnhG?=
+ =?utf-8?B?NDlxbnNZVERsenFMeGVtV01zWWQ0RUoxMUtyZGxWSjhLdk9UUDkvWUJ2dGtz?=
+ =?utf-8?B?eEFqcVlUUUFoc3krOWtmWWhmOUllUnZ3UmJObVlFQkJJVDVMMFdVL0lnbnlP?=
+ =?utf-8?B?UzN4SGNLZUdGT001R0VNYW5SK2ZhTGJQNXJycldrMi9mMjFObHlhTk5wWEZV?=
+ =?utf-8?B?WnZWbnA0aVRzRXJWUnJSRkdWbi9xQUg4cVRiUUtxcjVtZHRYSzhKK1F1Q2k5?=
+ =?utf-8?B?WWdRUEZzdXBKT0RBOXdJVHZkeGtaT05FOG9XbnNQSnZWU0k5bmFTbUVjV0Fm?=
+ =?utf-8?B?WTNGUDY2Qjg3cW5HSHdZV2NNSVAybjZ3R1JZcGYxZTU2Rk1HREpITnp5c1ll?=
+ =?utf-8?B?Zkg4ZXBZZFdmTUwrcjVMUU80OWNyS1p2TC93THhCdEZsVlBxNzJ6OTlsUVpo?=
+ =?utf-8?B?QTI2Wmx6ampmSmI3Y21CalE5SlYrZmdtRWZiTGV2WSszcWVSRDlpWXhPVDJz?=
+ =?utf-8?B?L0VVaFpKUWRlNUk5ZTVsc2g0SXByZkVEdHpmaDJWNFQySDhWK2cxamNrWStq?=
+ =?utf-8?B?YzVnWnFFSEgrbnNnc1QzQWY5TlZVNUEzUkNaRUw2TDIwYytyU09Bb2dWQ2Rq?=
+ =?utf-8?B?WHZVd3hadzE1YlRPSXhRNk54NElKUElRNk9NTlBGYWw1aHRNMTlDZmpKVGls?=
+ =?utf-8?B?VjA5dVZvVUFsNnk4TFRMRDhWME5EYkJIdkNKVzJ6aVpRMnpNSElVODdiY0RQ?=
+ =?utf-8?B?bHRqYUhyVzgraExMNlZTTDBzNml3aTN4eXdBSHpKMFZlTkwrV3VmQjJXRVdv?=
+ =?utf-8?B?SUc3cUxGQWxVKzBXSkhoSmNrZ0NrbzdFbDRoangveTdFSDlESEpzWGkraDBl?=
+ =?utf-8?B?Sm52NWVmalNBWHVOWGVBVUcxT01Xa3UzRk0yelVobll1NVZKMVNnWVpFc3Yr?=
+ =?utf-8?B?R2lvK3czaUhDUjdCTEVhNmgvQTl2T2NDd3ErUmMrNzhvWUNrVDFRdStvUEVC?=
+ =?utf-8?B?WWVNNndValRoWUpHUG4rSzRmYktLL1NkSjBNTStmVnJVM1ZvV2s2WjNpdm04?=
+ =?utf-8?B?QkhiMUVmVGlETlFMYzRBUXdHOWdyV2tHbWlXeURibjd4VnVXOVNrbXRERlRn?=
+ =?utf-8?B?QkRyQW5ZQ3lLak1RY0ZKSEgxVmY1MVJXMmthTVNhZTk3QUNqOUJ4c2VCOTh4?=
+ =?utf-8?B?VnJzU3hTU0hQbE9TeW0rSk81QmhwYW9CSUt4dHpaeVc0VjRLZUsvUXZHTDNn?=
+ =?utf-8?B?NFdiV2Zkd0VreTM4NDNCNlcxZVpDMzk0cURON1o5QkZ3eS9Na0NwejVka3pw?=
+ =?utf-8?B?NUFEUWc5UGxZUEErdFBEME92RXp0SWNrMTRBQld4NzNVZ2lJa1JWWG53UXlO?=
+ =?utf-8?B?ZkNSRFBrUFFrS21NdGFxc1krN2hGbTBwL01maCtJTG1VOW4xcUpaWDlvSlRw?=
+ =?utf-8?Q?j4++WLwlPiZvnyIVTpkRsja/4=3D?=
+MIME-Version: 1.0
+
+------=_Part_87580_587082350.1585072930404
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Get a first look today.=20
+
+Season 4
+
+April 1st
+
+
+Play Trailer - https://www.netflix.com/watch/81238236?trkid=3D13710079&MSG_=
+TITLE=3D81238236&lnktrk=3DEMP&g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&=
+lkid=3DPRIMARY_TRAILER_PLAY
+
+
+
+View All TV Shows & Movies
+https://www.netflix.com/browse?lnktrk=3DEMP&g=3D6A5F6B01C976E12BCF1F50C0AA5=
+062A9645262CD&lkid=3DURL_HOME
+
+-----------------------
+
+
+Questions? Visit the Help Center - https://help.netflix.com/help?lnktrk=3DE=
+MP&g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&lkid=3DURL_HELP_2
+100 Winchester Circle, Los Gatos, CA 95032, U.S.A.
+
+Unsubscribe: https://www.netflix.com/ManageSubscriptions?id=3DBQE0AAEBENqyI=
+WqRNrh%2B7%2FV5HCi4iKmAgHeFZDEnVSyIsgyi0afmQoJVpj1JX60NWdqEnhgc3v9rrhZtAXKm=
+Q753EK64gUYakH9o2rLLGZ8FOuUc7NFjeE8eVPV1VNWyPgpBek7I3PeXlxgnc7bKneIOw51NZHK=
+VY89Q%2BChey9LRE13FZe4%2Bo5C3KPNazPc%2BK7TzskJElw15&g=3D6A5F6B01C976E12BCF1=
+F50C0AA5062A9645262CD&mid=3D20792311&lkid=3DURL_UNSUB&lnktrk=3DEMP | Terms =
+of Use: https://www.netflix.com/TermsOfUse?lnktrk=3DEMP&g=3D6A5F6B01C976E12=
+BCF1F50C0AA5062A9645262CD&lkid=3DURL_TERMS | Privacy: https://www.netflix.c=
+om/PrivacyPolicy?lnktrk=3DEMP&g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&=
+lkid=3DURL_PRIVACY | Help Center: https://help.netflix.com/help?lnktrk=3DEM=
+P&g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&lkid=3DURL_HELP_3
+This message was mailed to [JohnSmlth@hotmail.com] by Netflix as part of =
+your Netflix=C2=A0membership.
+SRC: 12186_en_US
+
+
+------=_Part_87580_587082350.1585072930404
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" style=
+=3D"margin-top:0;padding:0;margin:0;background-color:rgb(0, 0, 0);"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">=20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+  <meta name=3D"format-detection" content=3D"telephone=3Dno">=20
+  <style type=3D"text/css">
+        /* START ENVELOPE CSS */
+       =20
+  @media (max-width: 500px) {
+    /* Gmail iOS hack */
+    u + .body .inbox-fix, u + .body .content-shell-table,
+    u + .body .footer-shell-table, u + .body .footer {
+      min-width: calc(100vw - 8.5vw) !important;
+    }
+   =20
+u + .body .content-padding {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .mobile-hide, .ios-hide {
+      display: none !important;
+    }
+    .desktop-hide, .desktop-hide img {
+      display: initial !important;
+    }
+    table.desktop-hide {
+      display: table !important;
+    }
+    .mobile-100w {
+      width: 100% !important;
+    }
+    .mobile-block {
+      display: block !important;
+    }
+    .mobile-left {
+      float: left !important;
+    }
+    .mobile-right {
+      float: right !important;
+    }
+    .mobile-center {
+      margin: 0 auto;
+      text-align: center !important;
+    }
+    .content-padding {
+      padding-left: 5.6% !important;
+      padding-right: 5.6% !important;
+    }
+    .inner-padding {
+      padding-left: 6% !important;
+      padding-right: 6% !important;
+    }
+    .outside-padding {
+      padding-left: 11.199999809265137% !important;
+      padding-right: 11.199999809265137% !important;
+    }
+  }
+
+  /*turn off border for iOS mobile*/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 500=
+px) {
+    .container.main-border {
+      padding: 0 !important;
+    }
+    .content-shell {
+      border: none !important;
+    }
+  }
+
+  .hide, .hide div, .hide table, .hide td, .hide tr, .hide a, .hide img {
+    display: none !important;=20
+    width: 0 !important;=20
+    height: 0 !important;=20
+    max-height: 0 !important;=20
+    line-height: 0 !important;=20
+    mso-hide: all !important;=20
+    overflow: hidden !important;=20
+    visibility: hidden !important;
+  }
+  @media yahoo {
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    table table {
+      table-layout: auto;
+    }
+  }
+  * [data-term] {
+    border-bottom: none !important;
+    pointer-events: none !important;
+  }
+  .ii a {
+    color: inherit !important;
+    text-decoration:none !important;
+  }
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  table {
+    -wings-cellpadding: 0;
+    -wings-cellspacing: 0;
+    -wings-border: 0;
+    border-spacing: 0;
+  }
+  img {
+    -ms-interpolation-mode: bicubic;
+    border: none;
+    outline: none;
+    border-collapse: collapse;
+  }
+  .empty {
+    font-size: 0;
+    line-height: 0;
+  }
+  .desktop-hide, .desktop-hide img, .desktop-hide-max, .desktop-hide-max im=
+g {
+    display:none;
+    mso-hide:all;
+  }
+  .content-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .inner-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .outer-radius {
+    border-radius: 8px;
+  }
+  .outside-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .inner-radius {
+    border-radius: 4px;
+  }
+  .gmail-fix-no-inline {
+    display:none;
+    display:none !important;
+  }
+  a {
+    color: inherit;
+  }
+  a img {
+    border-style: none;
+  }
+  .hide-link a, .iosnonlink a, .hide-link {
+    text-decoration: none !important;
+    cursor: text;
+  }
+
+  body, .container, html {
+    margin-top: 0;
+  }
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*Color Themes*/
+  body, .container, html, .container-table {
+    background-color: #000000;
+  }
+  .content-shell-table {
+    background-color: #0000000;
+  }
+
+  /*Below 4 classes dynamically assigned via envelope prop for border*/
+  .container.main-border {
+    padding: 19px 0 20px 0;
+  }
+  .container.main-border .content-shell {
+    border: 2px solid #EAECED;
+    border-radius: 8px;
+  }
+  .container.main-border .content-shell-table {
+    border-radius: 8px;
+  }
+  .container.main-border #gem-footer {
+    border-radius: 0 0 8px 8px;
+  }
+
+       =20
+       =20
+/*envelope styles*/
+/*more styles*/
+.footer-shell-table {
+background-color: #0000000;
+}
+@media (max-width: 499px) {
+.mobile-hide-max, .ios-hide-max {
+display: none !important;
+}
+.inbox-fix {
+display: none;
+}
+.desktop-hide-max, .desktop-hide-max img {
+display: initial !important;
+}
+table.content-shell-table, table.footer-shell-table, .footer {
+width: 100% !important;
+}
+}
+
+            /* END ENVELOPE CSS */
+        .gem-copy-table {
+  width: 100%;
+}
+.gem-component-image-cell img {display:block;}
+
+@media only screen and (max-width: 500px) {
+
+    .gem-component-image-cell img { width:100% !important; height:auto !imp=
+ortant; }
+}  =20
+.gem-single-button.button-1-table {
+  width: 100%;
+}
+.gem-single-button.button-1-text.button-text-light {
+  color: #FFFFFF !important;
+}
+.gem-single-button.button-1-text.button-text-dark {
+  color: #000000 !important;
+}
+.gem-single-button.button-1-text a.button-text-light {
+  color: #FFFFFF !important;
+}
+.gem-single-button.button-1-text a.button-text-dark {
+  color: #000000 !important;
+}
+.gem-single-button.button-1-text {
+  moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  text-decoration: none !important;
+  text-align:center;
+  padding: 13px 0 13px 0;
+  width: 100%;
+}
+a.gem-single-button.button-1-link {
+  text-decoration: none !important;
+}
+
+a.gem-single-button {
+  display:block;
+}
+
+@media(max-width: 500px) {
+  .gem-single-button-shell.button-mobile-flex {
+    width: 100%;
+  }
+  .gem-single-button-table {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .fixed-button-padding {
+  	padding-left: 5.6% !important;
+  	padding-right: 5.6% !important;
+  }
+}
+.gem-footer .icon {
+  padding-right: 22px;
+}
+
+.gem-footer .icon.nonMember {
+  padding-bottom: 20px;
+}
+
+.gem-footer .address {
+  padding-bottom: 20px;
+}
+
+.gem-footer .footer-links {
+  padding-bottom: 20px;
+}
+
+#gem-footer .questions, #gem-footer .footer-links a {
+  font-family: NetflixSans-Medium,Helvetica, Roboto, Segoe UI, sans-serif;
+  font-weight: 500;
+}
+
+.gem-footer .footer-links a {
+  font-family: NetflixSans-Light,Helvetica, Roboto, Segoe UI, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+#gem-footer .gem-legal, .gem-legal a, #gem-footer .hide-link, #gem-footer .=
+hide-link a,
+#gem-footer .footer-links a, #gem-footer .footer-links,
+#gem-footer .questions, #gem-footer .questions a {
+  color: #A9A6A6;
+}
+
+.gem-legal a {
+  text-decoration: underline;
+}
+
+#gem-footer .address {
+  color: #A9A6A6;
+  text-decoration: none !important;
+  cursor: text;
+}
+
+/*Conditional elements CSS*/
+.gem-legal.legal-top, .gem-legal.legal-bottom {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 499px) {
+  .gem-footer {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .gem-footer .outer-padding {
+    padding: 0  5.6% !important;
+  }
+}
+.gem-module-billboard-cell-inner-table {
+    border-radius:0px 0px 8px 8px;
+}
+
+.gem-flavor-text, .gem-date-text {
+ =20
+ =20
+ =20
+}
+.spacer {
+  font-size: 0;
+  line-height: 0;
+}
+
+@media (max-width: 500px) {
+  .mobile-block {
+    display: block !important;
+  }
+}
+/**** Global Font Styles ****/
+.gem-h0, .gem-h1, .gem-h2, .gem-h3, .gem-h4, .gem-h5, .gem-h6, .eyebrow, .b=
+old {
+  font-family: NetflixSans-Bold,Helvetica, Roboto, Segoe UI, sans-serif;
+  font-weight: 700;
+}
+
+.gem-p1, .gem-p2, .gem-legal, .gem-p3, .light, .gem-p {
+  font-family: NetflixSans-Light,Helvetica, Roboto, Segoe UI, sans-serif;
+  font-weight: 300;
+}
+
+.gem-h0 {
+  font-size: 44px;
+  line-height: 53px;
+  letter-spacing: -1px;
+}
+
+.gem-h1 {
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: -1px;
+}
+
+.gem-h2 {
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+}
+
+.gem-h3 {
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+}
+
+.gem-h4 {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.35px;
+}
+
+.gem-h5 {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.25px;
+}
+
+.gem-p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.gem-p1 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+}
+
+.gem-p2 {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.12px;
+}
+
+.gem-legal, .gem-p3 {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+}
+/* Flavor Text */
+.flavor-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #F5F5F1;
+  font-family: Helvetica, Arial, sans;
+  -wings-align: center;
+  padding: 20px 0 0 0;
+  font-weight: bold;
+}
+
+.flavor-text a {color: #F5F5F1;}
+
+/* Date Text */
+.date-text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #F5F5F1;
+  font-family: Helvetica, Arial, sans;
+  -wings-align: center;
+  padding: 5px 0 0 0;
+  font-weight: bold;
+}
+
+.date-text a {color: #F5F5F1;}
+/* Button */
+.button-shell {
+  padding: 20px 44px 0 44px;
+}
+.button.red td {
+  color:#ffffff;
+  font-size:14px;
+  font-weight:bold;
+  background-color:#E50914;
+  text-align:center;
+  padding:12px 22px;
+  border-radius:4px;
+  max-width:250px;
+}
+.button.red .button-link {
+  color:#ffffff;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+  font-family: Helvetica, Arial, sans;
+}
+@media (max-width: 400px){
+  .button-shell {
+    padding: 22px 26px 0 26px !important;
+  }
+  .button td, .button-link {
+    font-size: 13px !important;
+  }
+}
+
+       =20
+            /* Ability to override mobile styles declared in content script=
+s */
+       =20
+        @media screen {@font-face {font-family: NetflixSans-Medium;src: url=
+('https://assets.nflxext.com/us/email/fonts/NetflixSans-Medium-Opt.woff2');=
+}@font-face {font-family: NetflixSans-Light;src: url('https://assets.nflxex=
+t.com/us/email/fonts/NetflixSans-Light-Opt.woff2');}@font-face {font-family=
+: NetflixSans-Bold;src: url('https://assets.nflxext.com/us/email/fonts/Netf=
+lixSans-Bold-Opt.woff2');}}
+    </style>=20
+ </head>=20
+ <body class=3D"body" style=3D"margin-top:0;padding:0;margin:0;background-c=
+olor:rgb(0, 0, 0);">=20
+  <!--/* 100% Size Container -->=20
+  <!-- Preview Text -->=20
+  <div class=3D"hide" style=3D"display:none;width:0;height:0;max-height:0;l=
+ine-height:0;mso-hide:all;overflow:hidden;visibility:hidden;">
+   Get a first look today.
+   <!-- preview text hack -->=20
+   <div class=3D"hide" style=3D"display: none; max-height: 0px; overflow:hi=
+dden;display:none;width:0;height:0;max-height:0;line-height:0;mso-hide:all;=
+overflow:hidden;visibility:hidden;">
+    &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C=20
+   </div>
+  </div>=20
+  <!-- End Preview Text -->=20
+  <table class=3D"container-table -important" width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"border-spacing:0;background-col=
+or:rgb(0, 0, 0);">=20
+   <tbody>
+    <tr>=20
+     <td class=3D"container " align=3D"center" style=3D"margin-top:0;backgr=
+ound-color:rgb(0, 0, 0);">=20
+      <!--/* Hero + Content -->=20
+      <table class=3D"content-shell-table" width=3D"500" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-spacing:0;">=20
+       <tbody>
+        <tr>=20
+         <td>=20
+          <!--legal_content_footer--> <img src=3D"http://beacon.netflix.com=
+/img/BAQgBEAEa0AJ2THSsgosiINnMMOKPnivWTnmXMOFgnbh1eJCkol3UBNf5Psj3hNwMCpWDp=
+lyn9Ky7MYr9CH7Tj3tffniTlWd8KJpdFK5D0RzINjE-Rvh_Db2sR_JvA07f8l8hq7YqmCedUKDu=
+aNeppYMgkQqMon8pneAymvQWPkYrw52VygCvnsxmjE9c6q0MhRRVBY0ie4Sik7fUXJtACR0lPW2=
+oB67RH0CwR09LSVz50lniAOXISpTsfLceZaOGagD18CwFJ1Klq1SbURwG5T2Q0FcDl_Yi_Ywwog=
+kiE0qQ2sm4lByC7T8G_IJQP8qoh2p0dtQt6X9Tm_wCf3LD4_HVbWTUfhnN-wkbRyZkUD35u6BlK=
+DBmc7SCBkSP3hDMs2vmknQhHRuqLHbmtrTNVvAoY0LmBkn-xlrC_xiHvKK9Yfxg50315-1l0WxZ=
+tQznQFCr9BiluBY." style=3D"display:block;-ms-interpolation-mode:bicubic;bor=
+der:none;outline:none;border-collapse:collapse;" border=3D"0"> </td>=20
+        </tr>=20
+        <!--/* Content -->=20
+        <tr>=20
+         <td class=3D"content-shell" align=3D"center">=20
+          <table class=3D"gem-module-billboard-table" align=3D"center" widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border=
+-spacing:0;">=20
+           <tbody>
+            <tr>=20
+             <td class=3D"gem-module-billboard-image-cell" align=3D"center"=
+>=20
+              <table class=3D"gem-component-image" width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-spacing:0;">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"gem-component-image-cell _none" align=3D"cent=
+er" style=3D"padding-top:0px;;"> <a href=3D"https://www.netflix.com/title/8=
+0179138?trkid=3D13710079&amp;MSG_TITLE=3D80179138&amp;lnktrk=3DEMP&amp;g=3D=
+6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DPRIMARY_HERO" target=3D=
+"_blank" style=3D"color:inherit;"> <img alt=3D"Nailed It!" src=3D"https://d=
+nm.nflximg.net/api/v6/FiBQtKtbffS36QbSEEjDXZzuhEs/AAAAC4QGxZChSc32SugHiml4N=
+dRjQ4Kv-MEzUKgXxqYdsDZLR4uAn99cPTh_8eyQWfHjnK9OoPVTddGB993N5IKKgd7r7kC4Tn-S=
+Eksk9zLrLJKYUInpAUBmcSpMxgB9C46sdoyr2FzoMy7kqz0h-nJIDzkm98W_V7K-K34CCwukGI1=
+uSodvUBIv7HwJ6HSmBxlJV80WxVwXp_8k_JTPUFPnvToy8Unjyg.jpg?r=3D023" width=3D"5=
+00" border=3D"0" style=3D"border-radius:0px;box-shadow:none; max-width: 500=
+px;display:block;-ms-interpolation-mode:bicubic;border:none;outline:none;bo=
+rder-collapse:collapse;border-style:none;"> </a> </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+            <tr>=20
+             <td class=3D"gem-module-billboard-image-cell" align=3D"center"=
+>=20
+              <table class=3D"gem-module-billboard-cell-inner-table" bgcolo=
+r=3D"000000" align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"border-spacing:0;border-radius:0px 0px 8px 8px=
+;">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"gem-module-billboard-body-cell">=20
+                  <table class=3D"gem-copy-table" align=3D"center" style=3D=
+"width:100%;border-spacing:0;" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"gem-copy gem-h5 content-padding" align=3D=
+"center" style=3D"padding-top:32px; color:#F5F5F1;padding-left:20px;padding=
+-right:20px;font-family:NetflixSans-Bold, Helvetica, Roboto, Segoe UI, sans=
+-serif;font-weight:700;font-size:14px;line-height:17px;letter-spacing:-0.2p=
+x;"> Season 4 </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table>=20
+                  <table class=3D"gem-copy-table" align=3D"center" style=3D=
+"width:100%;border-spacing:0;" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"gem-copy gem-h4 content-padding" align=3D=
+"center" style=3D"padding-top:8px; color:#F5F5F1;padding-left:20px;padding-=
+right:20px;font-family:NetflixSans-Bold, Helvetica, Roboto, Segoe UI, sans-=
+serif;font-weight:700;font-size:18px;line-height:22px;letter-spacing:-0.35p=
+x;"> April 1st </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table>=20
+                  <table class=3D"gem-single-button-shell button-mobile-fle=
+x" width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"border-spacing:0;">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"gem-single-button button-1-shell inner-pa=
+dding" style=3D"padding-top:32px;padding-left:20px;padding-right:20px;" ali=
+gn=3D"center">=20
+                      <table class=3D"gem-single-button button-1-table" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-spacing:0;wid=
+th:100%;">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"gem-single-button button-1-text gem-h=
+5 button-text-light" style=3D"background-color: #e50914; border:solid 1px #=
+e50914;color:rgb(255, 255, 255);font-family:NetflixSans-Bold, Helvetica, Ro=
+boto, Segoe UI, sans-serif;font-weight:700;font-size:14px;line-height:17px;=
+letter-spacing:-0.2px;moz-border-radius:4px;-webkit-border-radius:4px;borde=
+r-radius:4px;text-decoration:none;text-align:center;padding:13px 0 13px 0;w=
+idth:100%;"> <a class=3D"gem-single-button gem-filled-button-a button-text-=
+light gem-h5" href=3D"https://www.netflix.com/watch/81238236?trkid=3D137100=
+79&amp;MSG_TITLE=3D81238236&amp;lnktrk=3DEMP&amp;g=3D6A5F6B01C976E12BCF1F50=
+C0AA5062A9645262CD&amp;lkid=3DPRIMARY_TRAILER_PLAY" style=3D"text-decoratio=
+n:none;display:block;font-family:NetflixSans-Bold, Helvetica, Roboto, Segoe=
+ UI, sans-serif;font-weight:700;font-size:14px;line-height:17px;letter-spac=
+ing:-0.2px;color:inherit;color:rgb(255, 255, 255);">Play Trailer</a> </td>=
+=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <table class=3D"gem-copy-table" align=3D"center" style=3D"width:1=
+00%;border-spacing:0;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=20
+           <tbody>
+            <tr>=20
+             <td class=3D"gem-copy gem-h5 content-padding" align=3D"center"=
+ style=3D"padding-top:16px; color:#F5F5F1;padding-left:20px;padding-right:2=
+0px;font-family:NetflixSans-Bold, Helvetica, Roboto, Segoe UI, sans-serif;f=
+ont-weight:700;font-size:14px;line-height:17px;letter-spacing:-0.2px;"> <a =
+href=3D"https://www.netflix.com/browse?lnktrk=3DEMP&amp;g=3D6A5F6B01C976E12=
+BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_HOME" style=3D"text-decoration:non=
+e;color:inherit;">View All TV Shows &amp; Movies</a> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!-- Spacer -->=20
+          <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-spacing:0;">=20
+           <tbody>
+            <tr>=20
+             <td class=3D"spacer-1 spacer" style=3D"padding: 20px 0 0 0;fon=
+t-size:0;line-height:0;"> &nbsp; </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!-- End Spacer -->=20
+          <table id=3D"gem-footer" class=3D"gem-footer mobile-100w" bgcolor=
+=3D"#0000000" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"border-spacing:0;">=20
+           <tbody>
+            <tr>=20
+             <td class=3D"outside-padding" style=3D"padding-top:40px;paddin=
+g-left:40px;padding-right:40px;">=20
+              <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-spacing:0;">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"icon" width=3D"1%" valign=3D"top" style=3D"pa=
+dding-right:22px;"> <a href=3D"https://www.netflix.com/browse?lnktrk=3DEMP&=
+amp;g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_HOME_2" tar=
+get=3D"_blank" style=3D"color:inherit;"> <img alt=3D"Netflix" src=3D"http:/=
+/cdn.nflximg.com/us/email/gem/nflx.png" width=3D"24" border=3D"0" style=3D"=
+-ms-interpolation-mode:bicubic;border:none;outline:none;border-collapse:col=
+lapse;border-style:none;"> </a> </td>=20
+                 <td>=20
+                  <table class=3D"footer-shell" width=3D"100%" valign=3D"to=
+p" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-spacing=
+:0;">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"gem-p1 questions" style=3D"font-family:Ne=
+tflixSans-Medium, Helvetica, Roboto, Segoe UI, sans-serif;font-weight:500;f=
+ont-family:NetflixSans-Light, Helvetica, Roboto, Segoe UI, sans-serif;font-=
+weight:300;font-size:14px;line-height:18px;letter-spacing:-0.25px;color:rgb=
+(169, 166, 166);"> Questions? Visit the <a href=3D"https://help.netflix.com=
+/help?lnktrk=3DEMP&amp;g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lki=
+d=3DURL_HELP_2" style=3D"color:rgb(169, 166, 166);color:inherit;"><span cla=
+ss=3D"footer-link-bold">Help Center</span></a> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"gem-legal address" style=3D"font-size:11p=
+x;line-height:14px;letter-spacing:-0.1px;font-family:NetflixSans-Light, Hel=
+vetica, Roboto, Segoe UI, sans-serif;font-weight:300;color:rgb(169, 166, 16=
+6);text-decoration:none;cursor:text;color:rgb(169, 166, 166);padding-bottom=
+:20px;"> <span class=3D"hide-link" style=3D"text-decoration:none;cursor:tex=
+t;color:rgb(169, 166, 166);"><a href=3D"https://www.netflix.com/browse?lnkt=
+rk=3DEMP&amp;g=3D6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_HO=
+ME_3" style=3D"text-decoration:none;cursor:text;text-decoration:underline;c=
+olor:rgb(169, 166, 166);color:inherit;">100 Winchester Circle, Los Gatos, C=
+A 95032, U.S.A.</a></span> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"footer-links" style=3D"padding-bottom:20p=
+x;color:rgb(169, 166, 166);"> <a class=3D"footer-link nowrap" href=3D"https=
+://www.netflix.com/ManageSubscriptions?id=3DBQE0AAEBENqyIWqRNrh%2B7%2FV5HCi=
+4iKmAgHeFZDEnVSyIsgyi0afmQoJVpj1JX60NWdqEnhgc3v9rrhZtAXKmQ753EK64gUYakH9o2r=
+LLGZ8FOuUc7NFjeE8eVPV1VNWyPgpBek7I3PeXlxgnc7bKneIOw51NZHKVY89Q%2BChey9LRE13=
+FZe4%2Bo5C3KPNazPc%2BK7TzskJElw15&amp;g=3D6A5F6B01C976E12BCF1F50C0AA5062A96=
+45262CD&amp;mid=3D20792311&amp;lkid=3DURL_UNSUB&amp;lnktrk=3DEMP" style=3D"=
+font-family:NetflixSans-Medium, Helvetica, Roboto, Segoe UI, sans-serif;fon=
+t-weight:500;font-family:NetflixSans-Light, Helvetica, Roboto, Segoe UI, sa=
+ns-serif;font-size:12px;line-height:20px;text-decoration:underline;color:rg=
+b(169, 166, 166);color:inherit;">Unsubscribe</a><br><a class=3D"footer-link=
+ nowrap" href=3D"https://www.netflix.com/TermsOfUse?lnktrk=3DEMP&amp;g=3D6A=
+5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_TERMS" style=3D"font-=
+family:NetflixSans-Medium, Helvetica, Roboto, Segoe UI, sans-serif;font-wei=
+ght:500;font-family:NetflixSans-Light, Helvetica, Roboto, Segoe UI, sans-se=
+rif;font-size:12px;line-height:20px;text-decoration:underline;color:rgb(169=
+, 166, 166);color:inherit;">Terms of Use</a><br><a class=3D"footer-link now=
+rap" href=3D"https://www.netflix.com/PrivacyPolicy?lnktrk=3DEMP&amp;g=3D6A5=
+F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_PRIVACY" style=3D"font=
+-family:NetflixSans-Medium, Helvetica, Roboto, Segoe UI, sans-serif;font-we=
+ight:500;font-family:NetflixSans-Light, Helvetica, Roboto, Segoe UI, sans-s=
+erif;font-size:12px;line-height:20px;text-decoration:underline;color:rgb(16=
+9, 166, 166);color:inherit;">Privacy</a><br><a class=3D"footer-link nowrap"=
+ href=3D"https://help.netflix.com/help?lnktrk=3DEMP&amp;g=3D6A5F6B01C976E12=
+BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_HELP_3" style=3D"font-family:Netfl=
+ixSans-Medium, Helvetica, Roboto, Segoe UI, sans-serif;font-weight:500;font=
+-family:NetflixSans-Light, Helvetica, Roboto, Segoe UI, sans-serif;font-siz=
+e:12px;line-height:20px;text-decoration:underline;color:rgb(169, 166, 166);=
+color:inherit;">Help Center</a> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"gem-legal mail-to" style=3D"font-size:11p=
+x;line-height:14px;letter-spacing:-0.1px;font-family:NetflixSans-Light, Hel=
+vetica, Roboto, Segoe UI, sans-serif;font-weight:300;color:rgb(169, 166, 16=
+6);"> This message was mailed to <span class=3D"hide-link" style=3D"text-de=
+coration:none;cursor:text;color:rgb(169, 166, 166);"><a href=3D"https://www=
+.netflix.com/browse?lnktrk=3DEMP&amp;g=3D6A5F6B01C976E12BCF1F50C0AA5062A964=
+5262CD&amp;lkid=3DURL_HOME_4" style=3D"text-decoration:none;cursor:text;tex=
+t-decoration:underline;color:rgb(169, 166, 166);color:inherit;">[ngibson227=
+8@hotmail.com]</a></span> by Netflix as part of your Netflix&nbsp;membershi=
+p.<br> SRC: <a href=3D"https://help.netflix.com/help?lnktrk=3DEMP&amp;g=3D6=
+A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=3DURL_HELP_5" class=3D"foo=
+ter-no-link hide-link" style=3D"text-decoration:none;cursor:text;text-decor=
+ation:underline;color:rgb(169, 166, 166);color:inherit;">12186_en_US</a> </=
+td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+               </tbody>
+              </table>=20
+              <!-- Spacer -->=20
+              <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-spacing:0;">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"spacer-2 spacer" style=3D"padding: 40px 0 0 0=
+;font-size:0;line-height:0;"> &nbsp; </td>=20
+                </tr>=20
+               </tbody>
+              </table>=20
+              <!-- End Spacer --> </td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>
+      </table> </td>=20
+    </tr>=20
+   </tbody>
+  </table>=20
+  <!-- Fix for Gmail on iOS -->=20
+  <div class=3D"mobile-hide-max gmail-fix-no-inline" style=3D"white-space:n=
+owrap; font:15px courier; line-height:0;">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=20
+  </div>  =20
+ </body>
+</html>=
+
+------=_Part_87580_587082350.1585072930404--

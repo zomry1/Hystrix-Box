@@ -36,19 +36,20 @@ Tools:
 
 
 More:
-* 64Base validator - ☑
+* 64Base validator - ☑️
 * Frequency analysis
-* strings  - ☑
+* strings  - ☑️
 * file  - In work
-* recursive compression
+* recursive compression - ☑️
 * file header repairs
-* LSB Stego  - ☑
+* LSB Stego  - ☑️
 * hidden files
 * EXIFTOOL
 * All Cyberchef tools
 * Email header analysis
 * Fix when english like this H1 0R instead hi or (english with symbols and numbers)
 * Analyze sound files
+* PDF previous changes viewer
 
 ### Requirements
 * requests
