@@ -19,3 +19,4 @@ https://www.fileformat.info/format/tiff/sample/index.htm
 
 Check optimization (tuple instead lists)
 string compare
+Check filename extension first and use his check function

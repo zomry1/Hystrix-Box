@@ -38,11 +38,11 @@ Tools:
 More:
 * find == at the end so it's base64
 * Frequency analysis
-* strings
-* file
+* strings  - ☑
+* file  - In work
 * recursive compression
 * file header repairs
-* LSB Stego
+* LSB Stego  - ☑
 * hidden files
 * EXIFTOOL
 * Analysis email header
