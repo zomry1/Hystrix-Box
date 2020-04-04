@@ -39,4 +39,4 @@ def getFileExtension(filePath):
 	return None
 
 
-print(getFileExtension("Examples/ELF.elf"))
+print(getFileExtension("Examples/WAV.wav"))
