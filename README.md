@@ -15,7 +15,7 @@ Tools:
 * Reverse - ☑️
 * Vigenere
 * Caesar  (ROT - Shift) - ☑️
-* phone keypad (T9)
+* phone keypad (T9) - ☑️
 * Hashes (md5,md4,sha1,sha256,sha384,sha512,ntlm) - ☑
 * Base64 - ☑️
 * All bases
@@ -36,7 +36,7 @@ Tools:
 
 
 More:
-* find == at the end so it's base64
+* 64Base validator - ☑
 * Frequency analysis
 * strings  - ☑
 * file  - In work
