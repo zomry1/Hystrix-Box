@@ -3,11 +3,15 @@ def leet_translator(text):
                  'm8': 'mate',
                  'tht': "that",
                  'j00': "you",
+                 '(V)': 'm',
+                 '$': 's',
+                 '!': 'i',
                  '0': 'o',
                  '1': 'i',
                  '3': 'e',
                  '5': 's',
                  '4': 'a',
+                 '6': 'b',
                  '7': 't', }
     temp_str = text
     for replaced_char in temp_str:
