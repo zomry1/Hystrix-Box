@@ -1,3 +1,5 @@
+import sys
+
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
@@ -23,17 +25,44 @@ ARGS_STR = """
               /____/                                             
 """
 
+
+class MyParser(argparse.ArgumentParser):
+    def __init__(self,
+                 prog=None,
+                 usage=None,
+                 description=None,
+                 epilog=None,
+                 parents=[],
+                 formatter_class=argparse.HelpFormatter,
+                 prefix_chars='-',
+                 fromfile_prefix_chars=None,
+                 argument_default=None,
+                 conflict_handler='error',
+                 add_help=True,
+                 allow_abbrev=True):
+        super().__init__(prog,usage,description,epilog,parents,formatter_class,prefix_chars,fromfile_prefix_chars,
+                    argument_default,conflict_handler,add_help,allow_abbrev)
+        self.problem = False
+
+    # the default status on the parent class is 0, we're
+    # changing it to be 1 here ...
+    def exit(self, status=1, message=None):
+        if message:
+            self._print_message(message, sys.stderr)
+        self.problem = True
+        return
+
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
 
-def app_starter():
-    #  ARGPARSE SECTION
+def app_starter(arguments):
+
 
     # intro of argparse
-    parser = argparse.ArgumentParser(usage='%(prog)s [input] [-s]',
+    parser = MyParser(usage='%(prog)s [input] [-s]',
                                      description=LOGO + '\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                                                         'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
                                      epilog='Just boring epilogue',
@@ -73,7 +102,9 @@ def app_starter():
     #  GET ARGS SECTION
 
     # Read arguments
-    args = parser.parse_args()
+    args = parser.parse_args(args=arguments)
+    if parser.problem:
+        return ''
 
     # Get the ciphertext from CLI or file
     if args.ciphertext is not None:
@@ -85,7 +116,7 @@ def app_starter():
     if args.specific is not None:
         decoder = DECODERS_MAP[args.specific]
         print(decoder(cipher_txt))
-        exit()
+        return
     # Create the evaluators string
     functions_string = ['F', 'F', 'F']
     flag_format = ''
@@ -108,10 +139,10 @@ def app_starter():
     plaintexts += ASCIIDecoder(cipher_txt)
     plaintexts += Base64Decoder(cipher_txt)
     plaintexts += ReverseDecoder(cipher_txt)
-    print(evaluate(plaintexts, functions_string, flag_format)[0])
+    return evaluate(plaintexts, functions_string, flag_format)[0]
 
 
-app_starter()
+#app_starter()
 
 '''
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.

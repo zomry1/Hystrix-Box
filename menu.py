@@ -1,5 +1,5 @@
-from consolemenu import *
-from consolemenu.items import *
+
+from main import app_starter
 
 LOGO = """
 ██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
@@ -9,25 +9,22 @@ LOGO = """
 ██║  ██║   ██║   ███████║   ██║   ██║  ██║██║██╔╝ ██╗     ██████╔╝╚██████╔╝██╔╝ ██╗
 ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
 """
+
+
+def decrypter():
+    print(app_starter('-h'.split()))
+    inputText = ''
+    while inputText != 'exit':
+        inputText = input('>>')
+        print(app_starter(inputText.split()))
+
+
+option = ''
 print(LOGO)
-menu = ConsoleMenu('Main Menu')
+print('input exit to exit')
+while option != 'exit':
+    option = input('Main Menu\n1) Decrypter\n2) Forencisc\n3) Extractor\n>>')
+    if option == '1' or option == 'Decrypter' or option == 'decrypter':
+        decrypter()
 
-decoderMenu = ConsoleMenu('Ultimate Decrypter')
-decoderFileMenu = ConsoleMenu('Ultimate Decrypter', 'Read from file')
-decoderStringMenu = ConsoleMenu('Ultimate Decrypter', 'Read from string')
 
-decoderItem = SubmenuItem('Ultimate Decrypter', decoderMenu, menu)
-decoderFile = SubmenuItem('file', decoderFileMenu, decoderMenu)
-decoderText = SubmenuItem('text', decoderStringMenu, decoderMenu)
-
-ForensicsMenu = MenuItem('Ultimate Forensics')
-ExtractorMenu = MenuItem('Ultimate Extractor')
-
-menu.append_item(decoderItem)
-menu.append_item(ForensicsMenu)
-menu.append_item(ExtractorMenu)
-
-decoderMenu.append_item(decoderFile)
-decoderMenu.append_item(decoderText)
-
-menu.show()
