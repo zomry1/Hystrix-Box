@@ -15,9 +15,7 @@ Main Menu\n
   1) Decrypter\n
   2) Forensics\n
   3) Extractor\n
-In order to exit , type: exit
-
->>
+In order to exit , type: exit\n
 '''
 
 
@@ -48,7 +46,7 @@ def menu_run():
     while True:
         print(LOGO)
         print(menu_txt)
-        option = input()
+        option = input('>>')
         if option == 'exit':
             exit()
         if option == '1' or option == 'Decrypter' or option == 'decrypter':
