@@ -1,3 +1,5 @@
+import logging
+
 from Checkers.letter_check import evaluation
 from Checkers.word_check import evaluateSentence
 from Checkers.flag_check import checkFormat
@@ -46,15 +48,19 @@ def evaluate(plaintexts, functionsString, formatString=''):
 
     # Evaluate with letterCheck
     if functionsString[0] == 'T':
+        logging.info('Evaluate results by letter analysis')
         evaluate_fun(evaluation, plaintexts, scoresDictionary, False)
 
     # Evaluate with wordCheck
     if functionsString[1] == 'T':
+        logging.info('Evaluate results by word analysis')
         evaluate_fun(evaluateSentence, plaintexts, scoresDictionary)
 
     # Evaluate with formatCheck
     if functionsString[2] == 'T' and formatString != '':
+        logging.info('Evaluate results by flag search')
         evaluate_fun(checkFormat, plaintexts, scoresDictionary, formatString=formatString)
 
+    logging.info('Sort results')
     scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)
     return scoresDictionary
