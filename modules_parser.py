@@ -8,6 +8,7 @@ from Decoders.ReverseCipher import ReverseDecoder
 ###########################
 from Extractors.emailExtractor import extractEmail
 from Extractors.ipExtractor import extractIP
+from Extractors.md5Extractor import extractMD5
 from Extractors.urlExtractor import extractUrl
 ###########################
 from personal_parser import MyParser, ParserException
@@ -30,11 +31,14 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder,
-                'hash': hashesDecoder}
+                'hash': hashesDecoder
+                }
 
 EXTRACTOR_MAP = {'url': extractUrl,
                  'ip': extractIP,
-                 'email': extractEmail}
+                 'email': extractEmail,
+                 'md5': extractMD5
+                 }
 
 
 ###########################
@@ -155,7 +159,6 @@ def decrypter_module(arguments):
     plaintexts += ReverseDecoder(cipher_txt)
     logging.info('Decode ciphertext by hash decoder')
     plaintexts += hashesDecoder(cipher_txt)
-
 
     # Create result string
     result = ''
