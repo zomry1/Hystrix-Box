@@ -33,5 +33,4 @@ class MyParser(argparse.ArgumentParser):
         if self.parse_known_args(args, namespace) is None:
             return
         else:
-            super().parse_args(args, namespace)
-            return
+            return super().parse_args(args, namespace)
