@@ -24,12 +24,9 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'reverse': ReverseDecoder}
 
 
-###########################
 
 
-###########################
-
-def decryptor_module(arguments):
+def decrypter_module(arguments):
     # Create argumentParser
     parser = MyParser(
         description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
@@ -69,6 +66,10 @@ def decryptor_module(arguments):
                         help='Evaluate results by flag format check',
                         metavar='FORMAT')
 
+    parser.add_argument('-n',
+                        help='Number of results to be printed (sorted by descending score',
+                        metavar='NUMBER',
+                        default=1)
     # Verbose flag
     parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
 
@@ -123,8 +124,7 @@ def decryptor_module(arguments):
     logging.info('Decode ciphertext by Reverse decoder')
     plaintexts += ReverseDecoder(cipher_txt)
 
-    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0] \
-           + '\n\n In order to go back to menu , type: back'
+    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0]
 
 
 def forensics_module(arguments):

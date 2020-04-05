@@ -1,4 +1,4 @@
-from modules_parser import decryptor_module, forensics_module, extractor_module
+from modules_parser import decrypter_module, forensics_module, extractor_module
 from os import system, name
 
 ###########################
@@ -42,7 +42,7 @@ def module_run(module):
             exit()
         if input_txt == 'back':
             return
-        print(module(input_txt.split()))
+        print(module(input_txt.split()) + '\n\nIn order to go back to menu , type: back')
 
 
 ###########################
@@ -58,7 +58,7 @@ def menu_run():
         # menu options
         if option == '1' or option == 'Decrypter' or option == 'decrypter':
             clear()
-            module_run(decryptor_module)
+            module_run(decrypter_module)
         elif option == '2' or option == 'Forensics' or option == 'forensics':
             clear()
             module_run(forensics_module)
