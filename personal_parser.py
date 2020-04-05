@@ -1,6 +1,8 @@
 import argparse
 import sys
 
+class ParserException(Exception):
+    pass
 
 class MyParser(argparse.ArgumentParser):
     def __init__(self,
@@ -27,6 +29,7 @@ class MyParser(argparse.ArgumentParser):
         if message:
             self._print_message(message, sys.stderr)
         self.problem = True
+        raise ParserException
         return
 
     def parse_args(self, args=None, namespace=None):

@@ -1,5 +1,4 @@
 import logging
-
 ###########################
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
@@ -10,7 +9,7 @@ from Extractors.emailExtractor import extractEmail
 from Extractors.ipExtractor import extractIP
 from Extractors.urlExtractor import extractUrl
 ###########################
-from personal_parser import MyParser
+from personal_parser import MyParser, ParserException
 from evaluator import evaluate
 ###########################
 import argparse
@@ -93,7 +92,10 @@ def decrypter_module(arguments):
                         metavar='FILENAME')
 
     # parse arguments
-    args = parser.parse_args(args=arguments)
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
     # If there was problem while parsing arguments
     if parser.problem:
         return ''

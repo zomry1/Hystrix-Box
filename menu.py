@@ -34,7 +34,7 @@ def clear():
 
 
 def module_run(module):
-    print(module('-h'.split()))
+    module('-h'.split())
     while True:
         input_txt = input('>>')
         clear()
@@ -42,7 +42,9 @@ def module_run(module):
             exit()
         if input_txt == 'back':
             return
-        print(module(input_txt.split()) + '\n\nIn order to go back to menu , type: back')
+        result = module(input_txt.split())
+        if result != None:
+            print(result + '\n\nIn order to go back to menu , type: back')
 
 
 ###########################
