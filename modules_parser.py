@@ -1,13 +1,21 @@
 import logging
 
-
+###########################
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
 from Decoders.ReverseCipher import ReverseDecoder
+###########################
+from Extractors.emailExtractor import extractEmail
+from Extractors.ipExtractor import extractIP
+from Extractors.urlExtractor import extractUrl
+###########################
 from personal_parser import MyParser
 from evaluator import evaluate
+###########################
 import argparse
+
+###########################
 
 ARGS_STR = """
     ___                                                 __       
@@ -23,8 +31,12 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
+EXTRACTOR_MAP = {'url': extractUrl,
+                 'ip': extractIP,
+                 'email': extractEmail}
 
 
+###########################
 
 def decrypter_module(arguments):
     # Create argumentParser
@@ -132,4 +144,61 @@ def forensics_module(arguments):
 
 
 def extractor_module(arguments):
-    pass  # TODO
+    # Create argumentParser
+    parser = MyParser(
+        description='\nThe Ultimate Extractor, Drop your RAW DATA FILE here\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter,
+        add_help=False
+    )
+
+    parser.version = '1.1'
+
+    # Add input flag required (string or filename)
+    input_group = parser.add_mutually_exclusive_group(required=True)
+
+    # input_group.add_argument('-c', '--ciphertext')
+    input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
+
+    # Help flag
+    input_group.add_argument('-h', '--help', action='help')
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # Specific decoder flag
+    parser.add_argument('-e', '--extractor',
+                        help='Choose specific extractor, {%(choices)s}',
+                        choices=EXTRACTOR_MAP.keys(),
+                        metavar='EXTRACTOR')
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # parse arguments
+    args = parser.parse_args(args=arguments)
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # Get the file data
+    if args.filename is not None:
+        data = args.filename.read()
+        # Extractor part
+        # logging.info('Used Extractor: ' + args.specific)
+        extractor = EXTRACTOR_MAP[args.extractor]
+        result = 'Result:\n'
+        str_list = list(list(extractor(data)))
+        # special case
+        if args.extractor == 'url':
+            for x in str_list:
+                result += (x[0] + '\n')
+        else:
+            for x in str_list:
+                result += (x + '\n')
+        return result
+    # not sure about this
+    return ""
