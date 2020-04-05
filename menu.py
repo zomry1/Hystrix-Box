@@ -29,8 +29,8 @@ def clear():
         _ = system('clear')
 
 
-def decrypter():
-    print(decryptor_module('-h'.split()))
+def tool(module):
+    print(module('-h'.split()))
     while True:
         input_txt = input('>>')
         clear()
@@ -38,7 +38,7 @@ def decrypter():
             exit()
         if input_txt == 'back':
             return
-        print(decryptor_module(input_txt.split()))
+        print(module(input_txt.split()))
 
 
 def menu_run():
@@ -51,7 +51,7 @@ def menu_run():
             exit()
         if option == '1' or option == 'Decrypter' or option == 'decrypter':
             clear()
-            decrypter()
+            tool(decryptor_module)
 
 
 menu_run()
