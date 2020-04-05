@@ -78,12 +78,19 @@ def decrypter_module(arguments):
                         help='Evaluate results by flag format check',
                         metavar='FORMAT')
 
+    # Number of results to print
     parser.add_argument('-n',
+                        type=int,
                         help='Number of results to be printed (sorted by descending score',
                         metavar='NUMBER',
                         default=1)
     # Verbose flag
     parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # Output to file
+    parser.add_argument('-o', '--output',
+                        help='Output file to save the results',
+                        metavar='FILENAME')
 
     # parse arguments
     args = parser.parse_args(args=arguments)
@@ -136,7 +143,19 @@ def decrypter_module(arguments):
     logging.info('Decode ciphertext by Reverse decoder')
     plaintexts += ReverseDecoder(cipher_txt)
 
-    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0]
+    # Create result string
+    result = ''
+    evaluatedPlaintexts = evaluate(plaintexts, functions_string, flag_format)[0:args.n]
+    for i, plaintext in enumerate(evaluatedPlaintexts):
+        result += '[' + str(i + 1) + '] Result: ' + plaintext[0] + '\n\n'
+
+    # Save results to file if correct arguments was given
+    if args.output:
+        with open(args.output, 'w') as file:
+            file.write(result)
+
+    return result
+
 
 
 def forensics_module(arguments):
