@@ -1,4 +1,4 @@
-from main import app_starter
+from Decryptor import decryptor_module
 from os import system, name
 
 LOGO = """
@@ -16,20 +16,22 @@ def clear():
     # for windows
     if name == 'nt':
         _ = system('cls')
-
         # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
 
 
 def decrypter():
-    print(app_starter('-h'.split()))
+    print(decryptor_module('-h'.split()))
     while True:
         inputText = input('>>')
         clear()
         if inputText == 'exit':
+            exit()
+        if inputText == 'back':
             return
-        print(app_starter(inputText.split()))
+        print(decryptor_module(inputText.split()))
+
 
 clear()
 while True:

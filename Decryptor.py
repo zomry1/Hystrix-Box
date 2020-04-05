@@ -7,15 +7,6 @@ from Decoders.ReverseCipher import ReverseDecoder
 from evaluator import evaluate
 import argparse
 
-LOGO = """
-██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
-██║  ██║╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔══██╗██║╚██╗██╔╝     ██╔══██╗██╔═══██╗╚██╗██╔╝
-███████║ ╚████╔╝ ███████╗   ██║   ██████╔╝██║ ╚███╔╝█████╗██████╔╝██║   ██║ ╚███╔╝ 
-██╔══██║  ╚██╔╝  ╚════██║   ██║   ██╔══██╗██║ ██╔██╗╚════╝██╔══██╗██║   ██║ ██╔██╗ 
-██║  ██║   ██║   ███████║   ██║   ██║  ██║██║██╔╝ ██╗     ██████╔╝╚██████╔╝██╔╝ ██╗
-╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
-"""
-
 ARGS_STR = """
     ___                                                 __       
    /   |   _____ ____ _ __  __ ____ ___   ___   ____   / /_ _____
@@ -40,8 +31,9 @@ class MyParser(argparse.ArgumentParser):
                  conflict_handler='error',
                  add_help=True,
                  allow_abbrev=True):
-        super().__init__(prog,usage,description,epilog,parents,formatter_class,prefix_chars,fromfile_prefix_chars,
-                    argument_default,conflict_handler,add_help,allow_abbrev)
+        super().__init__(prog, usage, description, epilog, parents, formatter_class, prefix_chars,
+                         fromfile_prefix_chars,
+                         argument_default, conflict_handler, add_help, allow_abbrev)
         self.problem = False
 
     # the default status on the parent class is 0, we're
@@ -52,31 +44,29 @@ class MyParser(argparse.ArgumentParser):
         self.problem = True
         return
 
+
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
                 'reverse': ReverseDecoder}
 
 
-def app_starter(arguments):
-
-
+def decryptor_module(arguments):
     # intro of argparse
     parser = MyParser(usage='%(prog)s [input] [-s]',
-                                     description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
-                                                        'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-                                     epilog='Just boring epilogue',
-                                     formatter_class=argparse.RawTextHelpFormatter)
+                      description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
+                                  'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+                      epilog='Just boring epilogue',
+                      formatter_class=argparse.RawTextHelpFormatter)
     # removes the annoying title
     parser.version = '1.1'
-    parser._optionals.title = None
+    #parser._optionals.title = None
     # ciphertext (input) arg
 
     # add arguments to argparse
     input_group = parser.add_mutually_exclusive_group(required=True)
     input_group.add_argument('-c', '--ciphertext')
     input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
-    # parser.add_argument('ciphertext')
 
     # Specific decoder flag
     parser.add_argument('-s', '--specific',
@@ -140,9 +130,6 @@ def app_starter(arguments):
     plaintexts += Base64Decoder(cipher_txt)
     plaintexts += ReverseDecoder(cipher_txt)
     return evaluate(plaintexts, functions_string, flag_format)[0]
-
-
-#app_starter()
 
 '''
 ciphertext = """Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
