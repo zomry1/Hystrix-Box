@@ -202,7 +202,10 @@ def extractor_module(arguments):
     #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
 
     # parse arguments
-    args = parser.parse_args(args=arguments)
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
     # If there was problem while parsing arguments
     if parser.problem:
         return ''

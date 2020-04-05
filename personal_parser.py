@@ -31,9 +31,10 @@ class MyParser(argparse.ArgumentParser):
         self.problem = True
         raise ParserException
         return
-
+'''
     def parse_args(self, args=None, namespace=None):
         if self.parse_known_args(args, namespace) is None:
             return
         else:
             return super().parse_args(args, namespace)
+'''
