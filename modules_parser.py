@@ -149,20 +149,16 @@ def extractor_module(arguments):
         description='\nThe Ultimate Extractor, Drop your RAW DATA FILE here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
         epilog='Just boring epilogue',
-        formatter_class=argparse.RawTextHelpFormatter,
-        add_help=False
+        formatter_class=argparse.RawTextHelpFormatter
     )
 
     parser.version = '1.1'
 
-    # Add input flag required (string or filename)
-    input_group = parser.add_mutually_exclusive_group(required=True)
 
-    # input_group.add_argument('-c', '--ciphertext')
-    input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
+    parser.add_argument('-f', '--filename',
+                        type=argparse.FileType('r'),
+                        required=True)
 
-    # Help flag
-    input_group.add_argument('-h', '--help', action='help')
     # Version flag
     parser.add_argument('--version', action='version')
 
@@ -170,7 +166,8 @@ def extractor_module(arguments):
     parser.add_argument('-e', '--extractor',
                         help='Choose specific extractor, {%(choices)s}',
                         choices=EXTRACTOR_MAP.keys(),
-                        metavar='EXTRACTOR')
+                        metavar='EXTRACTOR',
+                        required=True)
 
     # # Verbose flag
     #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
