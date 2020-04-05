@@ -67,6 +67,7 @@ def decrypter_module(arguments):
                         metavar='FORMAT')
 
     parser.add_argument('-n',
+                        type=int,
                         help='Number of results to be printed (sorted by descending score',
                         metavar='NUMBER',
                         default=1)
@@ -124,7 +125,11 @@ def decrypter_module(arguments):
     logging.info('Decode ciphertext by Reverse decoder')
     plaintexts += ReverseDecoder(cipher_txt)
 
-    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0]
+    result = ''
+    evaluatedPlaintexts = evaluate(plaintexts, functions_string, flag_format)[0:args.n]
+    for i, plaintext in enumerate(evaluatedPlaintexts):
+        result += '[' + str(i+1) +'] Result: ' + plaintext[0] + '\n'
+    return result
 
 
 def forensics_module(arguments):
