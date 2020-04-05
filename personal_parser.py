@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 
 class MyParser(argparse.ArgumentParser):
@@ -33,3 +34,4 @@ class MyParser(argparse.ArgumentParser):
             return
         else:
             super().parse_args(args, namespace)
+            return

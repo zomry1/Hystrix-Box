@@ -1,5 +1,5 @@
 import logging
-import sys
+
 
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
