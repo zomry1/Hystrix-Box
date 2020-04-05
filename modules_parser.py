@@ -155,19 +155,17 @@ def extractor_module(arguments):
     parser.version = '1.1'
 
 
-    parser.add_argument('-f', '--filename',
-                        type=argparse.FileType('r'),
-                        required=True)
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
 
     # Version flag
     parser.add_argument('--version', action='version')
 
     # Specific decoder flag
-    parser.add_argument('-e', '--extractor',
+    parser.add_argument('extractor',
                         help='Choose specific extractor, {%(choices)s}',
                         choices=EXTRACTOR_MAP.keys(),
-                        metavar='EXTRACTOR',
-                        required=True)
+                        metavar='EXTRACTOR')
 
     # # Verbose flag
     #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
