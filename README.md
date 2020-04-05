@@ -1,4 +1,4 @@
-#Ultimate CTF Tool
+# Ultimate CTF Tool
 Tools:
 * Ultimate Decrypter
 * Ultimate Forensics
@@ -54,3 +54,9 @@ More:
 ### Requirements
 * requests
 * PIL
+
+
+* add number of results and output arguments to parser
+* Create validator for ciphers and use them
+* add all built tools to menu
+* add extensions for file command

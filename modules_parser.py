@@ -53,6 +53,13 @@ class MyParser(argparse.ArgumentParser):
         return
 
 
+    def parse_args(self, args=None, namespace=None):
+        if self.parse_known_args(args, namespace) == None:
+            return
+        else:
+            super().parse_args(args,namespace)
+
+
 ###########################
 
 def decryptor_module(arguments):
