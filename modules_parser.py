@@ -3,6 +3,7 @@ import logging
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
+from Decoders.HashCipher import hashesDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 ###########################
 from Extractors.emailExtractor import extractEmail
@@ -28,7 +29,8 @@ ARGS_STR = """
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
-                'reverse': ReverseDecoder}
+                'reverse': ReverseDecoder,
+                'hash': hashesDecoder}
 
 EXTRACTOR_MAP = {'url': extractUrl,
                  'ip': extractIP,
@@ -113,7 +115,14 @@ def decrypter_module(arguments):
     if args.specific is not None:
         logging.info('Use specific decoder: ' + args.specific)
         decoder = DECODERS_MAP[args.specific]
-        return decoder(cipher_txt)
+        results = decoder(cipher_txt)
+        if results == []:
+            return 'No result found'
+
+        result = ''
+        for i, plaintext in enumerate(results):
+            result += '[' + str(i + 1) + '] Result: ' + plaintext + '\n\n'
+        return result
 
     # If specific evaluator set (else use all evaluators)
     functions_string = ['F', 'F', 'F']
@@ -144,6 +153,9 @@ def decrypter_module(arguments):
     plaintexts += Base64Decoder(cipher_txt)
     logging.info('Decode ciphertext by Reverse decoder')
     plaintexts += ReverseDecoder(cipher_txt)
+    logging.info('Decode ciphertext by hash decoder')
+    plaintexts += hashesDecoder(cipher_txt)
+
 
     # Create result string
     result = ''
