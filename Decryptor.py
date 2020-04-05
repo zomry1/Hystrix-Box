@@ -54,11 +54,12 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
 
 def decryptor_module(arguments):
     # Create argumentParser
-    parser = MyParser(usage='%(prog)s [input] [-s]',
+    parser = MyParser(
                       description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                                   'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
                       epilog='Just boring epilogue',
                       formatter_class=argparse.RawTextHelpFormatter,
+                      add_help=False
                       )
 
     parser.version = '1.1'
@@ -67,6 +68,10 @@ def decryptor_module(arguments):
     input_group = parser.add_mutually_exclusive_group(required=True)
     input_group.add_argument('-c', '--ciphertext')
     input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
+    # Help flag
+    input_group.add_argument('-h', '--help', action='help')
+    # Version flag
+    parser.add_argument('--version', action='version')
 
     # Specific decoder flag
     parser.add_argument('-s', '--specific',
@@ -86,9 +91,6 @@ def decryptor_module(arguments):
     parser.add_argument('-cf', '--checkFlag',
                         help='Evaluate results by flag format check',
                         metavar='FORMAT')
-
-    # Version flag
-    parser.add_argument('--version', action='version')
 
     # Verbose flag
     parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
