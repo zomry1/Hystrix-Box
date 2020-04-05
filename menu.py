@@ -1,4 +1,4 @@
-from Decryptor import decryptor_module
+from modules_parser import decryptor_module, forensics_module, extractor_module
 from os import system, name
 
 LOGO = """
@@ -29,7 +29,7 @@ def clear():
         _ = system('clear')
 
 
-def tool(module):
+def module_run(module):
     print(module('-h'.split()))
     while True:
         input_txt = input('>>')
@@ -49,9 +49,16 @@ def menu_run():
         option = input('>>')
         if option == 'exit':
             exit()
+        # menu options
         if option == '1' or option == 'Decrypter' or option == 'decrypter':
             clear()
-            tool(decryptor_module)
+            module_run(decryptor_module)
+        elif option == '2' or option == 'Forensics' or option == 'forensics':
+            clear()
+            module_run(forensics_module)
+        elif option == '3' or option == 'Extractor' or option == 'extractor':
+            clear()
+            module_run(extractor_module)
 
 
 menu_run()

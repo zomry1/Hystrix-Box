@@ -55,12 +55,12 @@ DECODERS_MAP = {'ascii': ASCIIDecoder,
 def decryptor_module(arguments):
     # Create argumentParser
     parser = MyParser(
-                      description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
-                                  'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-                      epilog='Just boring epilogue',
-                      formatter_class=argparse.RawTextHelpFormatter,
-                      add_help=False
-                      )
+        description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter,
+        add_help=False
+    )
 
     parser.version = '1.1'
 
@@ -148,3 +148,10 @@ def decryptor_module(arguments):
 
     return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0]
 
+
+def forensics_module(arguments):
+    pass  # TODO
+
+
+def extractor_module(arguments):
+    pass  # TODO
