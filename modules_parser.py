@@ -159,7 +159,6 @@ def decrypter_module(arguments):
     return result
 
 
-
 def forensics_module(arguments):
     pass  # TODO
 
@@ -174,7 +173,6 @@ def extractor_module(arguments):
     )
 
     parser.version = '1.1'
-
 
     parser.add_argument('filename',
                         type=argparse.FileType('r'))
