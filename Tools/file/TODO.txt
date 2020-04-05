@@ -15,6 +15,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 file samples:
 https://www.fileformat.info/format/tiff/sample/index.htm
 
+wiki:
+https://en.wikipedia.org/wiki/List_of_file_signatures
 
 
 Check optimization (tuple instead lists)

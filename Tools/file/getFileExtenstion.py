@@ -40,4 +40,5 @@ def getFileExtension(filePath):
 	return None
 
 
-print(getFileExtension("Examples/File"))
+#print(getFileExtension("Examples/File"))
+#print(getFileExtension("Examples/ZIP.zip"))
