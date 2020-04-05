@@ -17,6 +17,13 @@ ARGS_STR = """
               /____/                                             
 """
 
+DECODERS_MAP = {'ascii': ASCIIDecoder,
+                'base64': Base64Decoder,
+                'caesar': CaesarDecoder,
+                'reverse': ReverseDecoder}
+
+
+###########################
 
 class MyParser(argparse.ArgumentParser):
     def __init__(self,
@@ -46,11 +53,7 @@ class MyParser(argparse.ArgumentParser):
         return
 
 
-DECODERS_MAP = {'ascii': ASCIIDecoder,
-                'base64': Base64Decoder,
-                'caesar': CaesarDecoder,
-                'reverse': ReverseDecoder}
-
+###########################
 
 def decryptor_module(arguments):
     # Create argumentParser
@@ -146,7 +149,8 @@ def decryptor_module(arguments):
     logging.info('Decode ciphertext by Reverse decoder')
     plaintexts += ReverseDecoder(cipher_txt)
 
-    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0]
+    return 'Result:\n' + evaluate(plaintexts, functions_string, flag_format)[0][0] \
+           + '\n\n In order to go back to menu , type: back'
 
 
 def forensics_module(arguments):

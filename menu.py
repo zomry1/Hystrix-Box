@@ -1,6 +1,8 @@
 from modules_parser import decryptor_module, forensics_module, extractor_module
 from os import system, name
 
+###########################
+
 LOGO = """
 ██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
 ██║  ██║╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔══██╗██║╚██╗██╔╝     ██╔══██╗██╔═══██╗╚██╗██╔╝
@@ -18,6 +20,8 @@ Main Menu\n
 In order to exit , type: exit\n
 '''
 
+
+###########################
 
 # define our clear function
 def clear():
@@ -40,6 +44,8 @@ def module_run(module):
             return
         print(module(input_txt.split()))
 
+
+###########################
 
 def menu_run():
     clear()
