@@ -1,5 +1,4 @@
-from extenstion import Extension
-
+from Tools.file.extenstion import Extension
 
 class Jpeg(Extension):
 	EXTENSION = 'jpg'

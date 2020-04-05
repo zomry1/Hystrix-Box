@@ -1,5 +1,6 @@
-from extenstionDB import EXTENSIONS
 import time
+
+from Tools.file.extenstionDB import EXTENSIONS
 
 HEADER_BYTES = 262
 
@@ -39,4 +40,4 @@ def getFileExtension(filePath):
 	return None
 
 
-print(getFileExtension("Examples/WAV.wav"))
+print(getFileExtension("Examples/File"))

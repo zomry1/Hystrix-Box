@@ -1,4 +1,4 @@
-from extenstion import Extension
+from Tools.file.extenstion import Extension
 
 # https://www.iana.org/assignments/media-types/application/vnd.tcpdump.pcap
 class Pcap(Extension):
