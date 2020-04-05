@@ -63,7 +63,7 @@ def app_starter(arguments):
 
     # intro of argparse
     parser = MyParser(usage='%(prog)s [input] [-s]',
-                                     description=LOGO + '\nThe Ultimate Decoder, Drop your Cipher-text here\n'
+                                     description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                                                         'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
                                      epilog='Just boring epilogue',
                                      formatter_class=argparse.RawTextHelpFormatter)
