@@ -10,6 +10,16 @@ LOGO = """
 ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
 """
 
+menu_txt = '''
+Main Menu\n
+  1) Decrypter\n
+  2) Forensics\n
+  3) Extractor\n
+In order to exit , type: exit
+
+>>
+'''
+
 
 # define our clear function
 def clear():
@@ -24,22 +34,26 @@ def clear():
 def decrypter():
     print(decryptor_module('-h'.split()))
     while True:
-        inputText = input('>>')
+        input_txt = input('>>')
         clear()
-        if inputText == 'exit':
+        if input_txt == 'exit':
             exit()
-        if inputText == 'back':
+        if input_txt == 'back':
             return
-        print(decryptor_module(inputText.split()))
+        print(decryptor_module(input_txt.split()))
 
 
-clear()
-while True:
-    print(LOGO)
-    print('type exit to exit')
-    option = input('Main Menu\n1) Decrypter\n2) Forencisc\n3) Extractor\n>>')
-    if option == 'exit':
-        exit()
-    if option == '1' or option == 'Decrypter' or option == 'decrypter':
-        clear()
-        decrypter()
+def menu_run():
+    clear()
+    while True:
+        print(LOGO)
+        print(menu_txt)
+        option = input()
+        if option == 'exit':
+            exit()
+        if option == '1' or option == 'Decrypter' or option == 'decrypter':
+            clear()
+            decrypter()
+
+
+menu_run()
