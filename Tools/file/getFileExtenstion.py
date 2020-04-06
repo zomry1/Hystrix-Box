@@ -40,5 +40,5 @@ def getFileExtension(filePath):
 	return None
 
 
-#print(getFileExtension("Examples/File"))
+print(getFileExtension("Examples/TAR.tar"))
 #print(getFileExtension("Examples/ZIP.zip"))

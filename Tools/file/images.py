@@ -172,27 +172,6 @@ class Bmp(Extension):
 				buf[1] == 0x4D)
 
 
-# https://www.iana.org/assignments/media-types/image/vnd.adobe.photoshop
-class Psd(Extension):
-	EXTENSION = 'psd'
-	MIME = 'image/vnd.adobe.photoshop'
-	DESCRIPTION = 'Photoshop image file'
-
-	def __init__(self):
-		super(Psd, self).__init__(
-			extension=Psd.EXTENSION,
-			mime=Psd.MIME,
-			description=Psd.DESCRIPTION
-		)
-
-	def check(self, buf):
-		return (len(buf) > 4 and
-				buf[0] == 0x38 and
-				buf[1] == 0x42 and
-				buf[2] == 0x50 and
-				buf[3] == 0x53)
-
-
 # https://tools.ietf.org/html/rfc4047
 class Fits(Extension):
 	EXTENSION = 'fits'

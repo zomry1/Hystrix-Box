@@ -18,7 +18,12 @@ https://www.fileformat.info/format/tiff/sample/index.htm
 wiki:
 https://en.wikipedia.org/wiki/List_of_file_signatures
 
+Video samples:
+https://standaloneinstaller.com/blog/big-list-of-sample-videos-for-testers-124.html
 
 Check optimization (tuple instead lists)
 string compare
 Check filename extension first and use his check function
+
+fonts
+
