@@ -61,6 +61,7 @@ More:
 
 
 TODO:
+* Fix evaluators names (functions, files)
 * Create validator for ciphers and use them
 * Fix exit call in getFileExtension
 * add all built tools to menu

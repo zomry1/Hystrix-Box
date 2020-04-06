@@ -1,8 +1,10 @@
 import argparse
 import sys
 
+
 class ParserException(Exception):
     pass
+
 
 class MyParser(argparse.ArgumentParser):
     def __init__(self,
@@ -31,6 +33,8 @@ class MyParser(argparse.ArgumentParser):
         self.problem = True
         raise ParserException
         return
+
+
 '''
     def parse_args(self, args=None, namespace=None):
         if self.parse_known_args(args, namespace) is None:
