@@ -33,6 +33,8 @@ ARGS_STR = """
               /____/                                             
 """
 
+EPILOGUE_STR = 'Made by zomry1 and Matssu ©'
+
 DECODERS_MAP = {'ascii': ASCIIDecoder,
                 'base64': Base64Decoder,
                 'caesar': CaesarDecoder,
@@ -55,7 +57,7 @@ def decrypter_module(arguments):
         prog='',
         description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter,
         add_help=False
     )
@@ -184,13 +186,14 @@ def decrypter_module(arguments):
 def forensics_module(arguments):
     pass  # TODO
 
+
 def file_module(arguments):
     # Create argumentParser
     parser = MyParser(
         prog='',
         description='\nDetermine the type of a file\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 
@@ -221,13 +224,14 @@ def file_module(arguments):
     if args.filename is not None:
         getFileExtension(args.filename)
 
+
 def strings_module(arguments):
     # Create argumentParser
     parser = MyParser(
         prog='',
         description='\nFinds and prints text strings embedded in binary files such as executables.\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 
@@ -261,11 +265,11 @@ def strings_module(arguments):
     if parser.problem:
         return ''
 
-
     # Get the file data
     if args.filename is not None:
         results = strings(args.filename.name, args.n)
         print(results)
+
 
 def zip_extract_module(arguments):
     # Create argumentParser
@@ -273,7 +277,7 @@ def zip_extract_module(arguments):
         prog='',
         description='\nExtract recursive zip files\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 
@@ -306,11 +310,11 @@ def zip_extract_module(arguments):
     if parser.problem:
         return ''
 
-
     # Get the file data
     if args.filename is not None:
         extract_recursive(args.filename.name, args.output)
         print('Done extracting')
+
 
 def stegoLSB_module(arguments):
     # Create argumentParser
@@ -318,7 +322,7 @@ def stegoLSB_module(arguments):
         prog='',
         description='\nTry to decode data from image by LSB encode\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 
@@ -345,11 +349,11 @@ def stegoLSB_module(arguments):
     if parser.problem:
         return ''
 
-
     # Get the file data
     if args.filename is not None:
         results = decode(args.filename.name)
         print(results)
+
 
 def emailAnalyzer_module(arguments):
     # Create argumentParser
@@ -357,7 +361,7 @@ def emailAnalyzer_module(arguments):
         prog='',
         description='\nAnalyze email file\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 
@@ -384,11 +388,11 @@ def emailAnalyzer_module(arguments):
     if parser.problem:
         return ''
 
-
     # Get the file data
     if args.filename is not None:
         results = email_analyzer(args.filename.name)
         print(results)
+
 
 def extractor_module(arguments):
     # Create argumentParser
@@ -396,7 +400,7 @@ def extractor_module(arguments):
         prog='',
         description='\nThe Ultimate Extractor, Drop your RAW DATA FILE here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog='Just boring epilogue',
+        epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
 

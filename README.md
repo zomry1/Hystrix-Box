@@ -66,4 +66,5 @@ TODO:
 * add file output option to tools
 * collect forensics tools to one Ultimate tool
 * add json output format for email analyzer
+* add leetDecoder to Ultimate decoder
 * add extensions 
