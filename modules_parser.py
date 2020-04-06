@@ -11,6 +11,10 @@ from Extractors.ipExtractor import extractIP
 from Extractors.md5Extractor import extractMD5
 from Extractors.urlExtractor import extractUrl
 ###########################
+from Tools.file.getFileExtenstion import getFileExtension
+###########################
+from Tools.recursiveDecompression import extract_recursive
+from Tools.strings import strings
 from personal_parser import MyParser, ParserException
 from evaluator import evaluate
 ###########################
@@ -46,6 +50,7 @@ EXTRACTOR_MAP = {'url': extractUrl,
 def decrypter_module(arguments):
     # Create argumentParser
     parser = MyParser(
+        prog='',
         description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
         epilog='Just boring epilogue',
@@ -177,10 +182,138 @@ def decrypter_module(arguments):
 def forensics_module(arguments):
     pass  # TODO
 
+def file_module(arguments):
+    # Create argumentParser
+    parser = MyParser(
+        prog='',
+        description='\nDetermine the type of a file\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.version = '1.0'
+
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
+
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # parse arguments
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # Get the file data
+    if args.filename is not None:
+        getFileExtension(args.filename)
+
+def strings_module(arguments):
+    # Create argumentParser
+    parser = MyParser(
+        prog='',
+        description='\nFinds and prints text strings embedded in binary files such as executables.\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.version = '1.0'
+
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
+
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # Number of results to print
+    parser.add_argument('-n',
+                        type=int,
+                        help='Print sequences of characters that are at least min-len characters long, Default 4',
+                        metavar='NUMBER',
+                        default=4)
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # parse arguments
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+
+    # Get the file data
+    if args.filename is not None:
+        results = strings(args.filename.name, args.n)
+        print(results)
+
+def zip_extract_module(arguments):
+    # Create argumentParser
+    parser = MyParser(
+        prog='',
+        description='\nExtract recursive zip files\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.version = '1.0'
+
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
+
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # Number of results to print
+    parser.add_argument('-o', '--output',
+                        help='Output path for the extracted files',
+                        metavar='PATH',
+                        default='')
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # parse arguments
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+
+    # Get the file data
+    if args.filename is not None:
+        extract_recursive(args.filename.name, args.output)
+        print('Done extracting')
 
 def extractor_module(arguments):
     # Create argumentParser
     parser = MyParser(
+        prog='',
         description='\nThe Ultimate Extractor, Drop your RAW DATA FILE here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
         epilog='Just boring epilogue',
