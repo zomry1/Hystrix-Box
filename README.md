@@ -62,9 +62,11 @@ More:
 
 TODO:
 * Create validator for ciphers and use them
+* Fix exit call in getFileExtension
 * add all built tools to menu
 * add file output option to tools
 * collect forensics tools to one Ultimate tool
 * add json output format for email analyzer
-* add leetDecoder to Ultimate decoder
+* add leet Decoder to Ultimate decoder
+* Change extractor module to extract all if not specific extractor chosen 
 * add extensions 

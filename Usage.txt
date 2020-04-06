@@ -1,0 +1,5 @@
+decrypter:
+-f ExampleFiles/decrypter.txt
+
+extractor:
+ExampleFiles/extractor.txt ip

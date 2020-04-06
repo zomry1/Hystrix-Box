@@ -28,7 +28,7 @@ def get_header(filePath):
 		return None
 
 
-@timing
+#@timing
 def getFileExtension(filePath):
 	header = get_header(filePath)
 	if not header:

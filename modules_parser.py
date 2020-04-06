@@ -11,6 +11,9 @@ from Extractors.ipExtractor import extractIP
 from Extractors.md5Extractor import extractMD5
 from Extractors.urlExtractor import extractUrl
 ###########################
+from Parsers import createDecrypterParser, createFileParser, createStringParser, createZipExtractParser, \
+    createStegoLSBParser, createExtractorParser, DECODERS_MAP, EXTRACTOR_MAP, \
+    createEmailAnalyzerParser
 from Tools.emailAnalyzer import email_analyzer
 from Tools.file.getFileExtenstion import getFileExtension
 ###########################
@@ -19,105 +22,46 @@ from Tools.stegoLSB import decode
 from Tools.strings import strings
 from personal_parser import MyParser, ParserException
 from evaluator import evaluate
-###########################
-import argparse
 
 ###########################
 
-ARGS_STR = """
-    ___                                                 __       
-   /   |   _____ ____ _ __  __ ____ ___   ___   ____   / /_ _____
-  / /| |  / ___// __ `// / / // __ `__ \ / _ \ / __ \ / __// ___/
- / ___ | / /   / /_/ // /_/ // / / / / //  __// / / // /_ (__  ) 
-/_/  |_|/_/    \__, / \__,_//_/ /_/ /_/ \___//_/ /_/ \__//____/  
-              /____/                                             
-"""
-
-EPILOGUE_STR = 'Made by zomry1 and Matssu ©'
-
-DECODERS_MAP = {'ascii': ASCIIDecoder,
-                'base64': Base64Decoder,
-                'caesar': CaesarDecoder,
-                'reverse': ReverseDecoder,
-                'hash': hashesDecoder
-                }
-
-EXTRACTOR_MAP = {'url': extractUrl,
-                 'ip': extractIP,
-                 'email': extractEmail,
-                 'md5': extractMD5
-                 }
+# Create parser
+decrypterParser = createDecrypterParser()
+fileParser = createFileParser()
+stringParser = createStringParser
+zipExtractParser = createZipExtractParser()
+stegoLSBParser = createStegoLSBParser()
+emailAnalyzerParser = createEmailAnalyzerParser()
+extractorParser = createExtractorParser()
 
 
-###########################
-
-def decrypter_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter,
-        add_help=False
-    )
-
-    parser.version = '1.1'
-
-    # Add input flag required (string or filename)
-    input_group = parser.add_mutually_exclusive_group(required=True)
-    input_group.add_argument('-c', '--ciphertext')
-    input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
-    # Help flag
-    input_group.add_argument('-h', '--help', action='help')
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # Specific decoder flag
-    parser.add_argument('-s', '--specific',
-                        help='Choose specific decoder, {%(choices)s}',
-                        choices=DECODERS_MAP.keys(),
-                        metavar='DECODER')
-
-    # Evaluators flags
-    parser.add_argument('-cl', '--checkLetter',
-                        help='Evaluate results by letter analysis check',
-                        action='store_true')
-
-    parser.add_argument('-cw', '--checkWord',
-                        help='Evaluate results by word analysis check',
-                        action='store_true')
-
-    parser.add_argument('-cf', '--checkFlag',
-                        help='Evaluate results by flag format check',
-                        metavar='FORMAT')
-
-    # Number of results to print
-    parser.add_argument('-n',
-                        type=int,
-                        help='Number of results to be printed (sorted by descending score',
-                        metavar='NUMBER',
-                        default=1)
-    # Verbose flag
-    parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # Output to file
-    parser.add_argument('-o', '--output',
-                        help='Output file to save the results',
-                        metavar='FILENAME')
-
+def basic_module(arguments, parser, func):
     # parse arguments
     try:
         args = parser.parse_args(args=arguments)
     except ParserException:
+        parser.problem = False
         return
     # If there was problem while parsing arguments
     if parser.problem:
+        parser.problem = False
         return ''
 
     if args.verbose:
         logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
 
+    # Run module to get result
+    result = func(args)
+
+    # Save results to file if correct arguments was given
+    if args.output:
+        with open(args.output, 'w') as file:
+            file.write(result)
+
+    return result
+
+
+def decrypter_function(args):
     # Get the ciphertext from CLI or file
     if args.ciphertext is not None:
         cipher_txt = args.ciphertext
@@ -175,264 +119,72 @@ def decrypter_module(arguments):
     for i, plaintext in enumerate(evaluatedPlaintexts):
         result += '[' + str(i + 1) + '] Result: ' + plaintext[0] + '\n\n'
 
-    # Save results to file if correct arguments was given
-    if args.output:
-        with open(args.output, 'w') as file:
-            file.write(result)
-
     return result
 
 
-def forensics_module(arguments):
-    pass  # TODO
+def decrypter_module(arguments):
+    result = basic_module(arguments, decrypterParser, decrypter_function)
+    return result
+
+
+def file_function(args):
+    # Get the file data
+    if args.filename is not None:
+        return str(getFileExtension(args.filename))
 
 
 def file_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nDetermine the type of a file\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
+    result = basic_module(arguments, fileParser, file_function)
+    return result
 
-    parser.version = '1.0'
 
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
+def strings_function(args):
     # Get the file data
     if args.filename is not None:
-        getFileExtension(args.filename)
+        return strings(args.filename.name, args.n)
 
 
 def strings_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nFinds and prints text strings embedded in binary files such as executables.\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
-
-    parser.version = '1.0'
-
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # Number of results to print
-    parser.add_argument('-n',
-                        type=int,
-                        help='Print sequences of characters that are at least min-len characters long, Default 4',
-                        metavar='NUMBER',
-                        default=4)
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
-    # Get the file data
-    if args.filename is not None:
-        results = strings(args.filename.name, args.n)
-        print(results)
+    result = basic_module(arguments, stringParser, strings_function)
+    return result
 
 
-def zip_extract_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nExtract recursive zip files\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
-
-    parser.version = '1.0'
-
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # Number of results to print
-    parser.add_argument('-o', '--output',
-                        help='Output path for the extracted files',
-                        metavar='PATH',
-                        default='')
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
+def zip_extract_function(args):
     # Get the file data
     if args.filename is not None:
         extract_recursive(args.filename.name, args.output)
-        print('Done extracting')
+        return 'Done extracting'
+
+
+def zip_extract_module(arguments):
+    result = basic_module(arguments, zipExtractParser, zip_extract_function)
+    return result
+
+
+def stegoLSB_function(args):
+    # Get the file data
+    if args.filename is not None:
+        return decode(args.filename.name)
 
 
 def stegoLSB_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nTry to decode data from image by LSB encode\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
-
-    parser.version = '1.0'
-
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
-    # Get the file data
-    if args.filename is not None:
-        results = decode(args.filename.name)
-        print(results)
+    result = basic_module(arguments, stegoLSBParser, stegoLSB_function)
+    return result
 
 
-def emailAnalyzer_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nAnalyze email file\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
-
-    parser.version = '1.0'
-
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
+def emailAnalyzer_function(args):
     # Get the file data
     if args.filename is not None:
         results = email_analyzer(args.filename.name)
         print(results)
 
 
-def extractor_module(arguments):
-    # Create argumentParser
-    parser = MyParser(
-        prog='',
-        description='\nThe Ultimate Extractor, Drop your RAW DATA FILE here\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
-        epilog=EPILOGUE_STR,
-        formatter_class=argparse.RawTextHelpFormatter
-    )
+def emailAnalyzer_module(arguments):
+    result = basic_module(arguments, emailAnalyzerParser, emailAnalyzer_function)
+    return result
 
-    parser.version = '1.1'
 
-    parser.add_argument('filename',
-                        type=argparse.FileType('r'))
-
-    # Version flag
-    parser.add_argument('--version', action='version')
-
-    # Specific decoder flag
-    parser.add_argument('extractor',
-                        help='Choose specific extractor, {%(choices)s}',
-                        choices=EXTRACTOR_MAP.keys(),
-                        metavar='EXTRACTOR')
-
-    # # Verbose flag
-    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
-
-    # parse arguments
-    try:
-        args = parser.parse_args(args=arguments)
-    except ParserException:
-        return
-    # If there was problem while parsing arguments
-    if parser.problem:
-        return ''
-
-    # if args.verbose:
-    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
-
+def extractor_function(args):
     # Get the file data
     if args.filename is not None:
         data = args.filename.read()
@@ -451,3 +203,12 @@ def extractor_module(arguments):
         return result
     # not sure about this
     return ""
+
+
+def extractor_module(arguments):
+    result = basic_module(arguments, extractorParser, extractor_function)
+    return result
+
+
+def forensics_module(arguments):
+    pass  # TODO

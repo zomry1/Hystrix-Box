@@ -1,11 +1,11 @@
-from modules_parser import decrypter_module, forensics_module, extractor_module, file_module, strings_module, \
-    zip_extract_module, stegoLSB_module, emailAnalyzer_module
 from os import system, name
 from consolemenu import *
 from consolemenu.items import *
 import consolemenu
 
 ###########################
+from modules_parser import decrypter_module, extractor_module, file_module, strings_module, zip_extract_module, \
+    stegoLSB_module, emailAnalyzer_module
 
 LOGO = """
 ██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
