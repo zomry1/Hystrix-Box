@@ -1,5 +1,7 @@
 from modules_parser import decrypter_module, forensics_module, extractor_module
 from os import system, name
+from consolemenu import *
+from consolemenu.items import *
 
 ###########################
 
@@ -48,7 +50,7 @@ def module_run(module):
 
 
 ###########################
-
+'''
 def menu_run():
     clear()
     while True:
@@ -70,3 +72,21 @@ def menu_run():
 
 
 menu_run()
+'''
+
+menu_main = ConsoleMenu(LOGO)
+
+# Create 2 tools selection
+item_decrypter = FunctionItem('Ultimate Decrypter', module_run, [decrypter_module])
+item_extractor = FunctionItem('Ultimate Extractor', module_run, [extractor_module])
+
+# Create sub-menu for forensics
+menu_forensics = SelectionMenu(['File', 'String', 'Stego LSB', 'Hidden In Image', 'Email Analyzer', 'Recursive '
+                                                                                                    'Decompression'])
+item_forensics = SubmenuItem('Ultimate Forensics', menu_forensics, menu_main)
+
+menu_main.append_item(item_decrypter)
+menu_main.append_item(item_extractor)
+menu_main.append_item(item_forensics)
+
+menu_main.show()

@@ -39,7 +39,7 @@ More:
 * 64Base validator - ☑️
 * Frequency analysis
 * strings  - ☑️
-* file  - In work
+* file  - - ☑️
 * recursive compression - ☑️
 * file header repairs
 * LSB Stego  - ☑️
@@ -47,15 +47,17 @@ More:
 * EXIFTOOL
 * All Cyberchef tools
 * Email header analysis
-* Fix when english like this H1 0R instead hi or (english with symbols and numbers)
+* Fix when english like this H1 0R instead hi or (english with symbols and numbers) - ☑️
 * Analyze sound files
 * PDF previous changes viewer
+* Filesystem images
+* Memory dumps
 
 ### Requirements
 * requests
 * PIL
-
+* pyaudio
+* numpy
 
 * Create validator for ciphers and use them
 * add all built tools to menu
-* add extensions for file command
