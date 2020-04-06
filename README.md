@@ -59,5 +59,11 @@ More:
 * pyaudio
 * numpy
 
+
+TODO:
 * Create validator for ciphers and use them
 * add all built tools to menu
+* add file output option to tools
+* collect forensics tools to one Ultimate tool
+* add json output format for email analyzer
+* add extensions 

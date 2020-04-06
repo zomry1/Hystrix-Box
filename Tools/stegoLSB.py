@@ -39,8 +39,11 @@ def decode(filename):
                     extracted_bin.append(pixel[n] & 1)  # Get value
 
     data = "".join([str(x) for x in extracted_bin]).rstrip('0')  # Get string of bits and remove trailing zeros
-    return bits2string(data)
+    return bits2string(data)[0:20]
 
 
+'''
+#Run example#
 encode('hiomryking', 'image.png')
 print(decode('encoded_image.png'))
+'''

@@ -1,5 +1,5 @@
 import base64
-from Utils.base64Validator import checkBase64Format
+from Validators.base64Validator import checkBase64Format
 
 
 def Base64Decoder(ciphertext):

@@ -11,9 +11,11 @@ from Extractors.ipExtractor import extractIP
 from Extractors.md5Extractor import extractMD5
 from Extractors.urlExtractor import extractUrl
 ###########################
+from Tools.emailAnalyzer import email_analyzer
 from Tools.file.getFileExtenstion import getFileExtension
 ###########################
 from Tools.recursiveDecompression import extract_recursive
+from Tools.stegoLSB import decode
 from Tools.strings import strings
 from personal_parser import MyParser, ParserException
 from evaluator import evaluate
@@ -309,6 +311,84 @@ def zip_extract_module(arguments):
     if args.filename is not None:
         extract_recursive(args.filename.name, args.output)
         print('Done extracting')
+
+def stegoLSB_module(arguments):
+    # Create argumentParser
+    parser = MyParser(
+        prog='',
+        description='\nTry to decode data from image by LSB encode\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.version = '1.0'
+
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
+
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # parse arguments
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+
+    # Get the file data
+    if args.filename is not None:
+        results = decode(args.filename.name)
+        print(results)
+
+def emailAnalyzer_module(arguments):
+    # Create argumentParser
+    parser = MyParser(
+        prog='',
+        description='\nAnalyze email file\n'
+                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+        epilog='Just boring epilogue',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.version = '1.0'
+
+    parser.add_argument('filename',
+                        type=argparse.FileType('r'))
+
+    # Version flag
+    parser.add_argument('--version', action='version')
+
+    # # Verbose flag
+    #     # parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+
+    # if args.verbose:
+    #     logging.basicConfig(level=logging.INFO, format='[INFO] %(message)s')
+
+    # parse arguments
+    try:
+        args = parser.parse_args(args=arguments)
+    except ParserException:
+        return
+    # If there was problem while parsing arguments
+    if parser.problem:
+        return ''
+
+
+    # Get the file data
+    if args.filename is not None:
+        results = email_analyzer(args.filename.name)
+        print(results)
 
 def extractor_module(arguments):
     # Create argumentParser
