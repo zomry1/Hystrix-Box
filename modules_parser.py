@@ -188,21 +188,30 @@ def extractor_function(args):
     # Get the file data
     if args.filename is not None:
         data = args.filename.read()
-        # Extractor part
-        # logging.info('Used Extractor: ' + args.specific)
-        extractor = EXTRACTOR_MAP[args.extractor]
-        result = 'Result:\n'
-        str_list = list(list(extractor(data)))
-        # special case
-        if args.extractor == 'url':
+
+        # If specific extractor set (else use all decoders)
+        if args.extractor is not None:
+            logging.info('Use specific extractor: ' + args.extractor)
+            extractor = EXTRACTOR_MAP[args.extractor]
+            result = 'Result:\n'
+            str_list = list(list(extractor(data)))
+            if str_list == []:
+                return 'No result found'
             for x in str_list:
-                result += (x[0] + '\n')
-        else:
-            for x in str_list:
-                result += (x + '\n')
-        return result
-    # not sure about this
-    return ""
+                    result += (x + '\n')
+            return result
+        else: #Not specific extractor set
+            result = ''
+            for name, extractor in EXTRACTOR_MAP.items():
+                result += 'Extract ' + name + ':\n'
+                str_list = list(list(extractor(data)))
+                if not str_list:
+                    result += 'No result found\n'
+                for x in str_list:
+                    result += (x + '\n')
+                result += '\n'
+            return result
+    return "" # Should never get here, the argparser should throw  file not found
 
 
 def extractor_module(arguments):
