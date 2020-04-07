@@ -12,14 +12,14 @@ def timing(f):
 		for i in range(2000):
 			ret = f(*args)
 		time2 = time.time()
-		print('{:s} function took {:.3f} ms'.format(f.__name__, (time2 - time1) / 2))
+		print('{:s} function took {:.5f} ms'.format(f.__name__, (time2 - time1) / 2))
 		return ret
 
 	return wrap
 
 
 def get_header(filePath):
-	# Need to add checking for file with zero lenght
+	# Need to add checking for file with zero length
 	try:
 		with open(filePath, 'rb') as file:
 			return bytearray(file.read(HEADER_BYTES))
@@ -32,7 +32,7 @@ def get_header(filePath):
 def getFileExtension(filePath):
 	header = get_header(filePath)
 	if not header:
-		exit()
+		return None
 
 	for extension in EXTENSIONS:
 		if extension.check(header):

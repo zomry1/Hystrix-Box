@@ -130,7 +130,7 @@ def decrypter_module(arguments):
 def file_function(args):
     # Get the file data
     if args.filename is not None:
-        return str(getFileExtension(args.filename))
+        return str(getFileExtension(args.filename.name))
 
 
 def file_module(arguments):

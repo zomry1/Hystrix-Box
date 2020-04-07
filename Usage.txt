@@ -3,3 +3,9 @@ decrypter:
 
 extractor:
 ExampleFiles/extractor.txt ip
+
+filetypes:
+ExampleFiles/DetectFileFormat/GIF.gif
+
+EmailAnalyzer:
+ExampleFiles/emailAnalyzer.eml
