@@ -70,4 +70,3 @@ TODO:
 * add leet Decoder to Ultimate decoder
 * Change extractor module to extract all if not specific extractor chosen 
 * add extensions 
-* Fix return to title broken

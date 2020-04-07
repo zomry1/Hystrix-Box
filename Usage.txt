@@ -5,7 +5,7 @@ extractor:
 ExampleFiles/extractor.txt ip
 
 filetypes:
-ExampleFiles/DetectFileFormat/GIF.gif
+ExampleFiles/DetectFileFormat/TIF.TIF
 
 EmailAnalyzer:
 ExampleFiles/emailAnalyzer.eml

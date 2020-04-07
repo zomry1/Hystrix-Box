@@ -55,34 +55,11 @@ def module_run(module):
 
 
 ###########################
-'''
-def menu_run():
-    clear()
-    while True:
-        print(LOGO)
-        print(menu_txt)
-        option = input('>>')
-        if option == 'exit':
-            exit()
-        # menu options
-        if option == '1' or option == 'Decrypter' or option == 'decrypter':
-            clear()
-            module_run(decrypter_module)
-        elif option == '2' or option == 'Forensics' or option == 'forensics':
-            clear()
-            module_run(forensics_module)
-        elif option == '3' or option == 'Extractor' or option == 'extractor':
-            clear()
-            module_run(extractor_module)
-
-
-menu_run()
-'''
 # Create style for the menus
 menuStyle = consolemenu.menu_formatter.MenuFormatBuilder()
 menuStyle.set_border_style_type(5)
 
-menu_main = ConsoleMenu(title=LOGO, formatter=menuStyle)
+menu_main = ConsoleMenu(title='Main Menu', subtitle=LOGO, formatter=menuStyle)
 
 # Create 2 tools selection
 item_decrypter = FunctionItem('Ultimate Decrypter', module_run, [decrypter_module])
