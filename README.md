@@ -21,6 +21,7 @@ Tools:
 * All bases
 * Ascii - ☑️
 * URL encode
+* Gematria - ☑️
 
 
 ## UltimateExtractor

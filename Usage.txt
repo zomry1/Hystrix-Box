@@ -9,3 +9,6 @@ ExampleFiles/DetectFileFormat/TIF.TIF
 
 EmailAnalyzer:
 ExampleFiles/emailAnalyzer.eml
+
+Extractor:
+ExampleFiles/extractor.txt
