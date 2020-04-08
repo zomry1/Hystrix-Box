@@ -6,27 +6,28 @@
 
 <p align="center">
 
+<a herf='https://discord.gg/sgnTXV'><img src='https://img.shields.io/discord/697371315300204575' title='Discord'></a>
+<a herf='https://github.com/zomry1/Hystrix-Box/releases'><img src='https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total' title='Releases'></a>
+<a herf='https://pypi.org/'><img src='https://img.shields.io/pypi/v/hystrix-Box' title='PyPi'></a>
+<img src='https://img.shields.io/github/license/zormry1/Hystrix-Box' title='License'>
 
-![Discord](https://img.shields.io/discord/697371315300204575)
-![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total)
-![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
-![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box)
 
 ⭐️ Star us on GitHub — it helps!
 
-![demo](https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png)
+<img src='https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png' title='Demo'>
+
 </p>
 
 
 ## 🚩 Table of Contents 
 
-- [Demonstration](#Demonstration) ✨
-- [Installation](#installation) 💻
-- [Features](#features) 💣
-- [Team](#team) 👥
-- [Support](#support) 🤝
-- [Roadmap](#Roadmap) 🚧
-- [License](#license)  📝
+- [Demonstration](#-Demonstration) ✨
+- [Installation](#-installation) 💻
+- [Features](#-features) 💣
+- [Team](#-team) 👥
+- [Support](#-support) 🤝
+- [Roadmap](#-roadmap) 🚧
+- [License](#-license)  📝
 
 
 ---
