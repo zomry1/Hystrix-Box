@@ -13,4 +13,5 @@ def GematriaDecoder(ciphertext, separator=' '):
     return [result]
 
 
-#print(GematriaDecoder('16 9 15 3 20 6 { 20 8 5 14 21 13 2 5 18 19 13 1 19 15 14 }'))
+# Decode example
+# print(GematriaDecoder('16 9 15 3 20 6 { 20 8 5 14 21 13 2 5 18 19 13 1 19 15 14 }'))

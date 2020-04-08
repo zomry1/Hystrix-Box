@@ -17,4 +17,5 @@ def extract_recursive(filename, path=''):
             z.extract(f, path) # Extract the file
 
 
-#extract_recursive('Tools/recursiveCheck/recursivezip.zip', 'recursiveCheck')
+# Run example
+# extract_recursive('Tools/recursiveCheck/recursivezip.zip', 'recursiveCheck')

@@ -55,7 +55,8 @@ def findFiles(filename, output='hiddenFile'):
 
 
 
-#findFiles("me.txt") #Text file
-#findFiles("JPEG.jpg") #Regular jpg file
-#findFiles("hideInImage.jpg") #Jpg file with hidden files
-findFiles('hiddenCheck/hidden.png')
+# Run example
+# findFiles("me.txt") #Text file
+# findFiles("JPEG.jpg") #Regular jpg file
+# findFiles("hideInImage.jpg") #Jpg file with hidden files
+# findFiles('hiddenCheck/hidden.png')

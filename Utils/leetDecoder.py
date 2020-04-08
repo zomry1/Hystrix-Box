@@ -19,5 +19,6 @@ def leet_translator(text):
             temp_str = temp_str.replace(replaced_char, leet_dict[replaced_char])
     return temp_str.lower()
 
+# Run example
 # message = input("Please enter a message: ")
 # print("Translated Message: ", leet_translator(message))

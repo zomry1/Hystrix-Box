@@ -25,8 +25,7 @@ class MyParser(argparse.ArgumentParser):
                          argument_default, conflict_handler, add_help, allow_abbrev)
         self.problem = False
 
-    # the default status on the parent class is 0, we're
-    # changing it to be 1 here ...
+    # Change exit call default to raise an ParseException
     def exit(self, status=1, message=None):
         if message:
             self._print_message(message, sys.stderr)
@@ -34,11 +33,3 @@ class MyParser(argparse.ArgumentParser):
         raise ParserException
         return
 
-
-'''
-    def parse_args(self, args=None, namespace=None):
-        if self.parse_known_args(args, namespace) is None:
-            return
-        else:
-            return super().parse_args(args, namespace)
-'''

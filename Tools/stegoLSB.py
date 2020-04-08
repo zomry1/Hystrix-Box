@@ -43,7 +43,7 @@ def decode(filename):
 
 
 '''
-#Run example#
+# Run example #
 encode('hiomryking', 'image.png')
 print(decode('encoded_image.png'))
 '''

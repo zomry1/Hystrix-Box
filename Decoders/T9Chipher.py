@@ -9,4 +9,5 @@ def T9Decoder(ciphertext, separator=' '):
 	return ''.join(answer)
 
 
-print(T9Decoder('999 666 0 8 44 33 0 333 555 2 4 0 444 7777 0 7777 444 6 7 555 33 0 55 33 999 7 2 3'))
+# Decode example
+# print(T9Decoder('999 666 0 8 44 33 0 333 555 2 4 0 444 7777 0 7777 444 6 7 555 33 0 55 33 999 7 2 3'))

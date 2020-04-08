@@ -20,7 +20,7 @@ def soundplot(stream):
     pylab.close('all')
     print("took %.02f ms" % ((time.time() - t1) * 1000))
 
-
+'''
 audioFile = wave.open(FILENAME, 'rb')
 
 p = pyaudio.PyAudio()
@@ -34,7 +34,7 @@ data = audioFile.readframes(CHUNK)
 
 for i in range(int(20 * RATE / CHUNK)):  # do this for 10 seconds
     soundplot(stream)
-
+'''
 '''
     
 while data != '':
@@ -46,8 +46,10 @@ while data != '':
     print("%05d %s" % (peak, bars))
 
 '''
+'''
 ########################
 stream.stop_stream()
 stream.close()
 
 p.terminate()
+'''
