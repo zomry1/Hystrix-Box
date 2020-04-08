@@ -62,13 +62,3 @@ More:
 * pyaudio
 * numpy
 
-
-TODO:
-* Fix evaluators names (functions, files)
-* Create validator for ciphers and use them
-* add all built tools to menu
-* collect forensics tools to one Ultimate tool
-* add json output format for email analyzer
-* add leet Decoder to Ultimate decoder
-* add extensions 
-* Use new decoders
