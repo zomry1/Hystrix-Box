@@ -1,13 +1,16 @@
 <h1 align="center">
-<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://user-images.githubusercontent.com/13539354/78783362-2fb5c980-79ac-11ea-95af-fb239aeed765.png" width='250' title="LOGO" alt="LOGO"></a>
-
-Hystrix-Box
+<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://user-images.githubusercontent.com/13539354/78783362-2fb5c980-79ac-11ea-95af-fb239aeed765.png" width='400' title="LOGO" alt="LOGO"></a>
 </h1>
 
 <h4 align="center"> Ultimate toolbox for solving CTF challenges 👨‍💻</h4>
 
 <p align="center">
-![Discord](https://img.shields.io/discord/697371315300204575) ![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box) ![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total) ![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
+
+
+![Discord](https://img.shields.io/discord/697371315300204575)
+![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total)
+![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
+![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box)
 
 ⭐️ Star us on GitHub — it helps!
 
