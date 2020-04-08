@@ -22,6 +22,8 @@ Tools:
 * Ascii - ☑️
 * URL encode
 * Gematria - ☑️
+* Coordinates
+* Mores 
 
 
 ## UltimateExtractor
@@ -69,3 +71,4 @@ TODO:
 * add json output format for email analyzer
 * add leet Decoder to Ultimate decoder
 * add extensions 
+* Use new decoders
