@@ -7,13 +7,13 @@ Hystrix-Box
 <h4 align="center"> Ultimate toolbox for solving CTF challenges 👨‍💻</h4>
 
 <p align="center">
-![Discord](https://img.shields.io/discord/697371315300204575)![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box)![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total)![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
+![Discord](https://img.shields.io/discord/697371315300204575) ![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box) ![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total) ![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
 
 ⭐️ Star us on GitHub — it helps!
 
 ![demo](https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png)
 </p>
----
+
 
 ## 🚩 Table of Contents 
 
