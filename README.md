@@ -1,74 +1,116 @@
-# Ultimate CTF Tool
-Tools:
-* Ultimate Decrypter
-* Ultimate Forensics
-* Ultimate Extractor
+<h1 align="center">
+<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://user-images.githubusercontent.com/13539354/78783362-2fb5c980-79ac-11ea-95af-fb239aeed765.png" width='250' title="LOGO" alt="LOGO"></a>
 
-## UltimateDecrypter
+Hystrix-Box
+</h1>
 
-### results quality check:
-1) English words analysis - ☑️
-2) Flag format - ☑️
-3) Frequency analysis - ☑️
+<h4 align="center"> Ultimate toolbox for solving CTF challenges 👨‍💻</h4>
 
-### Codecs:
-* Reverse - ☑️
-* Vigenere
-* Caesar  (ROT - Shift) - ☑️
-* phone keypad (T9) - ☑️
-* Hashes (md5,md4,sha1,sha256,sha384,sha512,ntlm) - ☑
-* Base64 - ☑️
-* All bases
-* Ascii - ☑️
-* URL encode
-* Gematria - ☑️
-* Coordinates
-* Mores 
+<p align="center">
+![Discord](https://img.shields.io/discord/697371315300204575)![GitHub](https://img.shields.io/github/license/zormry1/Hystrix-Box)![GitHub Releases](https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total)![PyPI](https://img.shields.io/pypi/v/hystrix-Box)
 
+⭐️ Star us on GitHub — it helps!
 
-## UltimateExtractor
+![demo](https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png)
+</p>
+---
 
-### Extract
-* IP (v4,v6) - ☑️
-* Email - ☑️
-* URL - ☑️
-* Hashes
-* 64base code
-* CTF-Flags
-* Comments (from code files)
+## 🚩 Table of Contents 
+
+- [Demonstration](#Demonstration) ✨
+- [Installation](#installation) 💻
+- [Features](#features) 💣
+- [Team](#team) 👥
+- [Support](#support) 🤝
+- [Roadmap](#Roadmap) 🚧
+- [License](#license)  📝
 
 
-More:
-* 64Base validator - ☑️
-* Frequency analysis
-* strings  - ☑️
-* file  - - ☑️
-* recursive compression - ☑️
-* file header repairs
-* LSB Stego  - ☑️
-* hidden files - ☑️
-* EXIFTOOL
-* All Cyberchef tools
-* Email header analysis - ☑️
-* Fix when english like this H1 0R instead hi or (english with symbols and numbers) - ☑️
-* Analyze sound files
-* PDF previous changes viewer
-* Filesystem images
-* Memory dumps
+---
 
-### Requirements
-* requests
-* PIL
-* pyaudio
-* numpy
+## ✨ Demonstration
+
+<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://user-images.githubusercontent.com/13539354/78783906-0c3f4e80-79ad-11ea-9874-22770c5a092a.gif" title="Demonstration" alt="Demonstration"></a>
+
+---
+
+## 💻 Installation
+
+> `pip install hystrix-box`
+- Images of what it should look like
+
+### Clone
+
+- Clone this repo to your local machine using `https://github.com/zomry1/Hystrix-Box.git`
+
+---
+## 💣 Features
+
+| Decrypter   | Forensics               | Extractor |
+|-------------|-------------------------|-----------|
+| Hash        | Audio Analyzer          | Email     |
+| Base64      | Email Anaylzer          | IP        |
+| Caesar      | StegoLSB                | Hases     |
+| ASCII       | Strings                 | URL       |
+| Morse       | HideInImage             |           |
+| Reverse     | Recursive Decompression |           |
+| Gematria    |                         |           |
+| T9          |                         |           |
+| Coordinates |                         |          |
+
+---
+## Usage 
 
 
-TODO:
-* Fix evaluators names (functions, files)
-* Create validator for ciphers and use them
-* add all built tools to menu
-* collect forensics tools to one Ultimate tool
-* add json output format for email analyzer
-* add leet Decoder to Ultimate decoder
-* add extensions 
-* Use new decoders
+---
+
+
+## 👥 Team
+
+| <a href="https://github.com/zomry1" target="_blank">**zomry1**</a> | <a href="https://github.com/Mattssu" target="_blank">**Mattssu**</a> | 
+| :---: |:---:| 
+| [![zomry1](https://avatars1.githubusercontent.com/u/13539354?s=200)](https://github.com/zomry1)    | [![Mattssu](https://avatars2.githubusercontent.com/u/41211015?s=200)](https://github.com/Mattssu) |
+| <a href="https://github.com/zomry1" target="_blank">`github.com/zomry1`</a> | <a href="https://github.com/Mattssu" target="_blank">`github.com/Mattssu`</a> |
+
+
+ADD HALL OF FAME -  https://sourcerer.io/settings#hof
+
+---
+
+
+## Support 🤝
+
+Reach out to me at one of the following places!
+
+![Discord Banner 3](https://discordapp.com/api/guilds/697371315300204575/widget.png?style=banner3)
+
+###  Contributing
+
+#### Step 1
+
+- **Option 1**
+    - 🍴 Fork this repo!
+
+- **Option 2**
+    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+
+#### Step 2
+
+- **HACK AWAY!** 🔨🔨🔨
+
+#### Step 3
+
+- 🔃 Create a new pull request using <a href="https://github.com/zomry1/Hystrix-Box/compare/" target="_blank">`https://github.com/zomry1/Hystrix-Box/compare/`</a>
+
+---
+
+## 🚧 Roadmap
+
+---
+
+## 📝  License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2020 © <a href="https://github.com/zomry1" target="_blank">zomry1</a>.
