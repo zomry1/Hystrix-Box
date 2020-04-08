@@ -1,4 +1,4 @@
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://github.com/zomry1/Hystrix-Box/blob/master/Logo.png?raw=true?s=200" title="LOGO" alt="LOGO"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
@@ -7,9 +7,6 @@
 # Hystrix-Box
 
 > Ultimate toolbox for solving CTF challenges
-
-
-> include terms/tags that can be searched
 
 
 ![Discord](https://img.shields.io/discord/697371315300204575)
