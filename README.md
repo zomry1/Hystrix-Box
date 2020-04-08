@@ -11,8 +11,7 @@
 <a herf='https://pypi.org/'><img src='https://img.shields.io/pypi/v/hystrix-Box' title='PyPi'></a>
 <img src='https://img.shields.io/github/license/zormry1/Hystrix-Box' title='License'>
 
-
-⭐️ Star us on GitHub — it helps!
+<h5 align="center">⭐️ Star us on GitHub — it helps!</h5>
 
 <img src='https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png' title='Demo'>
 
