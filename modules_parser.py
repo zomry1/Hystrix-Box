@@ -3,7 +3,7 @@ import logging
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
-from Decoders.HashCipher import hashesDecoder
+from Decoders.HashCipher import HashDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 ###########################
 from Extractors.emailExtractor import extractEmail
@@ -103,15 +103,15 @@ def decrypter_function(args):
     # Try all decoders
     plaintexts = []
     logging.info('Decode ciphertext by Caesar decoder')
-    plaintexts += CaesarDecoder(cipher_txt)
+    plaintexts += CaesarDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by ASCII decoder')
-    plaintexts += ASCIIDecoder(cipher_txt)
+    plaintexts += ASCIIDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by Base64 decoder')
-    plaintexts += Base64Decoder(cipher_txt)
+    plaintexts += Base64Decoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by Reverse decoder')
-    plaintexts += ReverseDecoder(cipher_txt)
+    plaintexts += ReverseDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by hash decoder')
-    plaintexts += hashesDecoder(cipher_txt)
+    plaintexts += HashDecoder.safe_decode(cipher_txt)
 
     # Create result string
     result = ''

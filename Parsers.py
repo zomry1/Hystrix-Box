@@ -4,7 +4,7 @@ import argparse
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
-from Decoders.HashCipher import hashesDecoder
+from Decoders.HashCipher import HashDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 from Extractors.emailExtractor import extractEmail
 from Extractors.ipExtractor import extractIP
@@ -23,11 +23,11 @@ ARGS_STR = """
 
 EPILOGUE_STR = 'Made by zomry1 and Matssu ©'
 
-DECODERS_MAP = {'ascii': ASCIIDecoder,
-                'base64': Base64Decoder,
-                'caesar': CaesarDecoder,
-                'reverse': ReverseDecoder,
-                'hash': hashesDecoder
+DECODERS_MAP = {'ascii': ASCIIDecoder.safe_decode,
+                'base64': Base64Decoder.safe_decode,
+                'caesar': CaesarDecoder.safe_decode,
+                'reverse': ReverseDecoder.safe_decode,
+                'hash': HashDecoder.safe_decode
                 }
 
 EXTRACTOR_MAP = {'url': extractUrl,

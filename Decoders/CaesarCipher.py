@@ -1,3 +1,6 @@
+from Decoders.Decoder import Decoder
+
+
 def CaesarDecode(ciphertext, shift):
     plaintext = ''
     for i in range(len(ciphertext)):  # Foreach char
@@ -11,8 +14,14 @@ def CaesarDecode(ciphertext, shift):
     return plaintext
 
 
-def CaesarDecoder(ciphertext):
-    plaintexts = []
-    for i in range(26):
-        plaintexts.append(CaesarDecode(ciphertext, i + 1))
-    return plaintexts
+class CaesarDecoder(Decoder):
+    @staticmethod
+    def validate(text):
+        return True
+
+    @staticmethod
+    def decode(text):
+        plaintexts = []
+        for i in range(26):
+            plaintexts.append(CaesarDecode(text, i + 1))
+        return plaintexts

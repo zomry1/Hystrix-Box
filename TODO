@@ -18,3 +18,9 @@ README:
 * Upload package to PyPi
 * Check code again
 * Read about Release
+
+
+Deployment:
+* unittest
+* Change Decoders to Class and etc
+* Upload to PyPi
