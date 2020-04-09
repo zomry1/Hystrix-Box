@@ -1,27 +1,22 @@
 import logging
 
+
+from Evaluators.word_check import WordEvaluator
 from Evaluators.flag_check import FlagEvaluator
 from Evaluators.letter_check import LetterEvaluator
 from _collections import OrderedDict
 
-from Evaluators.word_check import WordEvaluator
 
 LETTER_PRIORITY = 1000
 WORD_PRIORITY = 1000
 FORMAT_PRIORITY = 2000
 
 
-def evaluate_fun(eval_function, plaintexts, scoresDictionary, sortOrder=True, formatString=''):
+def evaluate_fun(eval_function, plaintexts, scoresDictionary, sortOrder=True):
     evaluations = []
-    # Check if formatString is needed to be sent
-    if formatString != '':
-        # Evaluate each plaintext and calculate error
-        for plaintext in plaintexts:
-            evaluations.append((plaintext, eval_function(plaintext, formatString)))
-    else:
-        # Evaluate each plaintext and calculate error
-        for plaintext in plaintexts:
-            evaluations.append((plaintext, eval_function(plaintext)))
+    # Evaluate each plaintext and calculate error
+    for plaintext in plaintexts:
+        evaluations.append((plaintext, eval_function(plaintext)))
 
     group_evaluations = {}
 
@@ -60,7 +55,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
     # Evaluate with formatCheck
     if functionsString[2] == 'T' and formatString != '':
         logging.info('Evaluate results by flag search')
-        evaluate_fun(FlagEvaluator.evaluate, plaintexts, scoresDictionary, formatString=formatString)
+        evaluate_fun(FlagEvaluator.evaluate, [formatString,plaintexts], scoresDictionary)
 
     logging.info('Sort results')
     scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)
