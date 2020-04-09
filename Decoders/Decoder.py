@@ -8,7 +8,7 @@ class Decoder(object):
         raise NotImplementedError
 
     @classmethod
-    def safe_decode(cls,text):
+    def safe_decode(cls, text):
         if cls.validate(text):  # Check the text is in the cipher format
             return cls.decode(text)  # Decode it
         else:
