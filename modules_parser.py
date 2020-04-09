@@ -6,7 +6,6 @@ from Decoders.CaesarCipher import CaesarDecoder
 from Decoders.HashCipher import HashDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 ###########################
-from Extractors.emailExtractor import extractEmail
 from Extractors.ipExtractor import extractIP
 from Extractors.md5Extractor import extractMD5
 from Extractors.urlExtractor import extractUrl
@@ -195,12 +194,12 @@ def extractor_function(args):
             extractor = EXTRACTOR_MAP[args.extractor]
             result = 'Result:\n'
             str_list = list(list(extractor(data)))
-            if str_list == []:
+            if not str_list:  # Empty list
                 return 'No result found'
             for x in str_list:
-                    result += (x + '\n')
+                result += (x + '\n')
             return result
-        else: #Not specific extractor set
+        else:  # Not specific extractor set
             result = ''
             for name, extractor in EXTRACTOR_MAP.items():
                 result += 'Extract ' + name + ':\n'
@@ -211,7 +210,7 @@ def extractor_function(args):
                     result += (x + '\n')
                 result += '\n'
             return result
-    return "" # Should never get here, the argparser should throw  file not found
+    return ""  # Should never get here, the argparser should throw  file not found
 
 
 def extractor_module(arguments):

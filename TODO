@@ -1,7 +1,6 @@
 
 
 TODO:
-* Fix evaluators names (functions, files)
 * Create validator for ciphers and use them
 * add all built tools to menu
 * collect forensics tools to one Ultimate tool
@@ -9,6 +8,7 @@ TODO:
 * add leet Decoder to Ultimate decoder
 * add extensions
 * Use new decoders
+* Check hash validator
 
 
 README:

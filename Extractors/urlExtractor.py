@@ -1,5 +1,7 @@
 import re
 
+from Extractors.Extractor import Extractor
+
 URL_PATTERN = re.compile(
     """((?:https?://)?(?:(?:www\.)?(?:[\da-z\.-]+)\.(?:[a-z]{2,6})|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(
     ?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|(?:(?:[0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,
@@ -12,13 +14,12 @@ URL_PATTERN = re.compile(
     ?::[0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])?(?:/[\w\.-]*)*/?)""")
 
 
-def extractUrl(data):
-    urls = URL_PATTERN.findall(data)
-    # To return only string and not tuples
-    if len(urls) == 1:
-        return urls[0]
-    url = [url[0] for url in urls]
-    return url
+class URLExtractor(Extractor):
+    @staticmethod
+    def extract(text):
+        urls = URL_PATTERN.findall(text)
+        url = [url[0] for url in urls]  # To return only string and not tuples
+        return url
 
 
 '''

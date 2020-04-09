@@ -1,16 +1,16 @@
-###########################
-import argparse
-
 from Decoders.ASCIICipher import ASCIIDecoder
 from Decoders.Base64Cipher import Base64Decoder
 from Decoders.CaesarCipher import CaesarDecoder
 from Decoders.HashCipher import HashDecoder
 from Decoders.ReverseCipher import ReverseDecoder
-from Extractors.emailExtractor import extractEmail
-from Extractors.ipExtractor import extractIP
-from Extractors.md5Extractor import extractMD5
-from Extractors.urlExtractor import extractUrl
+############################
+from Extractors.emailExtractor import EmailExtractor
+from Extractors.ipExtractor import IPExtractor
+from Extractors.md5Extractor import MD5Extractor
+from Extractors.urlExtractor import URLExtractor
+############################
 from personal_parser import MyParser
+import argparse
 
 ARGS_STR = """
     ___                                                 __       
@@ -30,10 +30,10 @@ DECODERS_MAP = {'ascii': ASCIIDecoder.safe_decode,
                 'hash': HashDecoder.safe_decode
                 }
 
-EXTRACTOR_MAP = {'url': extractUrl,
-                 'ip': extractIP,
-                 'email': extractEmail,
-                 'md5': extractMD5
+EXTRACTOR_MAP = {'url': URLExtractor.extract,
+                 'ip': IPExtractor.extract,
+                 'email': EmailExtractor.extract,
+                 'md5': MD5Extractor.extract
                  }
 
 
