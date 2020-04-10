@@ -1,6 +1,5 @@
-
-
 TODO:
+* Check hash validator
 * Create validator for ciphers and use them
 * add all built tools to menu
 * collect forensics tools to one Ultimate tool
@@ -8,20 +7,18 @@ TODO:
 * add leet Decoder to Ultimate decoder
 * add extensions
 * Use new decoders
-* Check hash validator
 
 
 README:
+* Center Budgets
 * Add hall of fame
-* Create docs for tools
 * Complete roadmap
-* Upload package to PyPi
-* Check code again
 * Read about Release
 
 
 Deployment:
-* unittest
+* add testing using pytest
 * Change Decoders to Class and etc
 * Upload to PyPi
 * Create documentation - https://readthedocs.org/
+* Check code converge
