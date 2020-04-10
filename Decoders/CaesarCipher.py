@@ -22,6 +22,6 @@ class CaesarDecoder(Decoder):
     @staticmethod
     def decode(text):
         plaintexts = []
-        for i in range(26):
+        for i in range(25):
             plaintexts.append(CaesarDecode(text, i + 1))
         return plaintexts

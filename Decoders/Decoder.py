@@ -1,10 +1,10 @@
 class Decoder(object):
     @staticmethod
-    def validate(self, text):
+    def validate(text):
         raise NotImplementedError
 
     @staticmethod
-    def decode(self, text):
+    def decode(text):
         raise NotImplementedError
 
     @classmethod

@@ -6,10 +6,6 @@ from Decoders.CaesarCipher import CaesarDecoder
 from Decoders.HashCipher import HashDecoder
 from Decoders.ReverseCipher import ReverseDecoder
 ###########################
-from Extractors.ipExtractor import extractIP
-from Extractors.md5Extractor import extractMD5
-from Extractors.urlExtractor import extractUrl
-###########################
 from Parsers import createDecrypterParser, createFileParser, createStringParser, createZipExtractParser, \
     createStegoLSBParser, createExtractorParser, DECODERS_MAP, EXTRACTOR_MAP, \
     createEmailAnalyzerParser

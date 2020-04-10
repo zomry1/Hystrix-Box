@@ -9,10 +9,6 @@ def test_validate_false():
     assert (Base64Decoder.validate('dGhpcyBpcyBhIHRlc3Q==') == False)
 
 
-def test_decode_true():
-    assert (Base64Decoder.decode('dGhpcyBpcyBhIHRlc3Q=') == ['this is a test'])
-
-
 def test_safe_decode_true():
     assert (Base64Decoder.safe_decode('dGhpcyBpcyBhIHRlc3Q=') == ['this is a test'])
 
