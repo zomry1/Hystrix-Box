@@ -15,6 +15,16 @@
     <a herf="https://github.com/zomry1/Hystrix-Box/releases">
         <img src="https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total" title="Releases">
     </a>
+    <a herf="https://pypi.org/">
+        <img src="https://img.shields.io/pypi/v/hystrix-Box" title="PyPi">
+    </a>
+    <br>
+    <a herf="">
+        <img src="https://img.shields.io/github/issues-raw/zomry1/hystrix-box" title="Issues">
+    </a>
+    <a herf= "">
+        <img src="https://img.shields.io/readthedocs/hystrix-box" title="documents">
+    </a>
     <img src="https://img.shields.io/github/license/zormry1/Hystrix-Box" title="License">
 </p>
 
