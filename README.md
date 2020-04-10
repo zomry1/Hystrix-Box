@@ -6,10 +6,11 @@
 
 <p align="center">
 
-<a herf='https://discord.gg/sgnTXV'><img src='https://img.shields.io/discord/697371315300204575' title='Discord'></a>
-<a herf='https://github.com/zomry1/Hystrix-Box/releases'><img src='https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total' title='Releases'></a>
-<a herf='https://pypi.org/'><img src='https://img.shields.io/pypi/v/hystrix-Box' title='PyPi'></a>
-<img src='https://img.shields.io/github/license/zormry1/Hystrix-Box' title='License'>
+<a herf='https://github.com/zomry1/Hystrix-Box'><img src='https://travis-ci.com/zomry1/Hystrix-Box.svg?token=CNWD37moyyyPQp6jfNw5&branch=master' title='Build' align="center"></a>
+<a herf='https://discord.gg/sgnTXV'><img src='https://img.shields.io/discord/697371315300204575' title='Discord' align="center"></a>
+<a herf='https://github.com/zomry1/Hystrix-Box/releases'><img src='https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total' title='Releases' align="center"></a>
+<a herf='https://pypi.org/'><img src='https://img.shields.io/pypi/v/hystrix-Box' title='PyPi' align="center"></a>
+<img src='https://img.shields.io/github/license/zormry1/Hystrix-Box' title='License' align="center">
 
 <h5 align="center">⭐️ Star us on GitHub — it helps!</h5>
 
