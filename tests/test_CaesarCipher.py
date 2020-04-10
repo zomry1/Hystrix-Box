@@ -2,7 +2,7 @@ from Decoders.CaesarCipher import CaesarDecoder
 
 
 def test_validate():
-    assert (CaesarDecoder.validate() == True)
+    assert (CaesarDecoder.validate('iasdi!d23dfdfqeWADAS') == True)
 
 
 SAFE_DECODE_RESULT = ['Ij uijt jt b uftu!', 'Jk vjku ku c vguv!', 'Kl wklv lv d whvw!', 'Lm xlmw mw e xiwx!',

@@ -11,4 +11,6 @@ class ASCIIDecoder(Decoder):
 
     @staticmethod
     def decode(text):
-        return ''.join(chr(int(char)) for char in list(text))
+        return [''.join(chr(int(char)) for char in text.split())]
+
+
