@@ -1,22 +1,37 @@
 <h1 align="center">
-<a href="https://github.com/zomry1/Hystrix-Box"><img src="https://user-images.githubusercontent.com/13539354/78783362-2fb5c980-79ac-11ea-95af-fb239aeed765.png" width='400' title="LOGO" alt="LOGO"></a>
+    <a href="https://github.com/zomry1/Hystrix-Box">
+        <img src="https://user-images.githubusercontent.com/13539354/78783362-2fb5c980-79ac-11ea-95af-fb239aeed765.png" width='400' title="LOGO" alt="LOGO"></a>
 </h1>
 
 <h4 align="center"> Ultimate toolbox for solving CTF challenges 👨‍💻</h4>
 
 <p align="center">
-
-<a herf='https://github.com/zomry1/Hystrix-Box'><img src='https://travis-ci.com/zomry1/Hystrix-Box.svg?token=CNWD37moyyyPQp6jfNw5&branch=master' title='Build' align="center"></a>
-<a herf='https://discord.gg/sgnTXV'><img src='https://img.shields.io/discord/697371315300204575' title='Discord' align="center"></a>
-<a herf='https://github.com/zomry1/Hystrix-Box/releases'><img src='https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total' title='Releases' align="center"></a>
-<a herf='https://pypi.org/'><img src='https://img.shields.io/pypi/v/hystrix-Box' title='PyPi' align="center"></a>
-<img src='https://img.shields.io/github/license/zormry1/Hystrix-Box' title='License' align="center">
+    <a herf="https://github.com/zomry1/Hystrix-Box">
+        <img src="https://travis-ci.com/zomry1/Hystrix-Box.svg?token=CNWD37moyyyPQp6jfNw5&branch=master" title="Build">
+    </a>
+    <a herf="https://discord.gg/sgnTXV">
+        <img src="https://img.shields.io/discord/697371315300204575" title="Discord">
+    </a>
+    <a herf="https://github.com/zomry1/Hystrix-Box/releases">
+        <img src="https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total" title="Releases">
+    </a>
+    <a herf="https://pypi.org/">
+        <img src="https://img.shields.io/pypi/v/hystrix-Box" title="PyPi">
+    </a>
+    <br>
+    <a herf="">
+        <img src="https://img.shields.io/github/issues-raw/zomry1/hystrix-box" title="Issues">
+    </a>
+    <a herf= "">
+        <img src="https://img.shields.io/readthedocs/hystrix-box" title="documents">
+    </a>
+    <img src="https://img.shields.io/github/license/zormry1/Hystrix-Box" title="License">
+</p>
 
 <h5 align="center">⭐️ Star us on GitHub — it helps!</h5>
 
 <img src='https://user-images.githubusercontent.com/13539354/78792202-7d84fe80-79b9-11ea-8fa4-9da95c810851.png' title='Demo'>
 
-</p>
 
 
 ## 🚩 Table of Contents 
