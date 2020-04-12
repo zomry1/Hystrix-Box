@@ -14,42 +14,44 @@ class Wav(Extension):
         )
 
     @staticmethod
-    def check(buf): #Add size checking in bytes 5-8 (little endian)
-        return (len(buf) > 16 and
-                buf[0] == 0x52 and
-                buf[1] == 0x49 and
-                buf[2] == 0x46 and
-                buf[3] == 0x46 and
-                buf[8] == 0x57 and
-                buf[9] == 0x41 and
-                buf[10] == 0x56 and
-                buf[11] == 0x45 and
-                buf[12] == 0x66 and
-                buf[13] == 0x6D and
-                buf[14] == 0x74 and
-                buf[15] == 0x20)
+    def check(header): #Add size checking in bytes 5-8 (little endian)
+        return (len(header) > 16 and
+                header[0] == 0x52 and
+                header[1] == 0x49 and
+                header[2] == 0x46 and
+                header[3] == 0x46 and
+                header[8] == 0x57 and
+                header[9] == 0x41 and
+                header[10] == 0x56 and
+                header[11] == 0x45 and
+                header[12] == 0x66 and
+                header[13] == 0x6D and
+                header[14] == 0x74 and
+                header[15] == 0x20)
 
 
 class Aiff(Extension):
-    EXTENSION = 'aiff (aif, aifc)'
+    EXTENSION = 'aiff'
     MIME = 'audio/aiff'
     DESCRIPTION = 'Audio Interchange File Format'
+    OTHER_EXTENSIONS = 'aif, aifc'
 
     def __init__(self):
         super(Aiff, self).__init__(
             extension=Aiff.EXTENSION,
             mime=Aiff.MIME,
-            description=Aiff.DESCRIPTION
+            description=Aiff.DESCRIPTION,
+            otherExtensions=Aiff.OTHER_EXTENSIONS
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 5 and
-                buf[0] == 0x46 and
-                buf[1] == 0x4F and
-                buf[2] == 0x52 and
-                buf[3] == 0x4D and
-                buf[8] == 0x00)
+    def check(header):
+        return (len(header) > 5 and
+                header[0] == 0x46 and
+                header[1] == 0x4F and
+                header[2] == 0x52 and
+                header[3] == 0x4D and
+                header[8] == 0x00)
 
 
 class Mp3(Extension):
@@ -65,11 +67,11 @@ class Mp3(Extension):
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 3 and
-                buf[0] == 0x49 and
-                buf[1] == 0x44 and
-                buf[2] == 0x33)
+    def check(header):
+        return (len(header) > 3 and
+                header[0] == 0x49 and
+                header[1] == 0x44 and
+                header[2] == 0x33)
 
 
 class Aac(Extension):
@@ -85,34 +87,36 @@ class Aac(Extension):
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 3 and
-                (buf[0] == 0xFF and
-                 buf[1] == 0xF1)
+    def check(header):
+        return (len(header) > 3 and
+                (header[0] == 0xFF and
+                 header[1] == 0xF1)
                 or
-                (buf[0] == 0xFF and
-                 buf[1] == 0xF9)
+                (header[0] == 0xFF and
+                 header[1] == 0xF9)
                 )
 
 class Mid(Extension):
-    EXTENSION = 'mid (midi)'
+    EXTENSION = 'mid'
     MIME = 'audio/midi'
     DESCRIPTION = 'Musical Instrument Digital Interface (MIDI) sound file'
+    OTHER_EXTENSIONS = 'midi'
 
     def __init__(self):
         super(Mid, self).__init__(
             extension=Mid.EXTENSION,
             mime=Mid.MIME,
-            description=Mid.DESCRIPTION
+            description=Mid.DESCRIPTION,
+            otherExtensions=Mid.OTHER_EXTENSIONS
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x4D and
-                buf[1] == 0x54 and
-                buf[2] == 0x68 and
-                buf[3] == 0x64)
+    def check(header):
+        return (len(header) > 4 and
+                header[0] == 0x4D and
+                header[1] == 0x54 and
+                header[2] == 0x68 and
+                header[3] == 0x64)
 
 
 class Flac(Extension):
@@ -128,12 +132,12 @@ class Flac(Extension):
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x66 and
-                buf[1] == 0x4C and
-                buf[2] == 0x61 and
-                buf[3] == 0x43)
+    def check(header):
+        return (len(header) > 4 and
+                header[0] == 0x66 and
+                header[1] == 0x4C and
+                header[2] == 0x61 and
+                header[3] == 0x43)
 
 
 class M4a(Extension):
@@ -149,36 +153,38 @@ class M4a(Extension):
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 4 and
-                buf[4] == 0x66 and
-                buf[5] == 0x74 and
-                buf[6] == 0x79 and
-                buf[7] == 0x70 and
-                buf[8] == 0x4D and
-                buf[9] == 0x34 and
-                buf[10] == 0x41 and
-                buf[11] == 0x20)
+    def check(header):
+        return (len(header) > 4 and
+                header[4] == 0x66 and
+                header[5] == 0x74 and
+                header[6] == 0x79 and
+                header[7] == 0x70 and
+                header[8] == 0x4D and
+                header[9] == 0x34 and
+                header[10] == 0x41 and
+                header[11] == 0x20)
 
 class Ogg(Extension):
-    EXTENSION = 'ogg (oga, ogv, ogx, spx, opus)'
+    EXTENSION = 'ogg'
     MIME = 'audio/ogg'
     DESCRIPTION = '	Ogg Vorbis Codec compressed Multimedia file'
+    OTHER_EXTENSIONS = 'oga, ogv, ogx, spx, opusz'
 
     def __init__(self):
         super(Ogg, self).__init__(
             extension=Ogg.EXTENSION,
             mime=Ogg.MIME,
-            description=Ogg.DESCRIPTION
+            description=Ogg.DESCRIPTION,
+            otherExtensions=Ogg.OTHER_EXTENSIONS
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x4F and
-                buf[1] == 0x67 and
-                buf[2] == 0x67 and
-                buf[3] == 0x53)
+    def check(header):
+        return (len(header) > 4 and
+                header[0] == 0x4F and
+                header[1] == 0x67 and
+                header[2] == 0x67 and
+                header[3] == 0x53)
 
 class Amr(Extension):
     EXTENSION = 'amr'
@@ -194,10 +200,10 @@ class Amr(Extension):
         )
 
     @staticmethod
-    def check(buf):
-        return (len(buf) > 5 and
-                buf[0] == 0x23 and
-                buf[1] == 0x21 and
-                buf[2] == 0x41 and
-                buf[3] == 0x4D and
-                buf[4] == 52)
+    def check(header):
+        return (len(header) > 5 and
+                header[0] == 0x23 and
+                header[1] == 0x21 and
+                header[2] == 0x41 and
+                header[3] == 0x4D and
+                header[4] == 52)

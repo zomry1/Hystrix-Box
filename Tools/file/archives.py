@@ -14,12 +14,12 @@ class Zip(Extension):
             description=Zip.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x50 and
-                buf[1] == 0x4B and
-                buf[2] == 0x03 and
-                buf[3] == 0x04)
+    def check(self, header):
+        return (len(header) > 4 and
+                header[0] == 0x50 and
+                header[1] == 0x4B and
+                header[2] == 0x03 and
+                header[3] == 0x04)
 
 
 # https://www.iana.org/assignments/media-types/application/vnd.rar
@@ -35,24 +35,24 @@ class Rar(Extension):
             description=Rar.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 8 and  # first is v4 and the second is v5
-                (buf[0] == 0x52 and
-                 buf[1] == 0x61 and
-                 buf[2] == 0x72 and
-                 buf[3] == 0x21 and
-                 buf[4] == 0x1A and
-                 buf[5] == 0x07 and
-                 buf[6] == 0x00)
+    def check(self, header):
+        return (len(header) > 8 and  # first is v4 and the second is v5
+                (header[0] == 0x52 and
+                 header[1] == 0x61 and
+                 header[2] == 0x72 and
+                 header[3] == 0x21 and
+                 header[4] == 0x1A and
+                 header[5] == 0x07 and
+                 header[6] == 0x00)
                 or
-                (buf[0] == 0x52 and
-                 buf[1] == 0x61 and
-                 buf[2] == 0x72 and
-                 buf[3] == 0x21 and
-                 buf[4] == 0x1A and
-                 buf[5] == 0x07 and
-                 buf[6] == 0x01 and
-                 buf[7] == 0x00))
+                (header[0] == 0x52 and
+                 header[1] == 0x61 and
+                 header[2] == 0x72 and
+                 header[3] == 0x21 and
+                 header[4] == 0x1A and
+                 header[5] == 0x07 and
+                 header[6] == 0x01 and
+                 header[7] == 0x00))
 
 
 class Sevenz(Extension):
@@ -67,14 +67,14 @@ class Sevenz(Extension):
             description=Sevenz.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 6 and
-                buf[0] == 0x37 and
-                buf[1] == 0x7A and
-                buf[2] == 0xBC and
-                buf[3] == 0xAF and
-                buf[4] == 0x27 and
-                buf[5] == 0x1C)
+    def check(self, header):
+        return (len(header) > 6 and
+                header[0] == 0x37 and
+                header[1] == 0x7A and
+                header[2] == 0xBC and
+                header[3] == 0xAF and
+                header[4] == 0x27 and
+                header[5] == 0x1C)
 
 
 
@@ -90,12 +90,12 @@ class Jar(Extension):
             description=Jar.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x5F and
-                buf[1] == 0x27 and
-                buf[2] == 0xA8 and
-                buf[3] == 0x89)
+    def check(self, header):
+        return (len(header) > 4 and
+                header[0] == 0x5F and
+                header[1] == 0x27 and
+                header[2] == 0xA8 and
+                header[3] == 0x89)
 
 
 
@@ -111,13 +111,13 @@ class Tarz(Extension):
             description=Tarz.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 2 and
-                (buf[0] == 0x1F and
-                 buf[1] == 0x9D)
+    def check(self, header):
+        return (len(header) > 2 and
+                (header[0] == 0x1F and
+                 header[1] == 0x9D)
                 or
-                (buf[0] == 0x1F and
-                 buf[1] == 0xA0))
+                (header[0] == 0x1F and
+                 header[1] == 0xA0))
 
 
 
@@ -133,11 +133,11 @@ class Tarbz2(Extension):
             description=Tarbz2.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 3 and
-                buf[0] == 0x42 and
-                buf[1] == 0x5A and
-                buf[2] == 0x68)
+    def check(self, header):
+        return (len(header) > 3 and
+                header[0] == 0x42 and
+                header[1] == 0x5A and
+                header[2] == 0x68)
 
 
 
@@ -153,15 +153,15 @@ class Tarxz(Extension):
             description=Tarxz.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 7 and
-                buf[0] == 0xFD and
-                buf[1] == 0x37 and
-                buf[2] == 0x7A and
-                buf[3] == 0x58 and
-                buf[4] == 0x5A and
-                buf[5] == 0x00 and
-                buf[6] == 0x00)
+    def check(self, header):
+        return (len(header) > 7 and
+                header[0] == 0xFD and
+                header[1] == 0x37 and
+                header[2] == 0x7A and
+                header[3] == 0x58 and
+                header[4] == 0x5A and
+                header[5] == 0x00 and
+                header[6] == 0x00)
 
 
 class Tar(Extension):
@@ -176,10 +176,10 @@ class Tar(Extension):
             description=Tar.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 5 and
-                buf[257] == 0x75 and
-                buf[258] == 0x73 and
-                buf[259] == 0x74 and
-                buf[260] == 0x61 and
-                buf[261] == 0x72)
+    def check(self, header):
+        return (len(header) > 5 and
+                header[257] == 0x75 and
+                header[258] == 0x73 and
+                header[259] == 0x74 and
+                header[260] == 0x61 and
+                header[261] == 0x72)

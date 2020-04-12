@@ -16,14 +16,6 @@ LOGO = """
 ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝  ╚═╝                                                                      
 """
 
-menu_txt = '''
-Main Menu\n
-  1) Decrypter\n
-  2) Forensics\n
-  3) Extractor\n
-In order to exit , type: exit\n
-'''
-
 
 ###########################
 
@@ -69,7 +61,6 @@ if __name__ == "__main__":
     # Create sub-menu for forensics
     menu_forensics = ConsoleMenu('Ultimate Forensics', formatter=menuStyle)
     item_forensics = SubmenuItem('Ultimate Forensics', menu_forensics, menu_main)
-
 
     # Add items to main menu
     menu_main.append_item(item_decrypter)

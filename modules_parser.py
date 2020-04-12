@@ -212,7 +212,3 @@ def extractor_function(args):
 def extractor_module(arguments):
     result = basic_module(arguments, extractorParser, extractor_function)
     return result
-
-
-def forensics_module(arguments):
-    pass  # TODO

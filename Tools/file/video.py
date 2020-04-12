@@ -13,12 +13,12 @@ class Flv(Extension):
             description=Flv.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x46 and
-                buf[1] == 0x4C and
-                buf[2] == 0x56 and
-                buf[3] == 0x01)
+    def check(self, header):
+        return (len(header) > 4 and
+                header[0] == 0x46 and
+                header[1] == 0x4C and
+                header[2] == 0x56 and
+                header[3] == 0x01)
 
 
 class Matroska(Extension):
@@ -33,12 +33,12 @@ class Matroska(Extension):
             description=Matroska.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 4 and
-                buf[0] == 0x1A and
-                buf[1] == 0x45 and
-                buf[2] == 0xDF and
-                buf[3] == 0xA3)
+    def check(self, header):
+        return (len(header) > 4 and
+                header[0] == 0x1A and
+                header[1] == 0x45 and
+                header[2] == 0xDF and
+                header[3] == 0xA3)
 
 
 class Avi(Extension):
@@ -53,20 +53,20 @@ class Avi(Extension):
             description=Avi.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 15 and  # Bytes 4-7 is the file size little endian
-                buf[0] == 0x52 and
-                buf[1] == 0x49 and
-                buf[2] == 0x46 and
-                buf[3] == 0x46 and
-                buf[8] == 0x41 and
-                buf[9] == 0x56 and
-                buf[10] == 0x49 and
-                buf[11] == 0x20 and
-                buf[12] == 0x4C and
-                buf[13] == 0x49 and
-                buf[14] == 0x53 and
-                buf[15] == 0x54)
+    def check(self, header):
+        return (len(header) > 15 and  # Bytes 4-7 is the file size little endian
+                header[0] == 0x52 and
+                header[1] == 0x49 and
+                header[2] == 0x46 and
+                header[3] == 0x46 and
+                header[8] == 0x41 and
+                header[9] == 0x56 and
+                header[10] == 0x49 and
+                header[11] == 0x20 and
+                header[12] == 0x4C and
+                header[13] == 0x49 and
+                header[14] == 0x53 and
+                header[15] == 0x54)
 
 
 class Mp4(Extension):
@@ -81,16 +81,16 @@ class Mp4(Extension):
             description=Mp4.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 10 and
-                buf[3] == 0x66 and
-                buf[4] == 0x74 and
-                buf[5] == 0x79 and
-                buf[6] == 0x70 and
-                buf[7] == 0x69 and
-                buf[8] == 0x73 and
-                buf[9] == 0x6F and
-                buf[10] == 0x6D)
+    def check(self, header):
+        return (len(header) > 10 and
+                header[4] == 0x66 and
+                header[5] == 0x74 and
+                header[6] == 0x79 and
+                header[7] == 0x70 and
+                header[8] == 0x69 and
+                header[9] == 0x73 and
+                header[10] == 0x6F and
+                header[11] == 0x6D)
 
 class Mov(Extension):
     EXTENSION = 'mov'
@@ -104,16 +104,16 @@ class Mov(Extension):
             description=Mov.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 10 and
-                buf[3] == 0x66 and
-                buf[4] == 0x74 and
-                buf[5] == 0x79 and
-                buf[6] == 0x70 and
-                buf[7] == 0x71 and
-                buf[8] == 0x74 and
-                buf[9] == 0x20 and
-                buf[10] == 0x20)
+    def check(self, header):
+        return (len(header) > 10 and
+                header[3] == 0x66 and
+                header[4] == 0x74 and
+                header[5] == 0x79 and
+                header[6] == 0x70 and
+                header[7] == 0x71 and
+                header[8] == 0x74 and
+                header[9] == 0x20 and
+                header[10] == 0x20)
 
 
 class Wmv(Extension):
@@ -128,21 +128,21 @@ class Wmv(Extension):
             description=Wmv.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 10 and
-                buf[0] == 0x30 and
-                buf[1] == 0x26 and
-                buf[2] == 0xB2 and
-                buf[3] == 0x75 and
-                buf[4] == 0x8E and
-                buf[5] == 0x66 and
-                buf[6] == 0xCF and
-                buf[7] == 0x11 and
-                buf[8] == 0xA6 and
-                buf[9] == 0xD9 and
-                buf[10] == 0x00 and
-                buf[11] == 0xAA and
-                buf[12] == 0x00 and
-                buf[13] == 0x62 and
-                buf[14] == 0xCE and
-                buf[15] == 0x6C)
+    def check(self, header):
+        return (len(header) > 10 and
+                header[0] == 0x30 and
+                header[1] == 0x26 and
+                header[2] == 0xB2 and
+                header[3] == 0x75 and
+                header[4] == 0x8E and
+                header[5] == 0x66 and
+                header[6] == 0xCF and
+                header[7] == 0x11 and
+                header[8] == 0xA6 and
+                header[9] == 0xD9 and
+                header[10] == 0x00 and
+                header[11] == 0xAA and
+                header[12] == 0x00 and
+                header[13] == 0x62 and
+                header[14] == 0xCE and
+                header[15] == 0x6C)

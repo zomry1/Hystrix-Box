@@ -1,44 +1,26 @@
 import time
 
-from Tools.file.extenstionDB import EXTENSIONS
+from Tools.file.extenstionDB import ALL_EXTENSIONS
 
 HEADER_BYTES = 262
 
 
-# Add this function to add decorator of @timing to measure function runtime
-def timing(f):
-	def wrap(*args):
-		time1 = time.time()
-		for i in range(2000):
-			ret = f(*args)
-		time2 = time.time()
-		print('{:s} function took {:.5f} ms'.format(f.__name__, (time2 - time1) / 2))
-		return ret
-
-	return wrap
-
-
 def get_header(filePath):
-	# Need to add checking for file with zero length
-	try:
-		with open(filePath, 'rb') as file:
-			return bytearray(file.read(HEADER_BYTES))
-	except:
-		print('Cant read the file')
-		return None
+    # Need to add checking for file with zero length
+    try:
+        with open(filePath, 'rb') as file:
+            return bytearray(file.read(HEADER_BYTES))
+    except FileNotFoundError:
+        print('Cant read the file')
+        return None
 
 
-#@timing
 def getFileExtension(filePath):
-	header = get_header(filePath)
-	if not header:
-		return None
+    header = get_header(filePath)
+    if not header:
+        return None
 
-	for extension in EXTENSIONS:
-		if extension.check(header):
-			return extension
-	return None
-
-
-#print(getFileExtension("Examples/TAR.tar"))
-#print(getFileExtension("Examples/ZIP.zip"))
+    for extension in ALL_EXTENSIONS:
+        if extension.check(header):
+            return extension
+    return None

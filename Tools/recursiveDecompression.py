@@ -4,7 +4,14 @@ import zipfile
 
 
 def extract_recursive(filename, path=''):
-    z = zipfile.ZipFile(filename)  # Open the zip file
+    try:
+        z = zipfile.ZipFile(filename)  # Open the zip file
+    except FileNotFoundError:
+        print('File not found')
+        return
+    except zipfile.BadZipFile:
+        print('Not a zip file or corrupted zip file')
+        return
     for f in z.namelist():  # Foreach file in the zip
         if f.endswith('.zip'):  # IF the file is a zip file
             dirname = os.path.splitext(f)[0]  # get directory name from file

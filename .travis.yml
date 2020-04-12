@@ -15,6 +15,11 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install codecov
 
 script:
+  - cd tests
   - pytest
+
+after_success:
+  - codecov -t e941cc9d-7531-47dc-840d-778d46f83032

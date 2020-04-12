@@ -70,7 +70,7 @@ def createBasicParser(description):
 def createExtractorParser():
     # Create argumentParser
     parser = createBasicParser(    'The Ultimate Extractor, Drop your RAW DATA FILE here')
-    # Specific decoder flag
+    # Specific extractor flag
     parser.add_argument('-e', '--extractor',
                         help='Choose specific extractor, {%(choices)s}',
                         choices=EXTRACTOR_MAP.keys(),

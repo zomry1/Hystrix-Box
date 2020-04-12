@@ -1,6 +1,7 @@
 class Extension(object):
-	def __init__(self, extension, mime,  description):
+	def __init__(self, extension, mime, description, otherExtensions=''):
 		self.__extension = extension
+		self._otherExtensions = otherExtensions
 		self.__mime = mime
 		self.__description = description
 
@@ -16,9 +17,9 @@ class Extension(object):
 	def description(self):
 		return self.__description
 
-	# Check if the buf is indicate on this file type
-	def check(self, buf):
+	# Check if the magic numbers are in the header
+	def check(self, header):
 		raise NotImplementedError
 
 	def __str__(self):
-		return 'File extension: ' + self.__extension + '\nMIME: ' + self.__mime + '\ndescription: ' + self.__description
+		return 'File extension: ' + self.__extension + '\nother extensions names: ' + self._otherExtensions + '\nMIME: ' + self.__mime + '\ndescription: ' + self.__description

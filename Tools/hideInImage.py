@@ -6,8 +6,8 @@ def findFiles(filename, output='hiddenFile'):
     try:
         with open(filename, 'rb') as file:
             f = bytearray(file.read())
-    except Exception as e:
-        print('Cant read the file' + e)
+    except:
+        print('Cant read the file')
         return
 
     endTag = 0
@@ -28,7 +28,7 @@ def findFiles(filename, output='hiddenFile'):
     index = f.find(endTag)
 
     if index == -1:
-        print('Not jpg file or corrupted file')
+        print('corrupted file')
         return
 
     if index+2 == len(f):
@@ -47,16 +47,11 @@ def findFiles(filename, output='hiddenFile'):
         return
     print('File extension is: ' + extension.extension)
 
+    '''
     # save file with correspond extension
     os.remove(output)
     with open(output + '.' + extension.extension, 'wb') as file:
         file.write(f[index + len(endTag):])
         print('Hidden files extracted')
+    '''
 
-
-
-# Run example
-# findFiles("me.txt") #Text file
-# findFiles("JPEG.jpg") #Regular jpg file
-# findFiles("hideInImage.jpg") #Jpg file with hidden files
-# findFiles('hiddenCheck/hidden.png')

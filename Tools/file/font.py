@@ -14,13 +14,14 @@ class Otf(Extension):  # Print version = print(buf[5:8])
             description=Otf.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 5 and
-                buf[0] == 0x4F and
-                buf[1] == 0x54 and
-                buf[2] == 0x54 and
-                buf[3] == 0x4F and
-                buf[4] == 0x00)
+    def check(self, header):
+        return (len(header) > 5 and
+                header[0] == 0x4F and
+                header[1] == 0x54 and
+                header[2] == 0x54 and
+                header[3] == 0x4F and
+                header[4] == 0x00)
+
 
 # https://www.iana.org/assignments/media-types/font/ttf
 class Ttf(Extension):  # Print version = print(buf[5:8])
@@ -35,10 +36,10 @@ class Ttf(Extension):  # Print version = print(buf[5:8])
             description=Ttf.DESCRIPTION
         )
 
-    def check(self, buf):
-        return (len(buf) > 5 and
-                buf[0] == 0x74 and
-                buf[1] == 0x72 and
-                buf[2] == 0x75 and
-                buf[3] == 0x65 and
-                buf[4] == 0x00)
+    def check(self, header):
+        return (len(header) > 5 and
+                header[0] == 0x74 and
+                header[1] == 0x72 and
+                header[2] == 0x75 and
+                header[3] == 0x65 and
+                header[4] == 0x00)

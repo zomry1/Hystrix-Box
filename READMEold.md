@@ -55,6 +55,7 @@ More:
 * PDF previous changes viewer
 * Filesystem images
 * Memory dumps
+* Bardcode and QR decoder
 
 ### Requirements
 * requests

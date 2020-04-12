@@ -1,11 +1,11 @@
 import argparse
 import sys
 
-
+# Create parserException
 class ParserException(Exception):
     pass
 
-
+# Override ArgumentParser to raise an ParseException instead of exiting
 class MyParser(argparse.ArgumentParser):
     def __init__(self,
                  prog=None,
@@ -25,7 +25,7 @@ class MyParser(argparse.ArgumentParser):
                          argument_default, conflict_handler, add_help, allow_abbrev)
         self.problem = False
 
-    # Change exit call default to raise an ParseException
+    # Change exit call default to raise an ParseException instead of exiting
     def exit(self, status=1, message=None):
         if message:
             self._print_message(message, sys.stderr)
