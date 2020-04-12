@@ -24,7 +24,6 @@ jobs:
         pip install codecov
         pip install pytest-cov
         pip install pytest-socket
-    - name: Lint with flake8
     - name: Test with pytest
       run: |
         cd tests
