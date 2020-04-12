@@ -21,7 +21,7 @@ install:
 
 script:
   - cd tests
-  - pytest --cov=../
+  - pytest --cov=../ --disable-socket
 
 after_success:
   - codecov -t e941cc9d-7531-47dc-840d-778d46f83032
