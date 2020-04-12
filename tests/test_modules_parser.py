@@ -63,6 +63,8 @@ Extract md5:
 No result found
 
 '''
+
+
 def compareDir(dir1, dir2):
     """
         Compare two directory trees content.
@@ -86,8 +88,10 @@ def test_file_module():
     assert (file_module(['../examples/DetectFileFormat/BMP.BMP']) == TEST2)
 
 
+'''
 def test_strings_module():
     assert (strings_module(['../examples/strings.jpg', '-n', '11']) == TEST3)
+'''
 
 
 def test_zip_extract_module(tmpdir):
