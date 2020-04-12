@@ -9,15 +9,13 @@ def test_get_file_extension_nofile(capfd):
     assert (extension is None and out == TEST1)
 
 
-def test_get_file_extension_bmp():
+def test_get_file_extension_bmp_all():
     extension = getFileExtension('../examples/DetectFileFormat/BMP.BMP')
     assert (
-            extension.extension == 'bmp' and extension.mime == 'image/bmp' and extension.description == 'Windows (or '
-                                                                                                        'device'
-                                                                                                        '-independent'
-                                                                                                        ') bitmap '
-                                                                                                        'image '
-            and str(extension) ==
+            extension.extension == 'bmp' and
+            extension.mime == 'image/bmp' and
+            extension.description == 'Windows (or device-independent) bitmap image' and
+            str(extension) ==
             'File extension: bmp\nother extensions names: \nMIME: image/bmp\ndescription: Windows (or '
             'device-independent) bitmap image')
 

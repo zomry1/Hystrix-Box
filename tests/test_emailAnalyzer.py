@@ -40,4 +40,4 @@ def test_strings_noFile():
 
 
 def test_email_analyzer_image_file():
-    assert (email_analyzer('../examples/hiddenInImage.jpg') == '')
+    assert (email_analyzer('../examples/LSBimage.png') == '')
