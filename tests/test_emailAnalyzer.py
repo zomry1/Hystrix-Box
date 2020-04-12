@@ -30,12 +30,14 @@ TEXT = ("Subject: Coming Wednesday, April 1st... Nailed It! Season 4\n"
 def test_email_analyzer_email():
     assert (email_analyzer('../examples/emailAnalyzer.eml') == TEXT)
 
+
 def test_email_analyzer_text_file():
     assert (email_analyzer('../examples/extractor.txt') == '')
+
 
 def test_strings_noFile():
     assert (email_analyzer('') == '')
 
 
-def test_strings_emptyFile():
-    assert (email_analyzer('../examples/empty') == '')
+def test_email_analyzer_image_file():
+    assert (email_analyzer('../examples/hiddenInImage.jpg') == '')

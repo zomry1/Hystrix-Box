@@ -12,10 +12,7 @@ class Base64Decoder(Decoder):
 
     @staticmethod
     def decode(text):
-        try:
-            base64_bytes = text.encode('ascii')
-            message_bytes = base64.b64decode(base64_bytes)
-            ciphertext = message_bytes.decode('ascii')
-            return [ciphertext]
-        except:
-            return []
+        base64_bytes = text.encode('ascii')
+        message_bytes = base64.b64decode(base64_bytes)
+        ciphertext = message_bytes.decode('ascii')
+        return [ciphertext]

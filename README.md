@@ -20,6 +20,9 @@
     </a>
     <br>
     <a herf="">
+        <img src ="https://img.shields.io/codecov/c/github/zomry1/Hystrix-Box" title="Codecov">
+    </a>
+    <a herf="">
         <img src="https://img.shields.io/github/issues-raw/zomry1/hystrix-box" title="Issues">
     </a>
     <a herf= "">

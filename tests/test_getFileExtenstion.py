@@ -6,7 +6,20 @@ TEST1 = '''Cant read the file\n'''
 def test_get_file_extension_nofile(capfd):
     extension = getFileExtension('')
     out, err = capfd.readouterr()
-    assert (extension is None and out==TEST1)
+    assert (extension is None and out == TEST1)
+
+
+def test_get_file_extension_bmp():
+    extension = getFileExtension('../examples/DetectFileFormat/BMP.BMP')
+    assert (
+            extension.extension == 'bmp' and extension.mime == 'image/bmp' and extension.description == 'Windows (or '
+                                                                                                        'device'
+                                                                                                        '-independent'
+                                                                                                        ') bitmap '
+                                                                                                        'image '
+            and str(extension) ==
+            'File extension: bmp\nother extensions names: \nMIME: image/bmp\ndescription: Windows (or '
+            'device-independent) bitmap image')
 
 
 def test_get_file_extension_bmp():

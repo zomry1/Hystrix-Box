@@ -31,7 +31,7 @@ def findFiles(filename, output='hiddenFile'):
         print('corrupted file')
         return
 
-    if index+2 == len(f):
+    if index+len(endTag) == len(f):
         print('There is no hidden files in this image')
         return
 
@@ -46,12 +46,6 @@ def findFiles(filename, output='hiddenFile'):
         print('File extension not found')
         return
     print('File extension is: ' + extension.extension)
+    os.rename(output, output + '.' + extension.extension)
 
-    '''
-    # save file with correspond extension
-    os.remove(output)
-    with open(output + '.' + extension.extension, 'wb') as file:
-        file.write(f[index + len(endTag):])
-        print('Hidden files extracted')
-    '''
 

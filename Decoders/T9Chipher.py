@@ -17,4 +17,4 @@ class T9Decoder(Decoder):
         for j in letters:
             charset = T9_KEYPAD[int(j[0])]
             answer = answer + [charset[(len(j) - 1) % len(charset)]]
-        return ''.join(answer)
+        return [''.join(answer)]

@@ -12,11 +12,11 @@ def email_analyzer(filename):
         with open(filename) as file:
             result = ''
             msg = email.message_from_file(file)
-            if {MissingHeaderBodySeparatorDefect()} in msg.defects:
-                print('error')
             for field in wantedFields:
                 for value in (msg.get_all(field) or []):
                     result += field + ": " + value + '\n'
             return result
     except FileNotFoundError:
+        return ''
+    except UnicodeDecodeError:
         return ''
