@@ -19,7 +19,7 @@ install:
 
 script:
   - cd tests
-  - pytest
+  - pytest --cov=./
 
 after_success:
   - codecov -t e941cc9d-7531-47dc-840d-778d46f83032
