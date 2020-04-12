@@ -21,13 +21,13 @@ def compareDir(dir1, dir2):
     return True
 
 
-def test_extract_recursive_true(capfd, tmpdir):
+def test_extract_recursive_true(tmpdir):
     path = tmpdir.strpath
     extract_recursive('../examples/recursivezip.zip', path)
     assert compareDir(path, '../examples/RecursiveZipExtracted/')
 
 
-def test_extract_recursive_1layer(capfd, tmpdir):
+def test_extract_recursive_1layer(tmpdir):
     path = tmpdir.strpath
     extract_recursive('../examples/root.zip', path)
     assert compareDir(path, '../examples/RecursiveZipExtracted/1Introduction/2Introduction/3Introduction')

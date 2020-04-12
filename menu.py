@@ -4,8 +4,8 @@ from consolemenu.items import *
 import consolemenu
 
 ###########################
-from modules_parser import decrypter_module, extractor_module, file_module, strings_module, zip_extract_module, \
-    stegoLSB_module, emailAnalyzer_module
+from modules_parser import decrypter_module, extractor_module, file_module, strings_module, zip_extract_module,\
+    emailAnalyzer_module
 
 LOGO = """
 ██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
@@ -71,14 +71,14 @@ if __name__ == "__main__":
     item_file = FunctionItem('Detect file type', module_run, [file_module])
     item_strings = FunctionItem('Find printable strings in files', module_run, [strings_module])
     item_extract_zip = FunctionItem('Extract recursive zip file', module_run, [zip_extract_module])
-    item_stegoLSB = FunctionItem('StegoLSB decode', module_run, [stegoLSB_module])
+    #item_stegoLSB = FunctionItem('StegoLSB decode', module_run, [stegoLSB_module])
     item_emailAnalyzer = FunctionItem('Email analyzer', module_run, [emailAnalyzer_module])
 
     # Add items to forensics menu
     menu_forensics.append_item(item_file)
     menu_forensics.append_item(item_strings)
     menu_forensics.append_item(item_extract_zip)
-    menu_forensics.append_item(item_stegoLSB)
+    #menu_forensics.append_item(item_stegoLSB)
     menu_forensics.append_item(item_emailAnalyzer)
 
     # Show the menu

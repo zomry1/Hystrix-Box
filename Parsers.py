@@ -87,7 +87,12 @@ def createStegoLSBParser():
 
 
 def createZipExtractParser():
-    return createBasicParser('Extract recursive zip files')
+    parser = createBasicParser('Extract recursive zip files')
+    # Specific path to extract
+    parser.add_argument('-p', '--path',
+                        help='Choose path for extract',
+                        metavar='PATH')
+    return parser
 
 
 def createStringParser():

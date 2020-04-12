@@ -13,9 +13,8 @@ from Tools.emailAnalyzer import email_analyzer
 from Tools.file.getFileExtenstion import getFileExtension
 ###########################
 from Tools.recursiveDecompression import extract_recursive
-from Tools.stegoLSB import decode
 from Tools.strings import strings
-from personal_parser import MyParser, ParserException
+from personal_parser import ParserException
 from evaluator import evaluate
 
 ###########################
@@ -23,7 +22,7 @@ from evaluator import evaluate
 # Create parser
 decrypterParser = createDecrypterParser()
 fileParser = createFileParser()
-stringParser = createStringParser
+stringParser = createStringParser()
 zipExtractParser = createZipExtractParser()
 stegoLSBParser = createStegoLSBParser()
 emailAnalyzerParser = createEmailAnalyzerParser()
@@ -147,7 +146,7 @@ def strings_module(arguments):
 def zip_extract_function(args):
     # Get the file data
     if args.filename is not None:
-        extract_recursive(args.filename.name, args.output)
+        extract_recursive(args.filename.name, args.path)
         return 'Done extracting'
 
 
@@ -156,6 +155,7 @@ def zip_extract_module(arguments):
     return result
 
 
+'''
 def stegoLSB_function(args):
     # Get the file data
     if args.filename is not None:
@@ -165,13 +165,14 @@ def stegoLSB_function(args):
 def stegoLSB_module(arguments):
     result = basic_module(arguments, stegoLSBParser, stegoLSB_function)
     return result
+'''
 
 
 def emailAnalyzer_function(args):
     # Get the file data
     if args.filename is not None:
         results = email_analyzer(args.filename.name)
-        print(results)
+        return results
 
 
 def emailAnalyzer_module(arguments):
