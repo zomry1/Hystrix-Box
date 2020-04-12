@@ -216,12 +216,12 @@ TEST3 = '''YqU""""""""""""""""""""""""""*D
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDE
 """""""""""""""""""""""""*H'''
 
-
+'''
 def test_strings_4chars():
     assert (strings('../examples/strings.jpg') == TEST1)
 
 
-def test_strings_10chars():
+def test_strings_11chars():
     assert (strings('../examples/strings.jpg', 11) == TEST2)
 
 
@@ -231,7 +231,7 @@ def test_strings_20chars():
 
 def test_strings_100chars():
     assert (strings('../examples/strings.jpg', 100) == '')
-
+'''
 
 def test_strings_noFile():
     assert (strings('') == '')
