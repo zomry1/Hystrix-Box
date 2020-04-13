@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Hystrix-Box’s documentation! &#8212; Hystrix-Box 1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-hystrix-box-s-documentation">
+<h1>Welcome to Hystrix-Box’s documentation!<a class="headerlink" href="#welcome-to-hystrix-box-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="decoder">
+<h1>Decoder<a class="headerlink" href="#decoder" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="Decoders.Decoder.Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">Decoders.Decoder.</code><code class="sig-name descname">Decoder</code><a class="headerlink" href="#Decoders.Decoder.Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent an Decoder</p>
+<dl class="py method">
+<dt id="Decoders.Decoder.Decoder.decode">
+<em class="property">static </em><code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Decoder.Decoder.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode the text by the cipher</p>
+<p>If there are multiple ways to decode the text, return all of them</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the plain-texts (or plain-text) after decode</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raise</dt>
+<dd class="field-even"><p>NotImplementedError If the validate function not set in the decoder</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Decoders.Decoder.Decoder.safe_decode">
+<em class="property">classmethod </em><code class="sig-name descname">safe_decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Decoder.Decoder.safe_decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the format of the text and decode it</p>
+<p>First check if the text is in the format of the cipher, if so decode it.
+If the text is not in the format, return empty list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the plain-texts (or plain-text) after decode</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Decoders.Decoder.Decoder.validate">
+<em class="property">static </em><code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Decoder.Decoder.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate string format for this cipher.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Either the text is in the cipher format or not</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raise</dt>
+<dd class="field-even"><p>NotImplementedError If the validate function not set in the decoder</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="Decoders.Base64Cipher.Base64Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">Decoders.Base64Cipher.</code><code class="sig-name descname">Base64Decoder</code><a class="headerlink" href="#Decoders.Base64Cipher.Base64Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Decoders.Decoder.Decoder" title="Decoders.Decoder.Decoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decoders.Decoder.Decoder</span></code></a></p>
+<p>A class used to represent an Base64 decoder</p>
+<dl class="py method">
+<dt id="Decoders.Base64Cipher.Base64Decoder.decode">
+<em class="property">static </em><code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Base64Cipher.Base64Decoder.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode the text by the 64Base encoding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the plain-text after decode</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Decoders.Base64Cipher.Base64Decoder.safe_decode">
+<em class="property">classmethod </em><code class="sig-name descname">safe_decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Base64Cipher.Base64Decoder.safe_decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the format of the text and decode it</p>
+<p>First check if the text is in the format of the cipher, if so decode it.
+If the text is not in the format, return empty list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the plain-texts (or plain-text) after decode</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Decoders.Base64Cipher.Base64Decoder.validate">
+<em class="property">static </em><code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Decoders.Base64Cipher.Base64Decoder.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate string format for 64Base encoding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The cipher-text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Either the text is in the cipher format or not</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="extractor">
+<h1>Extractor<a class="headerlink" href="#extractor" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Hystrix-Box</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, zomry1.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
