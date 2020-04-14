@@ -11,6 +11,8 @@ from Extractors.urlExtractor import URLExtractor
 ############################
 from personal_parser import MyParser
 import argparse
+###########################
+
 
 ARGS_STR = """
     ___                                                 __       
@@ -131,7 +133,7 @@ def createDecrypterParser():
     Parser.add_argument('--version', action='version')
 
     # Specific decoder flag
-    Parser.add_argument('-s', '--specific',
+    Parser.add_argument('-d', '--decoder',
                         help='Choose specific decoder, {%(choices)s}',
                         choices=DECODERS_MAP.keys(),
                         metavar='DECODER')
@@ -150,9 +152,9 @@ def createDecrypterParser():
                         metavar='FORMAT')
 
     # Number of results to print
-    Parser.add_argument('-n',
+    Parser.add_argument('-n', '--number',
                         type=int,
-                        help='Number of results to be printed (sorted by descending score',
+                        help='Number of results to be printed (sorted by descending score)',
                         metavar='NUMBER',
                         default=1)
     # Verbose flag

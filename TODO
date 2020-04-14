@@ -19,5 +19,6 @@ README:
 Deployment:
 * Upload to PyPi
 * Complete documentation - https://readthedocs.org/
+* add Api keys file and to the documentation
 * Complete tests
 * Check python version

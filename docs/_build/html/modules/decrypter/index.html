@@ -13,8 +13,6 @@
 
   
   
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
   
   
 
@@ -55,9 +53,6 @@
             <a href="../../index.html" class="icon icon-home"> Hystrix-Box
           
 
-          
-            
-            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -187,6 +182,22 @@ Evaluate each result and return the best result.</p>
 </dl>
 </dd>
 </dl>
+<p><cite>or</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">-c Ciphertext</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--ciphertext</span></code></p>
+</dd>
+<dt class="field-odd">Explenation</dt>
+<dd class="field-odd"><p>Paste ciphertext</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </div>
 <div class="section" id="optional-arguments">
 <h2>Optional Arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h2>
@@ -204,13 +215,139 @@ Evaluate each result and return the best result.</p>
 </dd>
 </dl>
 </dd>
+<dt class="field-even">–version</dt>
+<dd class="field-even"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>flag</em></p>
+</dd>
+<dt class="field-even">Expleneation</dt>
+<dd class="field-even"><p>Show the version of the tool</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">-d</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>ascii, base64, caesar, reverse, hash</p>
+</dd>
+<dt class="field-odd">Aliases</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">--decoder</span></code></p>
+</dd>
+<dt class="field-even">Expleneation</dt>
+<dd class="field-even"><p>Use specific decoder</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">-n Number</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>int</em></p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>1</p>
+</dd>
+<dt class="field-odd">Aliases</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">--number</span></code></p>
+</dd>
+<dt class="field-even">Expleneation</dt>
+<dd class="field-even"><p>Number of results to be printed (sorted by descending score)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If none from below is selected, the script uses all the evaluators together</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">-cl</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>flag</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--checkLetter</span></code></p>
+</dd>
+<dt class="field-odd">Expleneation</dt>
+<dd class="field-odd"><p>Use letter analysis to evaluate the results</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">-cw</dt>
+<dd class="field-even"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>flag</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--checkWord</span></code></p>
+</dd>
+<dt class="field-odd">Expleneation</dt>
+<dd class="field-odd"><p>Use word analysis to evaluate the results</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">-cf Format</dt>
+<dd class="field-even"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--checkLetter</span></code></p>
+</dd>
+<dt class="field-odd">Expleneation</dt>
+<dd class="field-odd"><p>Search the CTF flag to evaluate the results</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If the CTF normal flag is omryCTF2020{XXXXXXXXXXXXXXX}</p>
+<p>you need to enter: <code class="docutils literal notranslate"><span class="pre">omryCTF2020{}</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">-v</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>flag</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p>
+</dd>
+<dt class="field-odd">Expleneation</dt>
+<dd class="field-odd"><p>Verbose mode, printing additional information</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">-o Filename</dt>
+<dd class="field-even"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Aliases</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">--output</span></code></p>
+</dd>
+<dt class="field-odd">Expleneation</dt>
+<dd class="field-odd"><p>Path for the file the results will be saved in</p>
+</dd>
+</dl>
+</dd>
 </dl>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -h
+<ul>
+<li><p>Using code.txt file and use all evaluators:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; <span class="sb">``</span>-f code.txt<span class="sb">``</span>
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+</ul>
 </div>
 </div>
 

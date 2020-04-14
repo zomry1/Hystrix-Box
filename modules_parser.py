@@ -63,7 +63,7 @@ def decrypter_function(args):
         cipher_txt = args.filename.read()
 
     # If specific decoder set (else use all decoders)
-    if args.specific is not None:
+    if args.decoder is not None:
         logging.info('Use specific decoder: ' + args.specific)
         decoder = DECODERS_MAP[args.specific]
         results = decoder(cipher_txt)
