@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
 setup(
   name = 'Hystrix-Box',         # How you named your package folder (MyLib)
   packages = ['Hystrix-Box'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = Hystrix-Box.__version__ ,      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Ultimate toolbox for solving CTF challenges',   # Give a short description about your library
   long_description=long_description,
@@ -14,7 +14,7 @@ setup(
   author = 'zomry1',                   # Type in your name
   author_email = 'zomry1@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/zomry1/Hystrix-Box/',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/zomry1/Hystrix-Box/archive/v_01.tar.gz',    # I explain this later on
   keywords = ['CTF', 'toolbox', 'challenges'],   # Keywords that define your package best
   packages=setuptools.find_packages(),
   install_requires=[            # I get to this in a second

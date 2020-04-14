@@ -11,15 +11,13 @@ TODO:
 
 
 README:
-* Center Budgets
 * Add hall of fame
 * Complete roadmap
 * Read about Release
 
 
 Deployment:
-* add testing using pytest
-* Change Decoders to Class and etc
 * Upload to PyPi
-* Create documentation - https://readthedocs.org/
-* Check code converge
+* Complete documentation - https://readthedocs.org/
+* Complete tests
+* Check python version
