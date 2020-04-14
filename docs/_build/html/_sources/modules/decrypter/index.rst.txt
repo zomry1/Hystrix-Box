@@ -9,6 +9,9 @@ Evaluate each result and return the best result.
     ``[-h] (-c CIPHERTEXT | -f FILENAME) [--version] [-s DECODER] [-cl] [-cw] [-cf FORMAT]``
     ``[-n NUMBER] [-v] [-o FILENAME]``
 
+Arguments
+---------
+
 Positional Arguments
 ~~~~~~~~~~~~~~~~~~~~
 :-f Filename:
@@ -84,7 +87,7 @@ Optional Arguments
 
 
 Examples
-~~~~~~~~
+--------
 
 - Using code.txt file and use all evaluators:
 
@@ -105,10 +108,21 @@ Examples
 
         >>> -c VGhpcyBpcyBhbiBleGFtcGxlIQ== -d base64
 
-- Decrypt string and use flag evaluator:
+.. important::
+
+    When using -c flag, when the ciphertext has whitespaces in it, the argument should be written between quotation marks ``"``
+
+- Decrypt string (with whitespaces in it) and use flag evaluator:
 
     .. code-block:: console
 
         >>> -c "}wonK_tnoD_I{0202FTCyrmo galf ym si erehW" -cf omryCTF2020{}
+
+
+- Using code.txt file, return the top 5 results and save it in results.txt file :
+
+    .. code-block:: console
+
+        >>> -f code.txt -n 5 -o results.txt
 
 

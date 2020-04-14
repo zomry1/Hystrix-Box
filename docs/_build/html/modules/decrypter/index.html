@@ -165,8 +165,10 @@ Evaluate each result and return the best result.</p>
 <p><code class="docutils literal notranslate"><span class="pre">[-h]</span> <span class="pre">(-c</span> <span class="pre">CIPHERTEXT</span> <span class="pre">|</span> <span class="pre">-f</span> <span class="pre">FILENAME)</span> <span class="pre">[--version]</span> <span class="pre">[-s</span> <span class="pre">DECODER]</span> <span class="pre">[-cl]</span> <span class="pre">[-cw]</span> <span class="pre">[-cf</span> <span class="pre">FORMAT]</span></code>
 <code class="docutils literal notranslate"><span class="pre">[-n</span> <span class="pre">NUMBER]</span> <span class="pre">[-v]</span> <span class="pre">[-o</span> <span class="pre">FILENAME]</span></code></p>
 </div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="positional-arguments">
-<h2>Positional Arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this headline">¶</a></h2>
+<h3>Positional Arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">-f Filename</dt>
 <dd class="field-odd"><dl class="field-list simple">
@@ -200,7 +202,7 @@ Evaluate each result and return the best result.</p>
 </dl>
 </div>
 <div class="section" id="optional-arguments">
-<h2>Optional Arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h2>
+<h3>Optional Arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">-h</dt>
 <dd class="field-odd"><dl class="field-list simple">
@@ -337,6 +339,7 @@ Evaluate each result and return the best result.</p>
 </dd>
 </dl>
 </div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <ul>
@@ -361,9 +364,22 @@ Evaluate each result and return the best result.</p>
 </div>
 </div></blockquote>
 </li>
-<li><p>Decrypt string and use flag evaluator:</p>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When using -c flag, when the ciphertext has whitespaces in it, the argument should be written between quotation marks <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p>
+</div>
+<ul>
+<li><p>Decrypt string (with whitespaces in it) and use flag evaluator:</p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -c <span class="s2">&quot;}wonK_tnoD_I{0202FTCyrmo galf ym si erehW&quot;</span> -cf omryCTF2020<span class="o">{}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Using code.txt file, return the top 5 results and save it in results.txt file :</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -f code.txt -n <span class="m">5</span> -o results.txt
 </pre></div>
 </div>
 </div></blockquote>
