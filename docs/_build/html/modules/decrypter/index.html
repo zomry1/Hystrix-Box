@@ -342,7 +342,28 @@ Evaluate each result and return the best result.</p>
 <ul>
 <li><p>Using code.txt file and use all evaluators:</p>
 <blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; <span class="sb">``</span>-f code.txt<span class="sb">``</span>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -f code.txt
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Using code.txt file and use letter analysis evaluator:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -f code.txt -cl
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Decrypt string and use Base64 decoder:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -c <span class="nv">VGhpcyBpcyBhbiBleGFtcGxlIQ</span><span class="o">==</span> -d base64
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Decrypt string and use flag evaluator:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; -c <span class="s2">&quot;}wonK_tnoD_I{0202FTCyrmo galf ym si erehW&quot;</span> -cf omryCTF2020<span class="o">{}</span>
 </pre></div>
 </div>
 </div></blockquote>

@@ -109,7 +109,7 @@ def decrypter_function(args):
 
     # Create result string
     result = ''
-    evaluatedPlaintexts = evaluate(plaintexts, functions_string, flag_format)[0:args.n]
+    evaluatedPlaintexts = evaluate(plaintexts, functions_string, flag_format)[0:args.number]
     for i, plaintext in enumerate(evaluatedPlaintexts):
         result += '[' + str(i + 1) + '] Result: ' + plaintext[0] + '\n\n'
 

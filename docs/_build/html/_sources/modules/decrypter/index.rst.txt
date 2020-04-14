@@ -90,4 +90,25 @@ Examples
 
     .. code-block:: console
 
-        >>> ``-f code.txt``
+        >>> -f code.txt
+
+
+- Using code.txt file and use letter analysis evaluator:
+
+    .. code-block:: console
+
+        >>> -f code.txt -cl
+
+- Decrypt string and use Base64 decoder:
+
+    .. code-block:: console
+
+        >>> -c VGhpcyBpcyBhbiBleGFtcGxlIQ== -d base64
+
+- Decrypt string and use flag evaluator:
+
+    .. code-block:: console
+
+        >>> -c "}wonK_tnoD_I{0202FTCyrmo galf ym si erehW" -cf omryCTF2020{}
+
+
