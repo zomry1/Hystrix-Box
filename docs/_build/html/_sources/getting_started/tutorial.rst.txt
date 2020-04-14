@@ -39,6 +39,3 @@ Open CMD and type:
     $ Hystrix-Box
 
 If everything worked, you should be see this:
-
-.. figure:: ../../images/demo.png
-   :alt: Welcome screen
