@@ -39,3 +39,5 @@ Open CMD and type:
     $ Hystrix-Box
 
 If everything worked, you should be see this:
+
+.. image:: demo.png
