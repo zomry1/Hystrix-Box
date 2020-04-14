@@ -22,7 +22,7 @@ copyright = '2020, zomry1'
 author = 'zomry1'
 
 # The full version, including alpha/beta/rc tags
-release = ../Hystrix-Box.__version__
+release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 
