@@ -5,6 +5,11 @@ PRINTABLE_ASCII_VALUES = '^(3[2-9]|[4-9][0-9]|1[01][0-9]|12[0-6])$'
 
 
 class ASCIIDecoder(Decoder):
+    """
+        A class used to represent a ASCII decoder
+
+    """
+
     @staticmethod
     def validate(text):
         return all(bool(re.match(PRINTABLE_ASCII_VALUES, part)) for part in text.split())

@@ -3,8 +3,6 @@ Welcome to Hystrix-Box's documentation!
 
 First steps
 -----------------
-.. toctree::
-   :maxdepth: 4
 
 * **First steps**
 
@@ -16,14 +14,20 @@ First steps
 
   * :doc:`modules/index`
 
+* **Code**
+
+  * :doc:`code/index`
+
+
 
 Indices and tables
 ==================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    getting_started/index
    modules/index
+   code/index
    support
    releases/index

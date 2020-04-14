@@ -1,8 +1,17 @@
+"""
+.. class: Decoder
+
+A class used to represent an Decoder
+
+"""
+
+
 class Decoder(object):
     """
-    A class used to represent an Decoder
+    A class used to represent a Decoder
 
     """
+
     @staticmethod
     def validate(text):
         """Validate string format for this cipher.
