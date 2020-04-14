@@ -14,6 +14,7 @@ Hystrix-Box supports Python 3.6 and above
 To check whether you have an appropriate version of Python 3:
 
 .. code-block:: console
+   :linenos:
 
    $ python3 --version
 
@@ -24,6 +25,7 @@ Install Hystrix-Box
 Use pip, which is packaged with Python, to install Hystrix-Box and its dependencies:
 
 .. code-block:: console
+   :linenos:
 
    $ pip install hystrix-box
 

@@ -9,7 +9,7 @@ you are invited to visit any of the following support channels, where our staff 
 
 
 Discord
-~~~~~
+~~~~~~~
 
 The Hystrix-Box Discord is open to all users and developers.
 To join, head to: `https://discord.gg/nwrZUuU <https://discord.gg/nwrZUuU>`_

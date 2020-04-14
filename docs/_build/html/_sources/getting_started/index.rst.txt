@@ -9,7 +9,9 @@ Dependencies needed for installation
 Quick install
 -------------
 Run the following command:
+
 .. code-block:: console
+   :linenos:
 
     $ pip install hystrix-box
 
