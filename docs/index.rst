@@ -1,32 +1,28 @@
 Welcome to Hystrix-Box's documentation!
 =======================================
 
+First steps
+-----------------
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-Decoder
-=======
-.. autoclass:: Decoders.Decoder.Decoder
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    :inherited-members:
+* **First steps**
 
-.. autoclass:: Decoders.Base64Cipher.Base64Decoder
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    :inherited-members:
+  * :doc:`getting_started/index`
+  * :doc:`getting_started/tutorial`
 
-Extractor
-=========
-
+* **Modules**
+  * :doc:`modules/index`
 
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   getting_started/index
+   modules/index
+   support
+   releases/index
