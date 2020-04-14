@@ -55,5 +55,5 @@ html_static_path = ['_static']
 
 master_doc = 'index'
 
-html_logo = 'logo.png'
+html_logo = 'logo.jpg'
 html_favicon = 'favicon.ico'

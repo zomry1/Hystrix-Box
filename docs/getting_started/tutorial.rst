@@ -40,4 +40,4 @@ Open CMD and type:
 
 If everything worked, you should be see this:
 
-.. image:: demo.png
+.. image:: demo.jpg
