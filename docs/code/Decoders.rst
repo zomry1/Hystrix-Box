@@ -1,63 +1,45 @@
-.. automodule:: Decoders
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :inherited-members:
+=======
+Decoder
+=======
 
-Decoders.Decoder
-^^^^^^^^^^^^^^^^
-
-.. automodule:: Decoders.Decoder
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :inherited-members:
-
-Decoders.ASCIICipher
-~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: Decoders.ASCIICipher
+.. autoclass:: Decoders.Decoder
    :members:
    :undoc-members:
    :show-inheritance:
 
-Decoders.Base64Cipher
-~~~~~~~~~~~~~~~~~~~~~
+Ascii Decoder
+~~~~~~~~~~~~~
 
-.. automodule:: Decoders.Base64Cipher
-   :members:
-   :undoc-members:
+.. autoclass:: Decoders.ASCIIDecoder
    :show-inheritance:
 
-Decoders.CaesarCipher
-~~~~~~~~~~~~~~~~~~~~~
+Base64 Decoder
+~~~~~~~~~~~~~~
 
-.. automodule:: Decoders.CaesarCipher
-   :members:
-   :undoc-members:
+.. autoclass:: Decoders.Base64Decoder
    :show-inheritance:
 
+Caesar Decoder
+~~~~~~~~~~~~~~
 
-Decoders.HashCipher
-~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: Decoders.HashCipher
-   :members:
-   :undoc-members:
+.. autoclass:: Decoders.CaesarDecoder
    :show-inheritance:
 
-Decoders.ReverseCipher
-~~~~~~~~~~~~~~~~~~~~~~
+Hash Decoder
+~~~~~~~~~~~~
 
-.. automodule:: Decoders.ReverseCipher
-   :members:
-   :undoc-members:
+.. autoclass:: Decoders.HashDecoder
    :show-inheritance:
 
-Decoders.T9Chipher
-~~~~~~~~~~~~~~~~~~
+Reverse Decoder
+~~~~~~~~~~~~~~~
 
-.. automodule:: Decoders.T9Chipher
-   :members:
-   :undoc-members:
+.. autoclass:: Decoders.ReverseDecoder
    :show-inheritance:
+
+T9 Decoder
+~~~~~~~~~~
+
+.. autoclass:: Decoders.T9Decoder
+   :show-inheritance:
+

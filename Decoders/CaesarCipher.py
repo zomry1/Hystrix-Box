@@ -15,6 +15,17 @@ def CaesarDecode(ciphertext, shift):
 
 
 class CaesarDecoder(Decoder):
+    """
+    A class used to represent a Caesar decoder
+
+    .. note:: brute-force all options (shifts) and return list of all possible options
+            starting from 1-shift to 25-shift
+
+    :Example:
+
+        ``Rfgq gq yl cvyknjc! -> [Sghr hr zm dwzlokd!, This is an example!, Uijt jt bo fybnqmf!] and go on``
+
+    """
     @staticmethod
     def validate(text):
         return True

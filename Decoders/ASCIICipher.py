@@ -8,6 +8,10 @@ class ASCIIDecoder(Decoder):
     """
         A class used to represent a ASCII decoder
 
+        :Example:
+
+            ``84 104 105 115 32 105 115 32 97 110 32 101 120 97 109 112 108 101 33 -> This is an example!``
+
     """
 
     @staticmethod
