@@ -1,7 +1,6 @@
-"""This module include Decoder abstract class and inheritance class that used to decode ciphertext.
+"""
+This module include Decoder abstract class and inheritance class that used to decode ciphertext.
 Used in Ultimate Decrypter Tool.
-
-.. moduleauthor:: Omry Zur <zomry1@gmail.com>
 
 """
 from Decoders.Decoder import Decoder

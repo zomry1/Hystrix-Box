@@ -8,6 +8,13 @@ URL_PATTERN = re.compile(
 
 
 class URLExtractor(Extractor):
+    """
+        A class used to represent an URL extractor
+
+        .. note:: Regex include prefix http or https, IPv4, IPv6, postfix port and resource path.\n
+            All URL with this format: ``((?:https?://)?(?:STANDARD_URL|IPv4|IPv6)(?:PORT)?(?:RESSOURCE_PATH)``
+    """
+
     @staticmethod
     def extract(text):
         urls = URL_PATTERN.findall(text)

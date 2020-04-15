@@ -25,6 +25,12 @@ IPv6_PATTERN = re.compile(r'(?:(?:[0-9A-Fa-f]{1,4}:){6}(?:[0-9A-Fa-f]{1,4}:[0-9A
 
 
 class IPExtractor(Extractor):
+    """
+        A class used to represent an Ip extractor
+
+        .. note:: Regex include both IPv4 and IPv6 formats
+    """
+
     @staticmethod
     def extract(text):
         # It's more efficient to use 2 patterns instead use OR between 2 regex
