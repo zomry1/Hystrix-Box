@@ -1,4 +1,4 @@
-from Extractors.urlExtractor import URLExtractor
+from HystrixBox.Extractors.urlExtractor import URLExtractor
 
 TEXT = '''add1 http://mit.edu.com abc
 add2 https://facebook.jp.com.2. abc

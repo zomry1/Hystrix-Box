@@ -1,4 +1,4 @@
-from Tools.strings import strings
+from HystrixBox.Tools.strings import strings
 
 TEST1 = r'''JFIF
 ICC_PROFILE

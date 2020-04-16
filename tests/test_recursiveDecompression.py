@@ -1,4 +1,4 @@
-from Tools.recursiveDecompression import extract_recursive
+from HystrixBox.Tools.recursiveDecompression import extract_recursive
 import filecmp
 import os
 

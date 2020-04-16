@@ -1,4 +1,4 @@
-from Decoders.CaesarCipher import CaesarDecoder
+from HystrixBox.Decoders.CaesarCipher import CaesarDecoder
 
 
 def test_validate():

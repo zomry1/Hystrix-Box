@@ -1,4 +1,4 @@
-from Decoders.HashCipher import HashDecoder
+from HystrixBox.Decoders.HashCipher import HashDecoder
 
 
 def test_validate_md5_true():

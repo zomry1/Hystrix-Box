@@ -1,4 +1,4 @@
-from Decoders.ASCIICipher import ASCIIDecoder
+from HystrixBox.Decoders.ASCIICipher import ASCIIDecoder
 
 
 def test_validate_true():

@@ -1,4 +1,4 @@
-from Tools.emailAnalyzer import email_analyzer
+from HystrixBox.Tools.emailAnalyzer import email_analyzer
 
 TEXT = ("Subject: Coming Wednesday, April 1st... Nailed It! Season 4\n"
         "Date: Tue, 24 Mar 2020 18:02:10 +0000\n"

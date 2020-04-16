@@ -1,4 +1,4 @@
-from Tools.fileType.getFileExtenstion import getFileExtension
+from HystrixBox.Tools.fileType.getFileExtenstion import getFileExtension
 
 TEST1 = '''Cant read the file\n'''
 

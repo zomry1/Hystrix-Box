@@ -1,4 +1,4 @@
-from Decoders.Base64Cipher import Base64Decoder
+from HystrixBox.Decoders.Base64Cipher import Base64Decoder
 
 
 def test_validate_true():

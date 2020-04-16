@@ -1,4 +1,4 @@
-from Tools.hideInImage import findFiles
+from HystrixBox.Tools.hideInImage import findFiles
 import filecmp
 
 TEST1 = '''Hidden files extracted

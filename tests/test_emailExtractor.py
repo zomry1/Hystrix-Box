@@ -1,4 +1,4 @@
-from Extractors.emailExtractor import EmailExtractor
+from HystrixBox.Extractors.emailExtractor import EmailExtractor
 
 TEXT = '''@@ -0,0 +1,5 @@
 Creuncf gur zbfg jryy-choyvpvmrq grpu gbby va Ehffvn'f nefrany sbe svtugvat pbebanivehf vf Zbfpbj'f znffvir snpvny-erpbtavgvba flfgrz. Ebyyrq bhg rneyvre guvf lrne, gur fheirvyynapr flfgrz unq bevtvanyyl cebzcgrq na hahfhny choyvp onpxynfu, jvgu cevinpl nqibpngrf svyvat ynjfhvgf bire haynjshy fheirvyynapr.
