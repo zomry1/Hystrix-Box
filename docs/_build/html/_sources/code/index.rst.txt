@@ -29,3 +29,14 @@ Tools
    :maxdepth: 4
 
    Tools
+
+.. _Evaluators_label:
+
+Evaluators
+~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 4
+
+   Evaluators
+

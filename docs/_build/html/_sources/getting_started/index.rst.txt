@@ -20,3 +20,9 @@ Run the following command:
     :maxdepth: 1
 
     tutorial
+
+.. important::
+
+   | In order to use Word analysis you need to add you keys to keys.py, further information
+   | Can be found :ref:`Keys_label`
+

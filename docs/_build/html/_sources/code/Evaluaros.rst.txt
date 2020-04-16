@@ -1,0 +1,26 @@
+=========
+Evaluator
+=========
+
+.. autoclass::  HystrixBox.Evaluators.Evaluator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Flag evaluator
+~~~~~~~~~~~~~~
+
+.. autoclass:: HystrixBox.Evaluators.flag_check
+   :show-inheritance:
+
+Letter analysis evaluator
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: HystrixBox.Evaluators.letter_check
+   :show-inheritance:
+
+Word analysis evaluator
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: HystrixBox.Evaluators.word_check
+   :show-inheritance:

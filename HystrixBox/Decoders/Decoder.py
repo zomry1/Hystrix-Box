@@ -1,7 +1,6 @@
 class Decoder(object):
     """
     A class used to represent a Decoder
-
     """
 
     @staticmethod

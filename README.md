@@ -59,7 +59,8 @@
 ## 💻 Installation
 
 > `pip install hystrix-box`
-- Images of what it should look like
+
+- In order to use some of the features, API keys should be provided. Further information ************add link here********
 
 ### Clone
 
@@ -71,7 +72,7 @@
 | Decrypter   | Forensics               | Extractor |
 |-------------|-------------------------|-----------|
 | Hash        | Audio Analyzer          | Email     |
-| Base64      | Email Anaylzer          | IP        |
+| Base64      | Email Analyzer          | IP        |
 | Caesar      | StegoLSB                | Hases     |
 | ASCII       | Strings                 | URL       |
 | Morse       | HideInImage             |           |
@@ -83,6 +84,7 @@
 ---
 ## Usage 
 
+Usage examples can be found in the docs ***add link here***
 
 ---
 

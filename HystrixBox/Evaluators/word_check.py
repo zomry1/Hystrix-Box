@@ -2,14 +2,11 @@ import requests
 import re
 
 from HystrixBox.Evaluators.Evaluator import Evaluator
-from HystrixBox.passwords import APP_ID, APP_KEY
+from HystrixBox.keys import APP_ID, APP_KEY
 
 MISSING_ERROR = 50
 
-
-# https://www.wordsapi.com/
-# https://wordsapiv1.p.mashape.com/words/sea/frequency
-# https://stackoverflow.com/questions/40425033/split-a-string-every-n-words-into-smaller-strings
+# https://developer.oxforddictionaries.com/
 
 
 def sentenceScore(sentence):
@@ -51,6 +48,11 @@ def sentenceScore(sentence):
 
 
 class WordEvaluator(Evaluator):
+    """
+        A class used to represent a letter analysis evaluator.
+
+        Score based on checking words in the english words frequencies, implement by www.wordsapi.com
+    """
     @staticmethod
     def evaluate(text):
         score = 0

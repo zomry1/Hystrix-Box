@@ -1,9 +1,11 @@
 import argparse
 import sys
 
+
 # Create parserException
 class ParserException(Exception):
     pass
+
 
 # Override ArgumentParser to raise an ParseException instead of exiting
 class MyParser(argparse.ArgumentParser):
@@ -32,4 +34,3 @@ class MyParser(argparse.ArgumentParser):
         self.problem = True
         raise ParserException
         return
-

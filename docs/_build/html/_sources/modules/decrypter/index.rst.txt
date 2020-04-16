@@ -129,4 +129,5 @@ Examples
 Code
 ---------
 
-This module uses the :ref:`Decoders_label` Package
+| This module uses the :ref:`Decoders_label` Package to Decode the ciphertext.
+| And uses the :ref:`Evaluators_label` Package to evaluate each result plaintext.

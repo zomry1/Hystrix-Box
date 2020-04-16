@@ -35,6 +35,11 @@ def getChi2(percentages):
 
 
 class LetterEvaluator(Evaluator):
+    """
+        A class used to represent a letter analysis evaluator.
+
+        Score based the difference between the English letter's frequencies and the plaintext letter's frequencies
+    """
     @staticmethod
     def evaluate(text):
         percentages = Frequency_Analysis(text)

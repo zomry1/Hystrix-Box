@@ -29,6 +29,13 @@ Use pip, which is packaged with Python, to install Hystrix-Box and its dependenc
 
    $ pip install hystrix-box
 
+.. _Keys_label:
+
+Add API keys
+~~~~~~~~~~~~
+
+| Open `HystrixBox/keys.py` and change the vars values corsponed to your API keys
+| you got when registering to `Oxford Dictionaries <https://developer.oxforddictionaries.com>`_
 
 Run Hystrix-Box
 ~~~~~~~~~~~~~~~

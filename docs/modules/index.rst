@@ -1,5 +1,5 @@
-Hystrix-Box Modules
-===================
+Usage
+=====
 
 .. toctree::
     :maxdepth: 2
