@@ -57,6 +57,7 @@ Examples
 Code
 ^^^^
 
+This module uses :ref:`file_code_label`
 
 
 
@@ -102,6 +103,7 @@ Examples
 Code
 ^^^^
 
+This module uses :ref:`strings_code_label`
 
 .. _recursive_label:
 
@@ -141,6 +143,7 @@ Examples
 Code
 ^^^^
 
+This module uses :ref:`recursive_code_label`
 
 .. _email_label:
 
@@ -198,3 +201,4 @@ Examples
 Code
 ^^^^
 
+This module uses :ref:`email_code_label`

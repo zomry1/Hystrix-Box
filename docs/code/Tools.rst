@@ -1,8 +1,12 @@
+.. _strings_code_label:
+
 =======
 Strings
 =======
 
 .. autofunction:: Tools.strings
+
+.. _recursive_code_label:
 
 =======================
 Recursive Decompression
@@ -10,11 +14,15 @@ Recursive Decompression
 
 .. autofunction:: Tools.extract_recursive
 
+.. _email_code_label:
+
 ==============
 Email analyzer
 ==============
 
 .. autofunction:: Tools.email_analyzer
+
+.. _file_code_label:
 
 ================
 Detect file type
