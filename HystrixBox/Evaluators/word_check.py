@@ -33,14 +33,11 @@ def sentenceScore(sentence):
     try:
         response = response.json()
     except:
-        print(response)
+        print(response.status_code)
+        return -1
 
-    try:
-        for result in response['results']:
-            score += result['normalizedFrequency']
-    except:
-        print(response)
-        print(sentence)
+    for result in response['results']:
+        score += result['normalizedFrequency']
 
     # Reduce missing word by 30: number of words is sentence minus number of return results multiply by missing error
     score -= (len(sentence.split()) - len(response['results'])) * MISSING_ERROR
