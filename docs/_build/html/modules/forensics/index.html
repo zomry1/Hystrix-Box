@@ -85,7 +85,16 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hystrix-Box Modules</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../decrypter/index.html">Decrypter Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../extractor/index.html">Extractor Module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Forensics Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Forensics Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#detect-file-type">Detect file type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printable-strings-in-file">Printable strings in file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recursive-decompression">Recursive Decompression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#email-analyzer">Email analyzer</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../code/index.html">Code</a></li>
@@ -159,6 +168,236 @@
             
   <div class="section" id="forensics-module">
 <h1>Forensics Module<a class="headerlink" href="#forensics-module" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">The Forensics module built from bunch of tools.</div>
+<div class="line">(Maybe in the future there will be an automated tool - an <strong>Ultimate tool</strong>)</div>
+</div>
+<p>add image here</p>
+<div class="line-block">
+<div class="line">All those tools has the default args of</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-h</span></code> = help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--version</span></code> = print tool version</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code> = verbose mode</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">Filename</span></code> = save the result in output file</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">From now and on I will not describe those flags in this section.</div>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#file-label"><span class="std std-ref">Detect file type</span></a></p></li>
+<li><p><a class="reference internal" href="#strings-label"><span class="std std-ref">Printable strings in file</span></a></p></li>
+<li><p><a class="reference internal" href="#recursive-label"><span class="std std-ref">Recursive Decompression</span></a></p></li>
+<li><p><a class="reference internal" href="#email-label"><span class="std std-ref">Email analyzer</span></a></p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="detect-file-type">
+<span id="file-label"></span><h3>Detect file type<a class="headerlink" href="#detect-file-type" title="Permalink to this headline">¶</a></h3>
+<p>Determine the type of a file by his header (<em>magic number</em>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Like ‘file’ command in Unix</p>
+</div>
+<div class="admonition-usage admonition">
+<p class="admonition-title">Usage</p>
+<p><code class="docutils literal notranslate"><span class="pre">[-h]</span> <span class="pre">[--version]</span> <span class="pre">[-v]</span> <span class="pre">[-o</span> <span class="pre">FILENAME]</span> <span class="pre">filename</span></code></p>
+</div>
+<div class="section" id="arguments">
+<h4>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h4>
+<p>Only regular args.</p>
+</div>
+<div class="section" id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Check ‘checkme’ file (png file):</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; checkme
+<span class="go">File extension: png</span>
+<span class="go">other extensions names:</span>
+<span class="go">MIME: image/png</span>
+<span class="go">description: Portable Network Graphics file</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="code">
+<h4>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="printable-strings-in-file">
+<span id="strings-label"></span><h3>Printable strings in file<a class="headerlink" href="#printable-strings-in-file" title="Permalink to this headline">¶</a></h3>
+<p>Find printable strings in binary files</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Like ‘strings’ command in Unix</p>
+</div>
+<div class="admonition-usage admonition">
+<p class="admonition-title">Usage</p>
+<p><code class="docutils literal notranslate"><span class="pre">[-h]</span> <span class="pre">[--version]</span> <span class="pre">[-v]</span> <span class="pre">[-o</span> <span class="pre">FILENAME]</span> <span class="pre">[-n</span> <span class="pre">NUMBER]</span> <span class="pre">filename</span></code></p>
+</div>
+<div class="section" id="id1">
+<h4>Arguments<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="optional-arguments">
+<h5>Optional Arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h5>
+<dl class="field-list simple">
+<dt class="field-odd">-n Number</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>int</em></p>
+</dd>
+<dt class="field-even">Expleneation</dt>
+<dd class="field-even"><p>Print only sequences of characters that are at least min-len of this number</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>4</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Search in ‘checkme’ file:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; checkme
+<span class="go">Strings will be printed here</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Search in ‘longwords’  for strings at least 10 characters long:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; checkme -n <span class="m">10</span>
+<span class="go">Strings will be printed here</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h4>Code<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="recursive-decompression">
+<span id="recursive-label"></span><h3>Recursive Decompression<a class="headerlink" href="#recursive-decompression" title="Permalink to this headline">¶</a></h3>
+<p>Decompress nested zip files, saves the files hierarchy (nested zips changed to directories).</p>
+<div class="admonition-usage admonition">
+<p class="admonition-title">Usage</p>
+<p><code class="docutils literal notranslate"><span class="pre">[-h]</span> <span class="pre">[--version]</span> <span class="pre">[-v]</span> <span class="pre">[-o</span> <span class="pre">FILENAME]</span> <span class="pre">[-p</span> <span class="pre">PATH]</span> <span class="pre">filename</span></code></p>
+</div>
+<div class="section" id="id4">
+<h4>Arguments<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h5>Optional Arguments<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h5>
+<dl class="field-list simple">
+<dt class="field-odd">-p Path</dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Expleneation</dt>
+<dd class="field-even"><p>Set path to extract the zip files</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>Current directory</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="id6">
+<h4>Examples<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Extract nested.zip file to current directory</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; nested.zip
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Extract nested.zip file to directory named ‘Data’ in the current directory</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; nested.zip -p Data
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h4>Code<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="email-analyzer">
+<span id="email-label"></span><h3>Email analyzer<a class="headerlink" href="#email-analyzer" title="Permalink to this headline">¶</a></h3>
+<p>Analyze email file headers to extract important information</p>
+<ul class="simple">
+<li><p>Subject</p></li>
+<li><p>Data</p></li>
+<li><p>From</p></li>
+<li><p>To</p></li>
+<li><p>Message-ID</p></li>
+<li><p>Unsubscribe URL</p></li>
+<li><p>Return Path (The email address when replying to this message)</p></li>
+<li><p>Content-Type (Check for attached files)</p></li>
+<li><p>Received (All the station the email pass through, track the sender)</p></li>
+</ul>
+<div class="admonition-usage admonition">
+<p class="admonition-title">Usage</p>
+<p><code class="docutils literal notranslate"><span class="pre">[-h]</span> <span class="pre">[--version]</span> <span class="pre">[-v]</span> <span class="pre">[-o</span> <span class="pre">FILENAME]</span> <span class="pre">filename</span></code></p>
+</div>
+<div class="section" id="id8">
+<h4>Arguments<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Only regular args</p>
+</div>
+<div class="section" id="id9">
+<h4>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Analyze email file with the name sendme.eml</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span>&gt;&gt; sendme.eml
+<span class="go">Subject: Coming Wednesday, April 1st... Nailed It! Season 4</span>
+<span class="go">Date: Tue, 24 Mar 2020 18:02:10 +0000</span>
+<span class="go">From: Netflix &lt;info@mailer.netflix.com&gt;</span>
+<span class="go">To: JohnSmlth@hotmail.com</span>
+<span class="go">Message-ID: &lt;010001710db57e6f-f9850d85-346e-4249-9551-71042c80ff5b-000000@email.amazonses.com&gt;</span>
+<span class="go">List-Unsubscribe: &lt;mailto:S0VXTkIzSUUyRkMzTkMyQ05KWktVSzZHRUFDNURF@unsubscribe.netflix.com&gt;, &lt;https://www.netflix.com/EmailUnsubscribe?id=BQE0AAEBENqyIWqRNrh%2B7%2FV5HCi4iKmAgHeFZDEnVSyIsgyi0afmQoJVpj1JX60NWdqEnhgc3v9rrhZtAXKmQ753EK64gUYakH9o2rLLGZ8FOuUc7NFjeE8eVPV1VNWyPgpBek7I3PeXlxgnc7bKneIOw51NZHKVY89Q%2BChey9LRE13FZe4%2Bo5C3KPNazPc%2BK7TzskJElw15&amp;lnktrk=EMP&amp;g=6A5F6B01C976E12BCF1F50C0AA5062A9645262CD&amp;lkid=unsubscribe_link&gt;</span>
+<span class="go">Return-Path:</span>
+<span class="go"> 010001710db57e6f-f9850d85-346e-4249-9551-71042c80ff5b-000000@mailer.netflix.com</span>
+<span class="go">Content-Type: multipart/alternative;</span>
+<span class="go">    boundary=&quot;----=_Part_87580_587082350.1585072930404&quot;</span>
+<span class="go">Received: from VI1EUR04HT047.eop-eur04.prod.protection.outlook.com</span>
+<span class="go"> (2603:10b6:208:51::34) by MN2PR05MB6573.namprd05.prod.outlook.com with HTTPS</span>
+<span class="go"> via BL0PR02CA0093.NAMPRD02.PROD.OUTLOOK.COM; Tue, 24 Mar 2020 18:02:12 +0000</span>
+<span class="go">Received: from VI1EUR04FT022.eop-eur04.prod.protection.outlook.com</span>
+<span class="go"> (2a01:111:e400:7e0e::33) by</span>
+<span class="go"> VI1EUR04HT047.eop-eur04.prod.protection.outlook.com (2a01:111:e400:7e0e::349)</span>
+<span class="go"> with Microsoft SMTP Server (version=TLS1_2,</span>
+<span class="go"> cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2814.13; Tue, 24 Mar</span>
+<span class="go"> 2020 18:02:11 +0000</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h4>Code<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
 </div>
 
 

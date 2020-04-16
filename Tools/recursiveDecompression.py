@@ -4,6 +4,18 @@ import zipfile
 
 
 def extract_recursive(filename, path=''):
+    """Decompress nested zip files
+
+    :param filename: The file to be extracted
+    :type filename: str
+
+    :param path: Path to extracted files *(default current directory)*
+    :type path: str
+
+    :returns: None
+    :rtype: None
+
+    """
     try:
         z = zipfile.ZipFile(filename)  # Open the zip file
     except FileNotFoundError:
@@ -22,7 +34,3 @@ def extract_recursive(filename, path=''):
             os.remove(newPath + '/' + f)  # Delete the temp zip file
         else: # It's a regular file
             z.extract(f, path) # Extract the file
-
-
-# Run example
-# extract_recursive('Tools/recursiveCheck/recursivezip.zip', 'recursiveCheck')

@@ -69,3 +69,8 @@ Examples
 
         >>> code.txt -o urls.txt
 
+Code
+---------
+
+This module uses the :ref:`Extractors_label` Package
+

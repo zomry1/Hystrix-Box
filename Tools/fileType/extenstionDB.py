@@ -1,4 +1,4 @@
-from Tools.file import images, applications, audio, archives, font, video
+from Tools.fileType import images, applications, audio, archives, font, video
 
 IMAGE_EXTENSIONS = [images.Jpeg(), images.Png(), images.Gif(), images.Webp(), images.Cr2(), images.Tiff(), images.Bmp(),
                     images.Fits(), images.Ico()]

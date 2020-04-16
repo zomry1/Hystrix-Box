@@ -19,6 +19,8 @@ README:
 Deployment:
 * Complete documentation - https://readthedocs.org/
 * add Api keys file and to the documentation
+* Add hystrix-Box to system environments vars
+* Add roadmap
 * Complete tests
 * Check python version
 * Check python name conventions

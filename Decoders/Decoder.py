@@ -14,7 +14,7 @@ class Decoder(object):
         :returns: Either the text is in the cipher format or not
         :rtype: bool
 
-        :raise: NotImplementedError If the validate function not set in the decoder
+        :raise NotImplementedError: If the validate function not set in the decoder
         """
 
         raise NotImplementedError
@@ -31,7 +31,7 @@ class Decoder(object):
         :returns: List of the plain-texts (or plain-text) after decode
         :rtype: list
 
-        :raise: NotImplementedError If the validate function not set in the decoder
+        :raise NotImplementedError: If the decode function not set in the decoder
         """
         raise NotImplementedError
 

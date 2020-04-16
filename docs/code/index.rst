@@ -2,6 +2,8 @@
 Code
 ====
 
+.. _Decoders_label:
+
 Decoders
 ~~~~~~~~
 
@@ -10,6 +12,8 @@ Decoders
 
    Decoders
 
+.. _Extractors_label:
+
 Extractors
 ~~~~~~~~~~
 
@@ -17,3 +21,11 @@ Extractors
    :maxdepth: 4
 
    Extractors
+
+Tools
+~~~~~
+
+.. toctree::
+   :maxdepth: 4
+
+   Tools

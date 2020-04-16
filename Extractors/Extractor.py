@@ -14,9 +14,7 @@ class Extractor(object):
         :returns: list of occurrences of the desired information
         :rtype: list
 
-        :raise:
-            NotImplementedError If the extract function not set in the extractor
+        :raise NotImplementedError: If the extract function not set in the extractor
 
         """
-
         raise NotImplementedError

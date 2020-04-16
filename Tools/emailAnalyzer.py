@@ -1,6 +1,4 @@
 import email
-from email.errors import MissingHeaderBodySeparatorDefect
-# https://github.com/SpamScope/mail-parser/blob/develop/mailparser/mailparser.py
 
 
 wantedFields = ['Subject', 'Date', 'From', 'To', 'Message-ID', 'List-Unsubscribe', 'Return-Path', 'Content-Type',
@@ -8,6 +6,15 @@ wantedFields = ['Subject', 'Date', 'From', 'To', 'Message-ID', 'List-Unsubscribe
 
 
 def email_analyzer(filename):
+    """Analyze email file headers
+
+    :param filename: The file to analyze
+    :type filename: str
+
+    :returns: List of important information from the email header
+    :rtype: list
+
+    """
     try:
         with open(filename) as file:
             result = ''

@@ -1,4 +1,4 @@
-from Tools.file.extenstion import Extension
+from Tools.fileType.extenstion import Extension
 
 
 class Flv(Extension):
@@ -91,6 +91,7 @@ class Mp4(Extension):
                 header[9] == 0x73 and
                 header[10] == 0x6F and
                 header[11] == 0x6D)
+
 
 class Mov(Extension):
     EXTENSION = 'mov'

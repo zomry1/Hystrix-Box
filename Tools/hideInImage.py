@@ -1,4 +1,4 @@
-from Tools.file.getFileExtenstion import getFileExtension
+from Tools.fileType.getFileExtenstion import getFileExtension
 import os
 
 def findFiles(filename, output='hiddenFile'):

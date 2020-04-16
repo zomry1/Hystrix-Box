@@ -1,4 +1,4 @@
-from Tools.file.getFileExtenstion import getFileExtension
+from Tools.fileType.getFileExtenstion import getFileExtension
 
 TEST1 = '''Cant read the file\n'''
 

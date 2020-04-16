@@ -1,4 +1,19 @@
 class Extension(object):
+	"""A class used to represent a Extension
+
+	:param extension: Extension name
+	:type extension: str
+
+	:param otherExtensions: Other possible extension names (if there are)
+	:type otherExtensions: str
+
+	:param mime:  MIME (Multipurpose Internet Mail Extensions)
+	:type mime: str
+
+	:param: description: Description on the extension
+	:type: description: str
+
+	"""
 	def __init__(self, extension, mime, description, otherExtensions=''):
 		self.__extension = extension
 		self._otherExtensions = otherExtensions
@@ -19,6 +34,16 @@ class Extension(object):
 
 	# Check if the magic numbers are in the header
 	def check(self, header):
+		"""Check if the correct magic numbers are in the file header
+
+		:param header: Header of the file to be checked
+		:type header: str
+
+		:returns: Either the file is according to the magic numbers or not
+		:rtype: bool
+
+		:raise NotImplementedError: If the check function not set in the extension
+		"""
 		raise NotImplementedError
 
 	def __str__(self):

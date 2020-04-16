@@ -126,3 +126,7 @@ Examples
         >>> -f code.txt -n 5 -o results.txt
 
 
+Code
+---------
+
+This module uses the :ref:`Decoders_label` Package

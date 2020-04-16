@@ -10,7 +10,7 @@ from Parsers import createDecrypterParser, createFileParser, createStringParser,
     createStegoLSBParser, createExtractorParser, DECODERS_MAP, EXTRACTOR_MAP, \
     createEmailAnalyzerParser
 from Tools.emailAnalyzer import email_analyzer
-from Tools.file.getFileExtenstion import getFileExtension
+from Tools.fileType.getFileExtenstion import getFileExtension
 ###########################
 from Tools.recursiveDecompression import extract_recursive
 from Tools.strings import strings
