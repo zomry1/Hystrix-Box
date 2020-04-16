@@ -92,7 +92,7 @@ def decrypter_function(args):
         functions_string = ''.join(functions_string)
     else:
         logging.info('Use all evaluators')
-        functions_string = 'TFT'  ##############Change this to TTT!!!!!!!!!!!!
+        functions_string = 'TTT'
 
     # Try all decoders
     plaintexts = []
