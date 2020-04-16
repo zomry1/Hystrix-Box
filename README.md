@@ -130,6 +130,8 @@ Reach out to me at one of the following places!
 
 ## 🚧 Roadmap
 
+add link to github project
+
 ---
 
 ## 📝  License
