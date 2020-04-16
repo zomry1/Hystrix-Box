@@ -80,7 +80,7 @@ def compareDir(dir1, dir2):
     return True
 
 
-def test_decrypter_module(capfd):
+def test_decrypter_module(capfd, socket_enabled):
     assert (decrypter_module(['-f', '../examples/decrypter.txt']) == TEST1)
 
 
