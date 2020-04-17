@@ -6,30 +6,25 @@
 <h4 align="center"> Ultimate toolbox for solving CTF challenges 👨‍💻</h4>
 
 <p align="center">
-    <a herf="https://github.com/zomry1/Hystrix-Box">
-        <img src="https://travis-ci.com/zomry1/Hystrix-Box.svg?token=CNWD37moyyyPQp6jfNw5&branch=master" title="Build">
-    </a>
-    <a herf="https://discord.gg/sgnTXV">
-        <img src="https://img.shields.io/discord/697371315300204575" title="Discord">
-    </a>
-    <a herf="https://github.com/zomry1/Hystrix-Box/releases">
-        <img src="https://img.shields.io/github/downloads-pre/zomry1/Hystrix-Box/latest/total" title="Releases">
-    </a>
-    <a herf="https://pypi.org/">
-        <img src="https://img.shields.io/pypi/v/hystrix-Box" title="PyPi">
-    </a>
+    <a href="https://github.com/zomry1/Hystrix-Box/actions" alt="Build">
+        <img src="https://github.com/zomry1/Hystrix-Box/workflows/Hystrix-Box/badge.svg" /></a>
+    <a href="https://discord.gg/nwrZUuU" alt="Discord">
+        <img src="https://img.shields.io/discord/697371315300204575" /></a>
+    <a href="https://github.com/zomry1/Hystrix-Box/releases" alt="Releases">
+        <img src="https://img.shields.io/github/downloads-pre/zomry1/Hystrix-Box/latest/total" /></a>
+    <a href="https://pypi.org/project/Hystrix-Box/" alt="PyPi">
+        <img src="https://img.shields.io/pypi/v/hystrix-Box" /></a>
     <br>
-    <a herf="">
-        <img src ="https://img.shields.io/codecov/c/github/zomry1/Hystrix-Box" title="Codecov">
-    </a>
-    <a herf="">
-        <img src="https://img.shields.io/github/issues-raw/zomry1/hystrix-box" title="Issues">
-    </a>
-    <a herf= "">
-        <img src="https://img.shields.io/readthedocs/hystrix-box" title="documents">
-    </a>
-    <img src="https://img.shields.io/github/license/zomry1/Hystrix-bOX" title="License">
+    <a href="https://codecov.io/gh/zomry1/Hystrix-Box">
+        <img src="https://img.shields.io/codecov/c/github/zomry1/Hystrix-Box" alt="Codecov"></a>
+    <a href="https://github.com/zomry1/Hystrix-Box/issues">
+        <img src="https://img.shields.io/github/issues-raw/zomry1/hystrix-box" alt="Issues"></a>
+    <a href="https://hystrix-box.readthedocs.io/en/latest/index.html">
+        <img src="https://img.shields.io/readthedocs/hystrix-box" alt="Docs"></a>
+    <a href="https://github.com/zomry1/Hystrix-Box/blob/master/LICENSE.txt">
+        <img src="https://img.shields.io/github/license/zomry1/Hystrix-bOX" alt="License"/></a>
 </p>
+
 
 <h5 align="center">⭐️ Star us on GitHub — it helps!</h5>
 
