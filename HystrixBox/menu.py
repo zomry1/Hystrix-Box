@@ -49,7 +49,7 @@ def module_run(module):
 
 
 ###########################
-if __name__ == "__main__":
+def main():
     # Create style for the menus
     menuStyle = consolemenu.menu_formatter.MenuFormatBuilder()
     menuStyle.set_border_style_type(5)
@@ -85,3 +85,6 @@ if __name__ == "__main__":
 
     # Show the menu
     menu_main.show()
+
+if __name__ == "__main__":
+    main()
