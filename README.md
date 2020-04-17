@@ -13,7 +13,7 @@
         <img src="https://img.shields.io/discord/697371315300204575" title="Discord">
     </a>
     <a herf="https://github.com/zomry1/Hystrix-Box/releases">
-        <img src="https://img.shields.io/github/downloads/zomry1/Hystrix-Box/latest/total" title="Releases">
+        <img src="https://img.shields.io/github/downloads-pre/zomry1/Hystrix-Box/latest/total" title="Releases">
     </a>
     <a herf="https://pypi.org/">
         <img src="https://img.shields.io/pypi/v/hystrix-Box" title="PyPi">
@@ -28,7 +28,7 @@
     <a herf= "">
         <img src="https://img.shields.io/readthedocs/hystrix-box" title="documents">
     </a>
-    <img src="https://img.shields.io/github/license/zormry1/Hystrix-Box" title="License">
+    <img src="https://img.shields.io/github/license/zomry1/Hystrix-bOX" title="License">
 </p>
 
 <h5 align="center">⭐️ Star us on GitHub — it helps!</h5>
