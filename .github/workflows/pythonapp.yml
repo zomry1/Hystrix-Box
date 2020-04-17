@@ -7,6 +7,9 @@ on:
     branches: [ master ]
 
 jobs:
+  env:
+    OXFORD_APP_ID: ${{ secrets.OXFORD_APP_ID }}
+    OXFORD_APP_KEY: ${{ secrets.OXFORD_APP_KEY }}
   build:
     runs-on: ${{ matrix.os}}
     strategy:

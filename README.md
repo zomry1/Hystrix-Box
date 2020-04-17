@@ -130,8 +130,7 @@ Reach out to me at one of the following places!
 
 ## 🚧 Roadmap
 
-add link to github project
-
+[Automated Roadmap](https://github.com/zomry1/Hystrix-Box/projects/1)
 ---
 
 ## 📝  License
