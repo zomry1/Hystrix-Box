@@ -58,9 +58,9 @@
 
 ## 💻 Installation
 
-> `pip install hystrix-box`
+> `pip install Hystrix-Box`
 
-- In order to use some of the features, API keys should be provided. Further information ************add link here********
+- In order to use some of the features, API keys should be provided. [Further information](https://hystrix-box.readthedocs.io/en/latest/getting_started/tutorial.html#add-api-keys)
 
 ### Clone
 
@@ -84,7 +84,7 @@
 ---
 ## Usage 
 
-Usage examples can be found in the docs ***add link here***
+Usage examples can be found in the [docs](https://hystrix-box.readthedocs.io/en/latest/)
 
 ---
 
@@ -96,8 +96,8 @@ Usage examples can be found in the docs ***add link here***
 | [![zomry1](https://avatars1.githubusercontent.com/u/13539354?s=200)](https://github.com/zomry1)    | [![Mattssu](https://avatars2.githubusercontent.com/u/41211015?s=200)](https://github.com/Mattssu) |
 | <a href="https://github.com/zomry1" target="_blank">`github.com/zomry1`</a> | <a href="https://github.com/Mattssu" target="_blank">`github.com/Mattssu`</a> |
 
-
-ADD HALL OF FAME -  https://sourcerer.io/settings#hof
+### Hall Of Fame
+[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/0)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/0)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/1)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/1)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/2)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/2)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/3)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/3)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/4)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/4)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/5)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/5)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/6)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/6)[![](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/images/7)](https://sourcerer.io/fame/zomry1/zomry1/Hystrix-Box/links/7)
 
 ---
 
@@ -116,7 +116,7 @@ Reach out to me at one of the following places!
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+    - 👯 Clone this repo to your local machine using `https://github.com/zomry1/Hystrix-Box.git`
 
 #### Step 2
 
