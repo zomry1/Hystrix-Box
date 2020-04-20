@@ -57,9 +57,8 @@ class MorseDecoder(Decoder):
         return plaintexts
         # Foreach code decode from dictionary
 
+
 FLAG = '- .... .. ... / .. ... / .- -. / . -..- .- -- .--. .-.. . -.-.--'
-FLAG = '- .... .. ...       .. ...       .- -.       . -..- .- -- .--. .-.. . -.-.--'
-FLAG = '.--. .. -.-. --- -.-. - ..-. { -- ----- .-. ... ...-- -.-. ----- -.. ...-- .---- ... ..-. ..- -. ...-- ....- ---.. ---.. ---.. --... .---- ----- ..... }'
 print(MorseDecoder.validate(FLAG))
 print(MorseDecoder.decode(FLAG))
 
