@@ -10,7 +10,7 @@ Decoder
 Ascii Decoder
 ~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.ASCIIDecoder
+.. autoclass:: HystrixBox.Decoders.AsciiDecoder
    :show-inheritance:
 
 Base64 Decoder

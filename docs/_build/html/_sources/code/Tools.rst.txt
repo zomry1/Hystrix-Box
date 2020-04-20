@@ -33,7 +33,7 @@ Core functions
 
 .. autofunction:: HystrixBox.Tools.fileType.get_header
 
-.. autofunction:: HystrixBox.Tools.fileType.getFileExtension
+.. autofunction:: HystrixBox.Tools.fileType.get_file_extension
 
 Extension
 ^^^^^^^^^

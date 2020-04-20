@@ -245,9 +245,9 @@ If the text is not in the format, return empty list</p>
 <div class="section" id="ascii-decoder">
 <h2>Ascii Decoder<a class="headerlink" href="#ascii-decoder" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Decoders.ASCIIDecoder">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">ASCIIDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.ASCIIDecoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dt id="HystrixBox.Decoders.AsciiDecoder">
+<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">AsciiDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.AsciiDecoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a ASCII decoder</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
@@ -262,7 +262,7 @@ If the text is not in the format, return empty list</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.Base64Decoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">Base64Decoder</code><a class="headerlink" href="#HystrixBox.Decoders.Base64Decoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a Base64 decoder</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
@@ -277,7 +277,7 @@ If the text is not in the format, return empty list</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.CaesarDecoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">CaesarDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.CaesarDecoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a Caesar decoder</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -297,7 +297,7 @@ starting from 1-shift to 25-shift</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.HashDecoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">HashDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.HashDecoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a Hash decoder</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -317,7 +317,7 @@ using www.nitrxgen.net API</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.ReverseDecoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">ReverseDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.ReverseDecoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a Reverse decoder</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
@@ -332,7 +332,7 @@ using www.nitrxgen.net API</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.T9Decoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">T9Decoder</code><a class="headerlink" href="#HystrixBox.Decoders.T9Decoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a T9 decoder, and old phone keypad (numbers to text)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
@@ -347,7 +347,7 @@ using www.nitrxgen.net API</p>
 <dl class="py class">
 <dt id="HystrixBox.Decoders.MorseDecoder">
 <em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">MorseDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.MorseDecoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.decoder.Decoder</span></code></p>
 <p>A class used to represent a Morse decoder</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
