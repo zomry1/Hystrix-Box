@@ -3,7 +3,7 @@ import sys
 
 
 # Create parserException
-class ParserException(Exception):
+class ParserExceptionError(Exception):
     pass
 
 
@@ -32,5 +32,5 @@ class MyParser(argparse.ArgumentParser):
         if message:
             self._print_message(message, sys.stderr)
         self.problem = True
-        raise ParserException
+        raise ParserExceptionError
         return

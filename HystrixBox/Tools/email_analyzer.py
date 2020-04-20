@@ -1,7 +1,6 @@
 import email
 
-
-wantedFields = ['Subject', 'Date', 'From', 'To', 'Message-ID', 'List-Unsubscribe', 'Return-Path', 'Content-Type',
+EMAIL_FIELDS = ['Subject', 'Date', 'From', 'To', 'Message-ID', 'List-Unsubscribe', 'Return-Path', 'Content-Type',
                 'Received']
 
 
@@ -19,7 +18,7 @@ def email_analyzer(filename):
         with open(filename) as file:
             result = ''
             msg = email.message_from_file(file)
-            for field in wantedFields:
+            for field in EMAIL_FIELDS:
                 for value in (msg.get_all(field) or []):
                     result += field + ": " + value + '\n'
             return result

@@ -1,8 +1,10 @@
-import requests
 import re
-from HystrixBox.Decoders.Decoder import Decoder
+
+import requests
 # Disable warnings
 import urllib3
+
+from HystrixBox.Decoders.decoder import Decoder
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -29,6 +31,7 @@ class HashDecoder(Decoder):
         ``a85a7dae016693c9351110c357e4b609 -> This is an example!``
 
     """
+
     @staticmethod
     def validate(text):
         return bool(re.match(MD5_FORMAT, text))

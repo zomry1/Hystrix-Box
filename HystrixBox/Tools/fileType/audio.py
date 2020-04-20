@@ -14,7 +14,7 @@ class Wav(Extension):
         )
 
     @staticmethod
-    def check(header): #Add size checking in bytes 5-8 (little endian)
+    def check(header):  # Add size checking in bytes 5-8 (little endian)
         return (len(header) > 16 and
                 header[0] == 0x52 and
                 header[1] == 0x49 and
@@ -96,6 +96,7 @@ class Aac(Extension):
                  header[1] == 0xF9)
                 )
 
+
 class Mid(Extension):
     EXTENSION = 'mid'
     MIME = 'audio/midi'
@@ -164,6 +165,7 @@ class M4a(Extension):
                 header[10] == 0x41 and
                 header[11] == 0x20)
 
+
 class Ogg(Extension):
     EXTENSION = 'ogg'
     MIME = 'audio/ogg'
@@ -185,6 +187,7 @@ class Ogg(Extension):
                 header[1] == 0x67 and
                 header[2] == 0x67 and
                 header[3] == 0x53)
+
 
 class Amr(Extension):
     EXTENSION = 'amr'

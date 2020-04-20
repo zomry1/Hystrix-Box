@@ -1,4 +1,4 @@
-from HystrixBox.Decoders.ReverseCipher import ReverseDecoder
+from HystrixBox.Decoders.reverse_cipher import ReverseDecoder
 
 
 def test_validate_true():

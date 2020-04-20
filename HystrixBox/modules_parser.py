@@ -1,40 +1,41 @@
 import logging
+
 ###########################
-from HystrixBox.Decoders.ASCIICipher import ASCIIDecoder
-from HystrixBox.Decoders.Base64Cipher import Base64Decoder
-from HystrixBox.Decoders.CaesarCipher import CaesarDecoder
-from HystrixBox.Decoders.HashCipher import HashDecoder
-from HystrixBox.Decoders.ReverseCipher import ReverseDecoder
-from HystrixBox.Decoders.MorseCipher import MorseDecoder
+from HystrixBox.Decoders.ascii_cipher import AsciiDecoder
+from HystrixBox.Decoders.base64_cipher import Base64Decoder
+from HystrixBox.Decoders.caesar_cipher import CaesarDecoder
+from HystrixBox.Decoders.hash_cipher import HashDecoder
+from HystrixBox.Decoders.morse_cipher import MorseDecoder
+from HystrixBox.Decoders.reverse_cipher import ReverseDecoder
 ###########################
-from HystrixBox.Parsers import createDecrypterParser, createFileParser, createStringParser, createZipExtractParser, \
-    createStegoLSBParser, createExtractorParser, DECODERS_MAP, EXTRACTOR_MAP, \
-    createEmailAnalyzerParser
-from HystrixBox.Tools.emailAnalyzer import email_analyzer
-from HystrixBox.Tools.fileType.getFileExtenstion import getFileExtension
+from HystrixBox.parsers import create_decrypter_parser, create_file_parser, create_string_parser, create_zip_extract_parser, \
+    create_stego_lsb_parser, create_extractor_parser, DECODERS_MAP, EXTRACTOR_MAP, \
+    create_email_analyzer_parser
+from HystrixBox.Tools.email_analyzer import email_analyzer
+from HystrixBox.Tools.fileType.get_file_extension import get_file_extension
 ###########################
-from HystrixBox.Tools.recursiveDecompression import extract_recursive
+from HystrixBox.Tools.recursive_decompression import extract_recursive
 from HystrixBox.Tools.strings import strings
-from HystrixBox.personal_parser import ParserException
 from HystrixBox.evaluator import evaluate
+from HystrixBox.personal_parser import ParserExceptionError
 
 ###########################
 
 # Create parser
-decrypterParser = createDecrypterParser()
-fileParser = createFileParser()
-stringParser = createStringParser()
-zipExtractParser = createZipExtractParser()
-stegoLSBParser = createStegoLSBParser()
-emailAnalyzerParser = createEmailAnalyzerParser()
-extractorParser = createExtractorParser()
+decrypter_parser = create_decrypter_parser()
+file_parser = create_file_parser()
+string_parser = create_string_parser()
+zip_extract_parser = create_zip_extract_parser()
+stego_lsb_parser = create_stego_lsb_parser()
+email_analyzer_parser = create_email_analyzer_parser()
+extractor_parser = create_extractor_parser()
 
 
 def basic_module(arguments, parser, func):
     # parse arguments
     try:
         args = parser.parse_args(args=arguments)
-    except ParserException:
+    except ParserExceptionError:
         parser.problem = False
         return
     # If there was problem while parsing arguments
@@ -100,7 +101,7 @@ def decrypter_function(args):
     logging.info('Decode ciphertext by Caesar decoder')
     plaintexts += CaesarDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by ASCII decoder')
-    plaintexts += ASCIIDecoder.safe_decode(cipher_txt)
+    plaintexts += AsciiDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by Base64 decoder')
     plaintexts += Base64Decoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by Reverse decoder')
@@ -120,18 +121,18 @@ def decrypter_function(args):
 
 
 def decrypter_module(arguments):
-    result = basic_module(arguments, decrypterParser, decrypter_function)
+    result = basic_module(arguments, decrypter_parser, decrypter_function)
     return result
 
 
 def file_function(args):
     # Get the file data
     if args.filename is not None:
-        return str(getFileExtension(args.filename.name))
+        return str(get_file_extension(args.filename.name))
 
 
 def file_module(arguments):
-    result = basic_module(arguments, fileParser, file_function)
+    result = basic_module(arguments, file_parser, file_function)
     return result
 
 
@@ -142,7 +143,7 @@ def strings_function(args):
 
 
 def strings_module(arguments):
-    result = basic_module(arguments, stringParser, strings_function)
+    result = basic_module(arguments, string_parser, strings_function)
     return result
 
 
@@ -154,7 +155,7 @@ def zip_extract_function(args):
 
 
 def zip_extract_module(arguments):
-    result = basic_module(arguments, zipExtractParser, zip_extract_function)
+    result = basic_module(arguments, zip_extract_parser, zip_extract_function)
     return result
 
 
@@ -171,15 +172,15 @@ def stegoLSB_module(arguments):
 '''
 
 
-def emailAnalyzer_function(args):
+def email_analyzer_function(args):
     # Get the file data
     if args.filename is not None:
         results = email_analyzer(args.filename.name)
         return results
 
 
-def emailAnalyzer_module(arguments):
-    result = basic_module(arguments, emailAnalyzerParser, emailAnalyzer_function)
+def email_analyzer_module(arguments):
+    result = basic_module(arguments, email_analyzer_parser, email_analyzer_function)
     return result
 
 
@@ -214,5 +215,5 @@ def extractor_function(args):
 
 
 def extractor_module(arguments):
-    result = basic_module(arguments, extractorParser, extractor_function)
+    result = basic_module(arguments, extractor_parser, extractor_function)
     return result

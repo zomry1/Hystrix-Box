@@ -1,6 +1,7 @@
 import base64
-from HystrixBox.Decoders.Decoder import Decoder
 import re
+
+from HystrixBox.Decoders.decoder import Decoder
 
 BASE64_FORMAT = '^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$'
 
@@ -14,6 +15,7 @@ class Base64Decoder(Decoder):
         ``VGhpcyBpcyBhbiBleGFtcGxlIQ== -> This is an example!``
 
     """
+
     @staticmethod
     def validate(text):
         return bool(re.match(BASE64_FORMAT, text))

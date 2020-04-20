@@ -1,4 +1,4 @@
-from HystrixBox.Decoders.T9Chipher import T9Decoder
+from HystrixBox.Decoders.t9_cipher import T9Decoder
 
 
 def test_validate_true():

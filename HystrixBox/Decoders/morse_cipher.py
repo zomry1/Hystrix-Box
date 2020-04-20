@@ -1,5 +1,6 @@
-from HystrixBox.Decoders.Decoder import Decoder
 import re
+
+from HystrixBox.Decoders.decoder import Decoder
 
 # Dictionary representing the morse code chart
 # From https://en.wikipedia.org/wiki/Morse_code
@@ -24,8 +25,6 @@ MORSE_CODE_DICT = {'.-': 'A', '-...': 'B', '-.-.': 'C',
                    '-...-': '=', '.-.-.': '+', '..--.-': '_',
                    '.-..-.': '"', '...-..-': '$', '.--.-.': '@'}
 
-MORSE_FORMAT = '^\s*(?:\s*(?:\.-|-\.\.\.|-\.-\.|-\.\.|\.|\.\.-\.|--\.|\.\.\.\.|\.\.|\.---|-\.-|\.-\.\.|--|-\.|---|\.--\.|--\.-|\.-\.|\.\.\.|-|\.\.-|\.\.\.-|\.--|-\.\.-|-\.--|--\.\.|-----|\.----|\.\.---|\.\.\.--|\.\.\.\.-|\.\.\.\.\.|-\.\.\.\.|--\.\.\.|---\.\.|----\.|\.-\.-\.-|--\.\.--|\.\.--\.\.|\.----\.|-\.-\.--|-\.\.-\.|-\.--\.|-\.--\.-|\.-\.\.\.|---\.\.\.|-\.-\.-\.|-\.\.\.-|\.-\.-\.|-\.\.\.\.-|\.\.--\.-|\.-\.\.-\.|\.\.\.-\.\.-|\.--\.-\.)(?=\s|\s{3}|\s*$))+\s*$'
-
 
 class MorseDecoder(Decoder):
     """
@@ -36,6 +35,7 @@ class MorseDecoder(Decoder):
         ``- .... .. ... / .. ... / .- -. / . -..- .- -- .--. .-.. . -.-.-- -> THIS IS AN EXAMPLE!``
 
     """
+
     @staticmethod
     def validate(text):
         # Check if there any  codes are in the dictionary
@@ -54,10 +54,3 @@ class MorseDecoder(Decoder):
             plaintexts.append(''.join([MORSE_CODE_DICT.get(code, code) for code in text]))  # Decode
             MORSE_CODE_DICT.pop(separator)  # Clean the dictionary to the next loop
         return plaintexts
-        # Foreach code decode from dictionary
-
-
-FLAG = '- .... .. ... / .. ... / .- -. / . -..- .- -- .--. .-.. . -.-.--'
-print(MorseDecoder.validate(FLAG))
-print(MorseDecoder.decode(FLAG))
-

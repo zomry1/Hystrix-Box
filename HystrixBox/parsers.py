@@ -1,16 +1,18 @@
-from HystrixBox.Decoders.ASCIICipher import ASCIIDecoder
-from HystrixBox.Decoders.Base64Cipher import Base64Decoder
-from HystrixBox.Decoders.CaesarCipher import CaesarDecoder
-from HystrixBox.Decoders.HashCipher import HashDecoder
-from HystrixBox.Decoders.ReverseCipher import ReverseDecoder
+import argparse
+
+from HystrixBox.Decoders.ascii_cipher import AsciiDecoder
+from HystrixBox.Decoders.base64_cipher import Base64Decoder
+from HystrixBox.Decoders.caesar_cipher import CaesarDecoder
+from HystrixBox.Decoders.hash_cipher import HashDecoder
+from HystrixBox.Decoders.reverse_cipher import ReverseDecoder
 ############################
-from HystrixBox.Extractors.emailExtractor import EmailExtractor
-from HystrixBox.Extractors.ipExtractor import IPExtractor
-from HystrixBox.Extractors.md5Extractor import MD5Extractor
-from HystrixBox.Extractors.urlExtractor import URLExtractor
+from HystrixBox.Extractors.email_extractor import EmailExtractor
+from HystrixBox.Extractors.ip_extractor import IPExtractor
+from HystrixBox.Extractors.md5_extractor import MD5Extractor
+from HystrixBox.Extractors.url_extractor import URLExtractor
 ############################
 from HystrixBox.personal_parser import MyParser
-import argparse
+
 ###########################
 
 
@@ -25,7 +27,7 @@ ARGS_STR = """
 
 EPILOGUE_STR = 'Made by zomry1 and Matssu ©'
 
-DECODERS_MAP = {'ascii': ASCIIDecoder.safe_decode,
+DECODERS_MAP = {'ascii': AsciiDecoder.safe_decode,
                 'base64': Base64Decoder.safe_decode,
                 'caesar': CaesarDecoder.safe_decode,
                 'reverse': ReverseDecoder.safe_decode,
@@ -40,12 +42,12 @@ EXTRACTOR_MAP = {'url': URLExtractor.extract,
 
 
 ###########################
-def createBasicParser(description):
+def create_basic_parser(description):
     # Create argumentParser
     parser = MyParser(
         prog='',
         description='\n' + description + '\n'
-                    'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
+                                         'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
         epilog=EPILOGUE_STR,
         formatter_class=argparse.RawTextHelpFormatter
     )
@@ -69,9 +71,9 @@ def createBasicParser(description):
     return parser
 
 
-def createExtractorParser():
+def create_extractor_parser():
     # Create argumentParser
-    parser = createBasicParser(    'The Ultimate Extractor, Drop your RAW DATA FILE here')
+    parser = create_basic_parser('The Ultimate Extractor, Drop your RAW DATA FILE here')
     # Specific extractor flag
     parser.add_argument('-e', '--extractor',
                         help='Choose specific extractor, {%(choices)s}',
@@ -80,16 +82,16 @@ def createExtractorParser():
     return parser
 
 
-def createEmailAnalyzerParser():
-    return createBasicParser('Analyze email file')
+def create_email_analyzer_parser():
+    return create_basic_parser('Analyze email file')
 
 
-def createStegoLSBParser():
-    return createBasicParser('Try to decode data from image by LSB encode')
+def create_stego_lsb_parser():
+    return create_basic_parser('Try to decode data from image by LSB encode')
 
 
-def createZipExtractParser():
-    parser = createBasicParser('Extract recursive zip files')
+def create_zip_extract_parser():
+    parser = create_basic_parser('Extract recursive zip files')
     # Specific path to extract
     parser.add_argument('-p', '--path',
                         help='Choose path for extract',
@@ -97,9 +99,9 @@ def createZipExtractParser():
     return parser
 
 
-def createStringParser():
+def create_string_parser():
     # Create argumentParser
-    parser = createBasicParser('Finds and prints text strings embedded in binary files such as executables.')
+    parser = create_basic_parser('Finds and prints text strings embedded in binary files such as executables.')
     # Number of results to print
     parser.add_argument('-n',
                         type=int,
@@ -109,12 +111,12 @@ def createStringParser():
     return parser
 
 
-def createFileParser():
-    return createBasicParser('Determine the type of a file')
+def create_file_parser():
+    return create_basic_parser('Determine the type of a file')
 
 
-def createDecrypterParser():
-    Parser = MyParser(
+def create_decrypter_parser():
+    parser = MyParser(
         prog='',
         description='\nThe Ultimate Decoder, Drop your Cipher-text here\n'
                     'just type the optional arguments that you need from the list\n\n' + ARGS_STR,
@@ -122,47 +124,47 @@ def createDecrypterParser():
         formatter_class=argparse.RawTextHelpFormatter
     )
 
-    Parser.version = '1.1'
+    parser.version = '1.1'
 
     # Add input flag required (string or filename)
-    input_group = Parser.add_mutually_exclusive_group(required=True)
+    input_group = parser.add_mutually_exclusive_group(required=True)
     input_group.add_argument('-c', '--ciphertext')
     input_group.add_argument('-f', '--filename', type=argparse.FileType('r'))
 
     # Version flag
-    Parser.add_argument('--version', action='version')
+    parser.add_argument('--version', action='version')
 
     # Specific decoder flag
-    Parser.add_argument('-d', '--decoder',
+    parser.add_argument('-d', '--decoder',
                         help='Choose specific decoder, {%(choices)s}',
                         choices=DECODERS_MAP.keys(),
                         metavar='DECODER')
 
     # Evaluators flags
-    Parser.add_argument('-cl', '--checkLetter',
+    parser.add_argument('-cl', '--checkLetter',
                         help='Evaluate results by letter analysis check',
                         action='store_true')
 
-    Parser.add_argument('-cw', '--checkWord',
+    parser.add_argument('-cw', '--checkWord',
                         help='Evaluate results by word analysis check',
                         action='store_true')
 
-    Parser.add_argument('-cf', '--checkFlag',
+    parser.add_argument('-cf', '--checkFlag',
                         help='Evaluate results by flag format check',
                         metavar='FORMAT')
 
     # Number of results to print
-    Parser.add_argument('-n', '--number',
+    parser.add_argument('-n', '--number',
                         type=int,
                         help='Number of results to be printed (sorted by descending score)',
                         metavar='NUMBER',
                         default=1)
     # Verbose flag
-    Parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
+    parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
 
     # Output to file
-    Parser.add_argument('-o', '--output',
+    parser.add_argument('-o', '--output',
                         help='Output file to save the results',
                         metavar='FILENAME')
 
-    return Parser
+    return parser

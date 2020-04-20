@@ -1,6 +1,7 @@
-from HystrixBox.Tools.recursiveDecompression import extract_recursive
 import filecmp
 import os
+
+from HystrixBox.Tools.recursive_decompression import extract_recursive
 
 TEST1 = '''File not found\n'''
 TEST2 = '''Not a zip file or corrupted zip file\n'''

@@ -1,6 +1,6 @@
 import os
-from pathlib import Path
 import zipfile
+from pathlib import Path
 
 
 def extract_recursive(filename, path=''):
@@ -32,5 +32,5 @@ def extract_recursive(filename, path=''):
             z.extract(f, newPath)  # Extract the zip to the new directory
             extract_recursive(newPath + '/' + f, newPath)  # Recursively call this function with the new zip
             os.remove(newPath + '/' + f)  # Delete the temp zip file
-        else: # It's a regular file
-            z.extract(f, path) # Extract the file
+        else:  # It's a regular file
+            z.extract(f, path)  # Extract the file

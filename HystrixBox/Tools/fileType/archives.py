@@ -77,7 +77,6 @@ class Sevenz(Extension):
                 header[5] == 0x1C)
 
 
-
 class Jar(Extension):
     EXTENSION = 'jar'
     MIME = 'application/java-archive'
@@ -96,7 +95,6 @@ class Jar(Extension):
                 header[1] == 0x27 and
                 header[2] == 0xA8 and
                 header[3] == 0x89)
-
 
 
 class Tarz(Extension):
@@ -120,7 +118,6 @@ class Tarz(Extension):
                  header[1] == 0xA0))
 
 
-
 class Tarbz2(Extension):
     EXTENSION = 'tar.bz2'
     MIME = 'application/gzip'
@@ -138,7 +135,6 @@ class Tarbz2(Extension):
                 header[0] == 0x42 and
                 header[1] == 0x5A and
                 header[2] == 0x68)
-
 
 
 class Tarxz(Extension):
