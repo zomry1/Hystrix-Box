@@ -43,3 +43,9 @@ T9 Decoder
 .. autoclass:: HystrixBox.Decoders.T9Decoder
    :show-inheritance:
 
+Morse Decoder
+~~~~~~~~~~~~~
+
+.. autoclass:: HystrixBox.Decoders.MorseDecoder
+   :show-inheritance:
+

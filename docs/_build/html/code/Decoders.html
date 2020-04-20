@@ -85,7 +85,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Hystrix-Box Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Code</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#decoders">Decoders</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Decoder</a><ul>
@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#hash-decoder">Hash Decoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reverse-decoder">Reverse Decoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#t9-decoder">T9 Decoder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#morse-decoder">Morse Decoder</a></li>
 </ul>
 </li>
 </ul>
@@ -336,6 +337,21 @@ using www.nitrxgen.net API</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">!8</span> <span class="pre">44</span> <span class="pre">444</span> <span class="pre">7777</span> <span class="pre">0</span> <span class="pre">444</span> <span class="pre">7777</span> <span class="pre">0</span> <span class="pre">2</span> <span class="pre">66</span> <span class="pre">0</span> <span class="pre">33</span> <span class="pre">99</span> <span class="pre">2</span> <span class="pre">6</span> <span class="pre">7</span> <span class="pre">555</span> <span class="pre">33</span> <span class="pre">-&gt;</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example!</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="morse-decoder">
+<h2>Morse Decoder<a class="headerlink" href="#morse-decoder" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="HystrixBox.Decoders.MorseDecoder">
+<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Decoders.</code><code class="sig-name descname">MorseDecoder</code><a class="headerlink" href="#HystrixBox.Decoders.MorseDecoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Decoders.Decoder.Decoder</span></code></p>
+<p>A class used to represent a Morse decoder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">....</span> <span class="pre">..</span> <span class="pre">...</span> <span class="pre">/</span> <span class="pre">..</span> <span class="pre">...</span> <span class="pre">/</span> <span class="pre">.-</span> <span class="pre">-.</span> <span class="pre">/</span> <span class="pre">.</span> <span class="pre">-..-</span> <span class="pre">.-</span> <span class="pre">--</span> <span class="pre">.--.</span> <span class="pre">.-..</span> <span class="pre">.</span> <span class="pre">-.-.--</span> <span class="pre">-&gt;</span> <span class="pre">THIS</span> <span class="pre">IS</span> <span class="pre">AN</span> <span class="pre">EXAMPLE!</span></code></p>
 </dd>
 </dl>
 </dd></dl>
