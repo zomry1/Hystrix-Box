@@ -5,6 +5,7 @@ from HystrixBox.Decoders.Base64Cipher import Base64Decoder
 from HystrixBox.Decoders.CaesarCipher import CaesarDecoder
 from HystrixBox.Decoders.HashCipher import HashDecoder
 from HystrixBox.Decoders.ReverseCipher import ReverseDecoder
+from HystrixBox.Decoders.MorseCipher import MorseDecoder
 ###########################
 from HystrixBox.Parsers import createDecrypterParser, createFileParser, createStringParser, createZipExtractParser, \
     createStegoLSBParser, createExtractorParser, DECODERS_MAP, EXTRACTOR_MAP, \
@@ -106,6 +107,8 @@ def decrypter_function(args):
     plaintexts += ReverseDecoder.safe_decode(cipher_txt)
     logging.info('Decode ciphertext by hash decoder')
     plaintexts += HashDecoder.safe_decode(cipher_txt)
+    logging.info('Decode ciphertext by morse decoder')
+    plaintexts += MorseDecoder.safe_decode(cipher_txt)
 
     # Create result string
     result = ''
