@@ -1,4 +1,4 @@
-from HystrixBox.Tools.fileType.extenstionDB import ALL_EXTENSIONS
+from HystrixBox.Tools.fileType.extension_db import ALL_EXTENSIONS
 
 HEADER_BYTES = 262
 
@@ -21,7 +21,7 @@ def get_header(filename):
         return None
 
 
-def getFileExtension(filename):
+def get_file_extension(filename):
     """Detect file extension
 
     :param filename: filename to be checked

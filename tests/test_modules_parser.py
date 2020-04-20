@@ -1,7 +1,8 @@
 import filecmp
 import os
 
-from HystrixBox.modules_parser import decrypter_module, file_module, strings_module, zip_extract_module, emailAnalyzer_module, \
+from HystrixBox.modules_parser import decrypter_module, file_module, zip_extract_module, \
+    email_analyzer_module, \
     extractor_module
 
 TEST1 = '''[1] Result: Perhaps the most well-publicized tech tool in Russia's arsenal for fighting coronavirus is Moscow's massive facial-recognition system. Rolled out earlier this year, the surveillance system had originally prompted an unusual public backlash, with privacy advocates filing lawsuits over unlawful surveillance.
@@ -101,7 +102,7 @@ def test_zip_extract_module(tmpdir):
 
 
 def test_email_analyzer_module():
-    assert (emailAnalyzer_module(['../examples/emailAnalyzer.eml']) == TEST5)
+    assert (email_analyzer_module(['../examples/emailAnalyzer.eml']) == TEST5)
 
 
 def test_extractor_module():

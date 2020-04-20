@@ -2,6 +2,7 @@ class Evaluator(object):
     """
     A class used to represent a plaintext Evaluator
     """
+
     @staticmethod
     def evaluate(self, text):
         """Evaluate plaintext by some parameters

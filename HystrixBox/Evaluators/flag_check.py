@@ -1,5 +1,5 @@
-from HystrixBox.Evaluators.Evaluator import Evaluator
-from HystrixBox.Utils.searchFlag import searchFlag
+from HystrixBox.Evaluators.evaluator import Evaluator
+from HystrixBox.Utils.search_flag import searchFlag
 
 
 class FlagEvaluator(Evaluator):
@@ -8,6 +8,7 @@ class FlagEvaluator(Evaluator):
 
         Score based on the occurrences of the flag in the plaintext
     """
+
     @staticmethod
     def evaluate(text):  # Special case use text as list of format and ciphertext
         return len(searchFlag(text[0], text[1]))

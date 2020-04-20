@@ -1,11 +1,9 @@
 import logging
-
-
-from HystrixBox.Evaluators.word_check import WordEvaluator
-from HystrixBox.Evaluators.flag_check import FlagEvaluator
-from HystrixBox.Evaluators.letter_check import LetterEvaluator
 from _collections import OrderedDict
 
+from HystrixBox.Evaluators.flag_check import FlagEvaluator
+from HystrixBox.Evaluators.letter_check import LetterEvaluator
+from HystrixBox.Evaluators.word_check import WordEvaluator
 
 LETTER_PRIORITY = 1000
 WORD_PRIORITY = 1000
@@ -55,7 +53,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
     # Evaluate with formatCheck
     if functionsString[2] == 'T' and formatString != '':
         logging.info('Evaluate results by flag search')
-        evaluate_fun(FlagEvaluator.evaluate, [formatString,plaintexts], scoresDictionary)
+        evaluate_fun(FlagEvaluator.evaluate, [formatString, plaintexts], scoresDictionary)
 
     logging.info('Sort results')
     scoresDictionary = sorted(scoresDictionary.items(), key=lambda x: x[1], reverse=True)

@@ -1,12 +1,14 @@
 import shlex
 from os import system, name
+
+import consolemenu
 from consolemenu import *
 from consolemenu.items import *
-import consolemenu
 
 ###########################
-from HystrixBox.modules_parser import decrypter_module, extractor_module, file_module, strings_module, zip_extract_module, \
-    emailAnalyzer_module
+from HystrixBox.modules_parser import decrypter_module, extractor_module, file_module, strings_module, \
+    zip_extract_module, \
+    email_analyzer_module
 
 LOGO = """
 ██╗  ██╗██╗   ██╗███████╗████████╗██████╗ ██╗██╗  ██╗     ██████╗  ██████╗ ██╗  ██╗
@@ -74,7 +76,7 @@ def main():
     item_strings = FunctionItem('Find printable strings in files', module_run, [strings_module])
     item_extract_zip = FunctionItem('Extract recursive zip file', module_run, [zip_extract_module])
     # item_stegoLSB = FunctionItem('StegoLSB decode', module_run, [stegoLSB_module])
-    item_emailAnalyzer = FunctionItem('Email analyzer', module_run, [emailAnalyzer_module])
+    item_emailAnalyzer = FunctionItem('Email analyzer', module_run, [email_analyzer_module])
 
     # Add items to forensics menu
     menu_forensics.append_item(item_file)
@@ -85,6 +87,7 @@ def main():
 
     # Show the menu
     menu_main.show()
+
 
 if __name__ == "__main__":
     main()

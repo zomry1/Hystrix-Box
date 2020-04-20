@@ -1,7 +1,9 @@
-from HystrixBox.Tools.fileType.getFileExtenstion import getFileExtension
 import os
 
-def findFiles(filename, output='hiddenFile'):
+from HystrixBox.Tools.fileType.get_file_extension import get_file_extension
+
+
+def find_files(filename, output='hiddenFile'):
     # Read image
     try:
         with open(filename, 'rb') as file:
@@ -12,7 +14,7 @@ def findFiles(filename, output='hiddenFile'):
 
     endTag = 0
     # Check image format
-    extension = getFileExtension(filename)
+    extension = get_file_extension(filename)
     if extension is None:
         print('File extension not found')
         return
@@ -31,7 +33,7 @@ def findFiles(filename, output='hiddenFile'):
         print('corrupted file')
         return
 
-    if index+len(endTag) == len(f):
+    if index + len(endTag) == len(f):
         print('There is no hidden files in this image')
         return
 
@@ -41,11 +43,9 @@ def findFiles(filename, output='hiddenFile'):
         print('Hidden files extracted')
 
     # Check with file command to detect file extension
-    extension = getFileExtension(output)
+    extension = get_file_extension(output)
     if extension is None:
         print('File extension not found')
         return
     print('File extension is: ' + extension.extension)
     os.rename(output, output + '.' + extension.extension)
-
-

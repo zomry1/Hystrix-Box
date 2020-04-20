@@ -233,6 +233,7 @@ def test_strings_100chars():
     assert (strings('../examples/strings.jpg', 100) == '')
 '''
 
+
 def test_strings_noFile():
     assert (strings('') == '')
 

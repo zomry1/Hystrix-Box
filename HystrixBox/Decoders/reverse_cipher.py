@@ -1,4 +1,4 @@
-from HystrixBox.Decoders.Decoder import Decoder
+from HystrixBox.Decoders.decoder import Decoder
 
 
 class ReverseDecoder(Decoder):
@@ -10,6 +10,7 @@ class ReverseDecoder(Decoder):
         ``!elpmaxe na si siht -> This is an example!``
 
     """
+
     @staticmethod
     def validate(text):
         return True

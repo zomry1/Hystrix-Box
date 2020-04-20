@@ -1,10 +1,11 @@
-from HystrixBox.Decoders.Decoder import Decoder
 import re
+
+from HystrixBox.Decoders.decoder import Decoder
 
 PRINTABLE_ASCII_VALUES = '^(3[2-9]|[4-9][0-9]|1[01][0-9]|12[0-6])$'
 
 
-class ASCIIDecoder(Decoder):
+class AsciiDecoder(Decoder):
     """
         A class used to represent a ASCII decoder
 
@@ -21,5 +22,3 @@ class ASCIIDecoder(Decoder):
     @staticmethod
     def decode(text):
         return [''.join(chr(int(char)) for char in text.split())]
-
-

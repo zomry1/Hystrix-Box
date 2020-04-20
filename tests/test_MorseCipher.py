@@ -1,4 +1,4 @@
-from HystrixBox.Decoders.MorseCipher import MorseDecoder
+from HystrixBox.Decoders.morse_cipher import MorseDecoder
 
 TEST4 = ['THIS/IS/AN/EXAMPLE!', 'THIS/IS/AN/EXAMPLE!', 'THIS IS AN EXAMPLE!']
 

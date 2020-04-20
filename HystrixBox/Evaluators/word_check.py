@@ -1,15 +1,17 @@
-import requests
 import re
 
-from HystrixBox.Evaluators.Evaluator import Evaluator
+import requests
+
+from HystrixBox.Evaluators.evaluator import Evaluator
 from HystrixBox.keys import APP_ID, APP_KEY
 
 MISSING_ERROR = 50
 
+
 # https://developer.oxforddictionaries.com/
 
 
-def sentenceScore(sentence):
+def sentence_score(sentence):
     # Remove Non alphabetic charts
     r2 = re.compile(r'[^a-zA-Z ]', re.MULTILINE)
     sentence = r2.sub('', sentence)
@@ -50,6 +52,7 @@ class WordEvaluator(Evaluator):
 
         Score based on checking words in the english words frequencies, implement by www.wordsapi.com
     """
+
     @staticmethod
     def evaluate(text):
         score = 0
@@ -57,5 +60,5 @@ class WordEvaluator(Evaluator):
         n = 80  # Split for groups of 80 words in group
         parts = [' '.join(sentence[i:i + n]) for i in range(0, len(sentence), n)]
         for part in parts:
-            score += sentenceScore(part)
+            score += sentence_score(part)
         return score

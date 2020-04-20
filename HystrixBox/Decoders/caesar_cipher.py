@@ -1,7 +1,7 @@
-from HystrixBox.Decoders.Decoder import Decoder
+from HystrixBox.Decoders.decoder import Decoder
 
 
-def CaesarDecode(ciphertext, shift):
+def caesar_decode(ciphertext, shift):
     plaintext = ''
     for i in range(len(ciphertext)):  # Foreach char
         char = ciphertext[i]  # Get the char
@@ -26,6 +26,7 @@ class CaesarDecoder(Decoder):
         ``Rfgq gq yl cvyknjc! -> [Sghr hr zm dwzlokd!, This is an example!, Uijt jt bo fybnqmf!] and go on``
 
     """
+
     @staticmethod
     def validate(text):
         return True
@@ -34,5 +35,5 @@ class CaesarDecoder(Decoder):
     def decode(text):
         plaintexts = []
         for i in range(25):
-            plaintexts.append(CaesarDecode(text, i + 1))
+            plaintexts.append(caesar_decode(text, i + 1))
         return plaintexts

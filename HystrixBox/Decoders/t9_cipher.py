@@ -1,5 +1,6 @@
-from HystrixBox.Decoders.Decoder import Decoder
 import re
+
+from HystrixBox.Decoders.decoder import Decoder
 
 T9_FORMAT = r'^(\d)\1*$'
 T9_KEYPAD = [" ", ".?!", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
@@ -14,6 +15,7 @@ class T9Decoder(Decoder):
             ``!8 44 444 7777 0 444 7777 0 2 66 0 33 99 2 6 7 555 33 -> This is an example!``
 
         """
+
     @staticmethod
     def validate(text):
         return all(bool(re.match(T9_FORMAT, part)) for part in text.split())
