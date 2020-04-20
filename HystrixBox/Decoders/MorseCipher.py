@@ -1,4 +1,4 @@
-from HystrixBox.Decoders import Decoder
+from HystrixBox.Decoders.Decoder import Decoder
 import re
 
 # Dictionary representing the morse code chart
@@ -36,7 +36,6 @@ class MorseDecoder(Decoder):
         ``- .... .. ... / .. ... / .- -. / . -..- .- -- .--. .-.. . -.-.-- -> THIS IS AN EXAMPLE!``
 
     """
-
     @staticmethod
     def validate(text):
         # Check if there any  codes are in the dictionary

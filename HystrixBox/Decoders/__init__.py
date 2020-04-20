@@ -9,6 +9,8 @@ from HystrixBox.Decoders.CaesarCipher import CaesarDecoder
 from HystrixBox.Decoders.HashCipher import HashDecoder
 from HystrixBox.Decoders.ReverseCipher import ReverseDecoder
 from HystrixBox.Decoders.T9Chipher import T9Decoder
+from HystrixBox.Decoders.MorseCipher import MorseDecoder
 from HystrixBox.Decoders.Decoder import Decoder
 
-__all__ = ['Decoder', 'ASCIIDecoder', 'Base64Decoder', 'CaesarDecoder', 'HashDecoder', 'ReverseDecoder', 'T9Decoder']
+__all__ = ['Decoder', 'ASCIIDecoder', 'Base64Decoder', 'CaesarDecoder', 'HashDecoder', 'ReverseDecoder', 'T9Decoder',
+           'MorseDecoder']
