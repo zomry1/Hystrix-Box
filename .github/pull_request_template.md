@@ -9,6 +9,9 @@ Please also include relevant motivation and context.
 
 - [ ] Bug fix 
 - [ ] New feature
+- [ ] Coding style
+- [ ] Documentation update  
+
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 - [ ] This change changed the dependencies
@@ -28,6 +31,7 @@ Provide instructions so we can reproduce. Please also list any relevant details 
 # Checklist:
 
 - [ ] My code follows the style guidelines of this project
+- [ ] I rebase my code with the `dev` branch
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation - Optional
