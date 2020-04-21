@@ -48,7 +48,7 @@ def evaluate(plaintexts, functionsString, formatString=''):
     # Evaluate with wordCheck
     if functionsString[1] == 'T':
         logging.info('Evaluate results by word analysis')
-        evaluate_fun(WordEvaluator.evaluate, plaintexts, scoresDictionary)
+        # evaluate_fun(WordEvaluator.evaluate, plaintexts, scoresDictionary)
 
     # Evaluate with formatCheck
     if functionsString[2] == 'T' and formatString != '':
