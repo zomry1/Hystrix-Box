@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Decoders.decoder import Decoder
+from Decoders.decoder import Decoder
 
 T9_FORMAT = r'^(\d)\1*$'
 T9_KEYPAD = [" ", ".?!", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]

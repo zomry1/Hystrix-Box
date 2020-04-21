@@ -1,4 +1,4 @@
-from HystrixBox.Tools.fileType.extenstion import Extension
+from Tools.fileType.extenstion import Extension
 
 
 # https://www.iana.org/assignments/media-types/font/otf

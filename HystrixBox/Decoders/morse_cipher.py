@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Decoders.decoder import Decoder
+from Decoders.decoder import Decoder
 
 # Dictionary representing the morse code chart
 # From https://en.wikipedia.org/wiki/Morse_code

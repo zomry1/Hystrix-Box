@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Extractors.extractor import Extractor
+from Extractors.extractor import Extractor
 
 IPv4_PATTERN = re.compile(
     r'(?:(?:1\d\d|2[0-5][0-5]|2[0-4]\d|0?[1-9]\d|0?0?\d)\.){3}(?:1\d\d|2[0-5][0-5]|2[0-4]\d|0?[1-9]\d|0?0?\d)')

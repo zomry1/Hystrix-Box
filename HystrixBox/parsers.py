@@ -1,17 +1,17 @@
 import argparse
 
-from HystrixBox.Decoders.ascii_cipher import AsciiDecoder
-from HystrixBox.Decoders.base64_cipher import Base64Decoder
-from HystrixBox.Decoders.caesar_cipher import CaesarDecoder
-from HystrixBox.Decoders.hash_cipher import HashDecoder
-from HystrixBox.Decoders.reverse_cipher import ReverseDecoder
+from Decoders.ascii_cipher import AsciiDecoder
+from Decoders.base64_cipher import Base64Decoder
+from Decoders.caesar_cipher import CaesarDecoder
+from Decoders.hash_cipher import HashDecoder
+from Decoders.reverse_cipher import ReverseDecoder
 ############################
-from HystrixBox.Extractors.email_extractor import EmailExtractor
-from HystrixBox.Extractors.ip_extractor import IPExtractor
-from HystrixBox.Extractors.md5_extractor import MD5Extractor
-from HystrixBox.Extractors.url_extractor import URLExtractor
+from Extractors.email_extractor import EmailExtractor
+from Extractors.ip_extractor import IPExtractor
+from Extractors.md5_extractor import MD5Extractor
+from Extractors.url_extractor import URLExtractor
 ############################
-from HystrixBox.personal_parser import MyParser
+from personal_parser import MyParser
 
 ###########################
 

@@ -1,6 +1,6 @@
 import os
 
-from HystrixBox.Tools.fileType.get_file_extension import get_file_extension
+from Tools.fileType.get_file_extension import get_file_extension
 
 
 def find_files(filename, output='hiddenFile'):

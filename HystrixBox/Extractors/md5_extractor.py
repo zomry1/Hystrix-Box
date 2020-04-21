@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Extractors.extractor import Extractor
+from Extractors.extractor import Extractor
 
 MD5_PATTERN = re.compile(r"([a-fA-F\d]{32})")
 

@@ -2,7 +2,7 @@
 Decoder
 =======
 
-.. autoclass:: HystrixBox.Decoders.Decoder
+.. autoclass:: Decoders.Decoder
    :members:
    :undoc-members:
    :show-inheritance:
@@ -10,42 +10,42 @@ Decoder
 Ascii Decoder
 ~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.AsciiDecoder
+.. autoclass:: Decoders.AsciiDecoder
    :show-inheritance:
 
 Base64 Decoder
 ~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.Base64Decoder
+.. autoclass:: Decoders.Base64Decoder
    :show-inheritance:
 
 Caesar Decoder
 ~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.CaesarDecoder
+.. autoclass:: Decoders.CaesarDecoder
    :show-inheritance:
 
 Hash Decoder
 ~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.HashDecoder
+.. autoclass:: Decoders.HashDecoder
    :show-inheritance:
 
 Reverse Decoder
 ~~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.ReverseDecoder
+.. autoclass:: Decoders.ReverseDecoder
    :show-inheritance:
 
 T9 Decoder
 ~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.T9Decoder
+.. autoclass:: Decoders.T9Decoder
    :show-inheritance:
 
 Morse Decoder
 ~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Decoders.MorseDecoder
+.. autoclass:: Decoders.MorseDecoder
    :show-inheritance:
 

@@ -4,7 +4,7 @@
 Strings
 =======
 
-.. autofunction:: HystrixBox.Tools.strings
+.. autofunction:: Tools.strings
 
 .. _recursive_code_label:
 
@@ -12,7 +12,7 @@ Strings
 Recursive Decompression
 =======================
 
-.. autofunction:: HystrixBox.Tools.extract_recursive
+.. autofunction:: Tools.extract_recursive
 
 .. _email_code_label:
 
@@ -20,7 +20,7 @@ Recursive Decompression
 Email analyzer
 ==============
 
-.. autofunction:: HystrixBox.Tools.email_analyzer
+.. autofunction:: Tools.email_analyzer
 
 .. _file_code_label:
 
@@ -31,14 +31,14 @@ Detect file type
 Core functions
 ^^^^^^^^^^^^^^
 
-.. autofunction:: HystrixBox.Tools.fileType.get_header
+.. autofunction:: Tools.fileType.get_header
 
-.. autofunction:: HystrixBox.Tools.fileType.get_file_extension
+.. autofunction:: Tools.fileType.get_file_extension
 
 Extension
 ^^^^^^^^^
 
-.. autoclass:: HystrixBox.Tools.fileType.Extension
+.. autoclass:: Tools.fileType.Extension
    :members:
 
 
@@ -48,65 +48,65 @@ Extension inheritances
 Application
 ~~~~~~~~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Pcap
- * .. autoclass:: HystrixBox.Tools.fileType.Db
- * .. autoclass:: HystrixBox.Tools.fileType.Pdf
- * .. autoclass:: HystrixBox.Tools.fileType.Exe
- * .. autoclass:: HystrixBox.Tools.fileType.Elf
- * .. autoclass:: HystrixBox.Tools.fileType.Psd
- * .. autoclass:: HystrixBox.Tools.fileType.Flash
- * .. autoclass:: HystrixBox.Tools.fileType.Office
+ * .. autoclass:: Tools.fileType.Pcap
+ * .. autoclass:: Tools.fileType.Db
+ * .. autoclass:: Tools.fileType.Pdf
+ * .. autoclass:: Tools.fileType.Exe
+ * .. autoclass:: Tools.fileType.Elf
+ * .. autoclass:: Tools.fileType.Psd
+ * .. autoclass:: Tools.fileType.Flash
+ * .. autoclass:: Tools.fileType.Office
 
 Archives
 ~~~~~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Zip
- * .. autoclass:: HystrixBox.Tools.fileType.Rar
- * .. autoclass:: HystrixBox.Tools.fileType.Sevenz
- * .. autoclass:: HystrixBox.Tools.fileType.Jar
- * .. autoclass:: HystrixBox.Tools.fileType.Tarz
- * .. autoclass:: HystrixBox.Tools.fileType.Tarbz2
- * .. autoclass:: HystrixBox.Tools.fileType.Tarxz
- * .. autoclass:: HystrixBox.Tools.fileType.Tar
+ * .. autoclass:: Tools.fileType.Zip
+ * .. autoclass:: Tools.fileType.Rar
+ * .. autoclass:: Tools.fileType.Sevenz
+ * .. autoclass:: Tools.fileType.Jar
+ * .. autoclass:: Tools.fileType.Tarz
+ * .. autoclass:: Tools.fileType.Tarbz2
+ * .. autoclass:: Tools.fileType.Tarxz
+ * .. autoclass:: Tools.fileType.Tar
 
 Audio
 ~~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Wav
- * .. autoclass:: HystrixBox.Tools.fileType.Aiff
- * .. autoclass:: HystrixBox.Tools.fileType.Mp3
- * .. autoclass:: HystrixBox.Tools.fileType.Aac
- * .. autoclass:: HystrixBox.Tools.fileType.Mid
- * .. autoclass:: HystrixBox.Tools.fileType.Flac
- * .. autoclass:: HystrixBox.Tools.fileType.M4a
- * .. autoclass:: HystrixBox.Tools.fileType.Ogg
- * .. autoclass:: HystrixBox.Tools.fileType.Amr
+ * .. autoclass:: Tools.fileType.Wav
+ * .. autoclass:: Tools.fileType.Aiff
+ * .. autoclass:: Tools.fileType.Mp3
+ * .. autoclass:: Tools.fileType.Aac
+ * .. autoclass:: Tools.fileType.Mid
+ * .. autoclass:: Tools.fileType.Flac
+ * .. autoclass:: Tools.fileType.M4a
+ * .. autoclass:: Tools.fileType.Ogg
+ * .. autoclass:: Tools.fileType.Amr
 
 Font
 ~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Otf
- * .. autoclass:: HystrixBox.Tools.fileType.Ttf
+ * .. autoclass:: Tools.fileType.Otf
+ * .. autoclass:: Tools.fileType.Ttf
 
 Image
 ~~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Jpeg
- * .. autoclass:: HystrixBox.Tools.fileType.Png
- * .. autoclass:: HystrixBox.Tools.fileType.Gif
- * .. autoclass:: HystrixBox.Tools.fileType.Webp
- * .. autoclass:: HystrixBox.Tools.fileType.Cr2
- * .. autoclass:: HystrixBox.Tools.fileType.Tiff
- * .. autoclass:: HystrixBox.Tools.fileType.Bmp
- * .. autoclass:: HystrixBox.Tools.fileType.Fits
- * .. autoclass:: HystrixBox.Tools.fileType.Ico
+ * .. autoclass:: Tools.fileType.Jpeg
+ * .. autoclass:: Tools.fileType.Png
+ * .. autoclass:: Tools.fileType.Gif
+ * .. autoclass:: Tools.fileType.Webp
+ * .. autoclass:: Tools.fileType.Cr2
+ * .. autoclass:: Tools.fileType.Tiff
+ * .. autoclass:: Tools.fileType.Bmp
+ * .. autoclass:: Tools.fileType.Fits
+ * .. autoclass:: Tools.fileType.Ico
 
 Video
 ~~~~~
 
- * .. autoclass:: HystrixBox.Tools.fileType.Flv
- * .. autoclass:: HystrixBox.Tools.fileType.Matroska
- * .. autoclass:: HystrixBox.Tools.fileType.Avi
- * .. autoclass:: HystrixBox.Tools.fileType.Mp4
- * .. autoclass:: HystrixBox.Tools.fileType.Mov
- * .. autoclass:: HystrixBox.Tools.fileType.Wmv
+ * .. autoclass:: Tools.fileType.Flv
+ * .. autoclass:: Tools.fileType.Matroska
+ * .. autoclass:: Tools.fileType.Avi
+ * .. autoclass:: Tools.fileType.Mp4
+ * .. autoclass:: Tools.fileType.Mov
+ * .. autoclass:: Tools.fileType.Wmv

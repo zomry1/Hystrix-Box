@@ -6,7 +6,7 @@ from consolemenu import *
 from consolemenu.items import *
 
 ###########################
-from HystrixBox.modules_parser import decrypter_module, extractor_module, file_module, strings_module, \
+from modules_parser import decrypter_module, extractor_module, file_module, strings_module, \
     zip_extract_module, \
     email_analyzer_module
 

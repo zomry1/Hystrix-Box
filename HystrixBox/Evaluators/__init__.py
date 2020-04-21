@@ -3,9 +3,9 @@ This module include Evaluator abstract class and inheritance class that used to 
 Used in Ultimate Decrypter Tool.
 """
 
-from HystrixBox.Evaluators.evaluator import Evaluator
-from HystrixBox.Evaluators.flag_check import FlagEvaluator
-from HystrixBox.Evaluators.letter_check import LetterEvaluator
-from HystrixBox.Evaluators.word_check import WordEvaluator
+from Evaluators.evaluator import Evaluator
+from Evaluators.flag_check import FlagEvaluator
+from Evaluators.letter_check import LetterEvaluator
+from Evaluators.word_check import WordEvaluator
 
 __all__ = ['Evaluator', 'FlagEvaluator', 'LetterEvaluator', 'WordEvaluator']

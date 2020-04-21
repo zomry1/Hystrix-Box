@@ -1,5 +1,5 @@
-from HystrixBox.Evaluators.evaluator import Evaluator
-from HystrixBox.Utils.search_flag import searchFlag
+from Evaluators.evaluator import Evaluator
+from Utils.search_flag import searchFlag
 
 
 class FlagEvaluator(Evaluator):

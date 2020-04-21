@@ -172,13 +172,13 @@
   <div class="section" id="evaluator">
 <h1>Evaluator<a class="headerlink" href="#evaluator" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="HystrixBox.Evaluators.Evaluator">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Evaluators.</code><code class="sig-name descname">Evaluator</code><a class="headerlink" href="#HystrixBox.Evaluators.Evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="Evaluators.Evaluator">
+<em class="property">class </em><code class="sig-prename descclassname">Evaluators.</code><code class="sig-name descname">Evaluator</code><a class="headerlink" href="#Evaluators.Evaluator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class used to represent a plaintext Evaluator</p>
 <dl class="py method">
-<dt id="HystrixBox.Evaluators.Evaluator.evaluate">
-<em class="property">static </em><code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#HystrixBox.Evaluators.Evaluator.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt id="Evaluators.Evaluator.evaluate">
+<em class="property">static </em><code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Evaluators.Evaluator.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate plaintext by some parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -201,9 +201,9 @@
 <div class="section" id="flag-evaluator">
 <h2>Flag evaluator<a class="headerlink" href="#flag-evaluator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Evaluators.FlagEvaluator">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Evaluators.</code><code class="sig-name descname">FlagEvaluator</code><a class="headerlink" href="#HystrixBox.Evaluators.FlagEvaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Evaluators.evaluator.Evaluator</span></code></p>
+<dt id="Evaluators.FlagEvaluator">
+<em class="property">class </em><code class="sig-prename descclassname">Evaluators.</code><code class="sig-name descname">FlagEvaluator</code><a class="headerlink" href="#Evaluators.FlagEvaluator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Evaluators.evaluator.Evaluator</span></code></p>
 <p>A class used to represent a flag evaluator.</p>
 <p>Score based on the occurrences of the flag in the plaintext</p>
 </dd></dl>
@@ -212,9 +212,9 @@
 <div class="section" id="letter-analysis-evaluator">
 <h2>Letter analysis evaluator<a class="headerlink" href="#letter-analysis-evaluator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Evaluators.LetterEvaluator">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Evaluators.</code><code class="sig-name descname">LetterEvaluator</code><a class="headerlink" href="#HystrixBox.Evaluators.LetterEvaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Evaluators.evaluator.Evaluator</span></code></p>
+<dt id="Evaluators.LetterEvaluator">
+<em class="property">class </em><code class="sig-prename descclassname">Evaluators.</code><code class="sig-name descname">LetterEvaluator</code><a class="headerlink" href="#Evaluators.LetterEvaluator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Evaluators.evaluator.Evaluator</span></code></p>
 <p>A class used to represent a letter analysis evaluator.</p>
 <p>Score based the difference between the English letter’s frequencies and the plaintext letter’s frequencies</p>
 </dd></dl>
@@ -223,9 +223,9 @@
 <div class="section" id="word-analysis-evaluator">
 <h2>Word analysis evaluator<a class="headerlink" href="#word-analysis-evaluator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Evaluators.WordEvaluator">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Evaluators.</code><code class="sig-name descname">WordEvaluator</code><a class="headerlink" href="#HystrixBox.Evaluators.WordEvaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Evaluators.evaluator.Evaluator</span></code></p>
+<dt id="Evaluators.WordEvaluator">
+<em class="property">class </em><code class="sig-prename descclassname">Evaluators.</code><code class="sig-name descname">WordEvaluator</code><a class="headerlink" href="#Evaluators.WordEvaluator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Evaluators.evaluator.Evaluator</span></code></p>
 <p>A class used to represent a letter analysis evaluator.</p>
 <p>Score based on checking words in the english words frequencies, implement by www.wordsapi.com</p>
 </dd></dl>

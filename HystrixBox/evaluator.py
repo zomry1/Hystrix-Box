@@ -1,9 +1,9 @@
 import logging
 from _collections import OrderedDict
 
-from HystrixBox.Evaluators.flag_check import FlagEvaluator
-from HystrixBox.Evaluators.letter_check import LetterEvaluator
-from HystrixBox.Evaluators.word_check import WordEvaluator
+from Evaluators.flag_check import FlagEvaluator
+from Evaluators.letter_check import LetterEvaluator
+from Evaluators.word_check import WordEvaluator
 
 LETTER_PRIORITY = 1000
 WORD_PRIORITY = 1000

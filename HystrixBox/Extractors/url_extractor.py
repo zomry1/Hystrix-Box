@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Extractors.extractor import Extractor
+from Extractors.extractor import Extractor
 
 # https://stackoverflow.com/a/50789607/5345684
 

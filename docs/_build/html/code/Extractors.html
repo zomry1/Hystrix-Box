@@ -173,13 +173,13 @@
   <div class="section" id="extractor">
 <h1>Extractor<a class="headerlink" href="#extractor" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="HystrixBox.Extractors.Extractor">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Extractors.</code><code class="sig-name descname">Extractor</code><a class="headerlink" href="#HystrixBox.Extractors.Extractor" title="Permalink to this definition">¶</a></dt>
+<dt id="Extractors.Extractor">
+<em class="property">class </em><code class="sig-prename descclassname">Extractors.</code><code class="sig-name descname">Extractor</code><a class="headerlink" href="#Extractors.Extractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class used to represent a Extractor</p>
 <dl class="py method">
-<dt id="HystrixBox.Extractors.Extractor.extract">
-<em class="property">static </em><code class="sig-name descname">extract</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#HystrixBox.Extractors.Extractor.extract" title="Permalink to this definition">¶</a></dt>
+<dt id="Extractors.Extractor.extract">
+<em class="property">static </em><code class="sig-name descname">extract</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Extractors.Extractor.extract" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract specific information from data (text-&gt;str) usually by regex</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -202,9 +202,9 @@
 <div class="section" id="email-extractor">
 <h2>Email Extractor<a class="headerlink" href="#email-extractor" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Extractors.EmailExtractor">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Extractors.</code><code class="sig-name descname">EmailExtractor</code><a class="headerlink" href="#HystrixBox.Extractors.EmailExtractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Extractors.extractor.Extractor</span></code></p>
+<dt id="Extractors.EmailExtractor">
+<em class="property">class </em><code class="sig-prename descclassname">Extractors.</code><code class="sig-name descname">EmailExtractor</code><a class="headerlink" href="#Extractors.EmailExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Extractors.extractor.Extractor</span></code></p>
 <p>A class used to represent an email extractor</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -216,9 +216,9 @@
 <div class="section" id="ip-extractor">
 <h2>Ip Extractor<a class="headerlink" href="#ip-extractor" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Extractors.IPExtractor">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Extractors.</code><code class="sig-name descname">IPExtractor</code><a class="headerlink" href="#HystrixBox.Extractors.IPExtractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Extractors.extractor.Extractor</span></code></p>
+<dt id="Extractors.IPExtractor">
+<em class="property">class </em><code class="sig-prename descclassname">Extractors.</code><code class="sig-name descname">IPExtractor</code><a class="headerlink" href="#Extractors.IPExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Extractors.extractor.Extractor</span></code></p>
 <p>A class used to represent an Ip extractor</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -230,9 +230,9 @@
 <div class="section" id="md5-hash-extractor">
 <h2>Md5 (Hash) Extractor<a class="headerlink" href="#md5-hash-extractor" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Extractors.MD5Extractor">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Extractors.</code><code class="sig-name descname">MD5Extractor</code><a class="headerlink" href="#HystrixBox.Extractors.MD5Extractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Extractors.extractor.Extractor</span></code></p>
+<dt id="Extractors.MD5Extractor">
+<em class="property">class </em><code class="sig-prename descclassname">Extractors.</code><code class="sig-name descname">MD5Extractor</code><a class="headerlink" href="#Extractors.MD5Extractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Extractors.extractor.Extractor</span></code></p>
 <p>A class used to represent an md5 Hash extractor</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -244,9 +244,9 @@
 <div class="section" id="url-extractor">
 <h2>URL Extractor<a class="headerlink" href="#url-extractor" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="HystrixBox.Extractors.URLExtractor">
-<em class="property">class </em><code class="sig-prename descclassname">HystrixBox.Extractors.</code><code class="sig-name descname">URLExtractor</code><a class="headerlink" href="#HystrixBox.Extractors.URLExtractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HystrixBox.Extractors.extractor.Extractor</span></code></p>
+<dt id="Extractors.URLExtractor">
+<em class="property">class </em><code class="sig-prename descclassname">Extractors.</code><code class="sig-name descname">URLExtractor</code><a class="headerlink" href="#Extractors.URLExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Extractors.extractor.Extractor</span></code></p>
 <p>A class used to represent an URL extractor</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

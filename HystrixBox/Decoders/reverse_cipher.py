@@ -1,4 +1,4 @@
-from HystrixBox.Decoders.decoder import Decoder
+from Decoders.decoder import Decoder
 
 
 class ReverseDecoder(Decoder):

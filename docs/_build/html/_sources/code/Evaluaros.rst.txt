@@ -2,7 +2,7 @@
 Evaluator
 =========
 
-.. autoclass::  HystrixBox.Evaluators.Evaluator
+.. autoclass::  Evaluators.Evaluator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -10,17 +10,17 @@ Evaluator
 Flag evaluator
 ~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Evaluators.flag_check
+.. autoclass:: Evaluators.flag_check
    :show-inheritance:
 
 Letter analysis evaluator
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Evaluators.letter_check
+.. autoclass:: Evaluators.letter_check
    :show-inheritance:
 
 Word analysis evaluator
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Evaluators.word_check
+.. autoclass:: Evaluators.word_check
    :show-inheritance:

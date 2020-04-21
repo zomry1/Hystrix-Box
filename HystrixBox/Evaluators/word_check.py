@@ -2,8 +2,8 @@ import re
 
 import requests
 
-from HystrixBox.Evaluators.evaluator import Evaluator
-from HystrixBox.keys import APP_ID, APP_KEY
+from Evaluators.evaluator import Evaluator
+from keys import APP_ID, APP_KEY
 
 MISSING_ERROR = 50
 

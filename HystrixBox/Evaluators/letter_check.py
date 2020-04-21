@@ -1,7 +1,7 @@
 import re
 from collections import Counter
 
-from HystrixBox.Evaluators.evaluator import Evaluator
+from Evaluators.evaluator import Evaluator
 
 # https://crypto.stackexchange.com/questions/30209/developing-algorithm-for-detecting-plain-text-via-frequency-analysis
 ENGLISH_FREQUENCIES = {'e': 12.02, 't': 9.1, 'a': 8.12, 'o': 7.68, 'i': 7.31, 'n': 6.95, 's': 6.28, 'r': 6.02,

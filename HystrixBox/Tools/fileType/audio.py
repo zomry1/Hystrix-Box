@@ -1,4 +1,4 @@
-from HystrixBox.Tools.fileType.extenstion import Extension
+from Tools.fileType.extenstion import Extension
 
 
 class Wav(Extension):

@@ -3,10 +3,10 @@ This module include Extract abstract class and inheritance class that used to ex
 Used in Ultimate Extractor Tool.
 
 """
-from HystrixBox.Extractors.extractor import Extractor
-from HystrixBox.Extractors.email_extractor import EmailExtractor
-from HystrixBox.Extractors.ip_extractor import IPExtractor
-from HystrixBox.Extractors.md5_extractor import MD5Extractor
-from HystrixBox.Extractors.url_extractor import URLExtractor
+from Extractors.extractor import Extractor
+from Extractors.email_extractor import EmailExtractor
+from Extractors.ip_extractor import IPExtractor
+from Extractors.md5_extractor import MD5Extractor
+from Extractors.url_extractor import URLExtractor
 
 __all__ = ['Extractor', 'EmailExtractor', 'IPExtractor', 'MD5Extractor', 'URLExtractor']

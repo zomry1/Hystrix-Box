@@ -4,7 +4,7 @@ import requests
 # Disable warnings
 import urllib3
 
-from HystrixBox.Decoders.decoder import Decoder
+from Decoders.decoder import Decoder
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

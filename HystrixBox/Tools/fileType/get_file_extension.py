@@ -1,4 +1,4 @@
-from HystrixBox.Tools.fileType.extension_db import ALL_EXTENSIONS
+from Tools.fileType.extension_db import ALL_EXTENSIONS
 
 HEADER_BYTES = 262
 

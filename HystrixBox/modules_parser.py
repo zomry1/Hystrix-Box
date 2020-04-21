@@ -1,23 +1,23 @@
 import logging
 
 ###########################
-from HystrixBox.Decoders.ascii_cipher import AsciiDecoder
-from HystrixBox.Decoders.base64_cipher import Base64Decoder
-from HystrixBox.Decoders.caesar_cipher import CaesarDecoder
-from HystrixBox.Decoders.hash_cipher import HashDecoder
-from HystrixBox.Decoders.morse_cipher import MorseDecoder
-from HystrixBox.Decoders.reverse_cipher import ReverseDecoder
+from Decoders.ascii_cipher import AsciiDecoder
+from Decoders.base64_cipher import Base64Decoder
+from Decoders.caesar_cipher import CaesarDecoder
+from Decoders.hash_cipher import HashDecoder
+from Decoders.morse_cipher import MorseDecoder
+from Decoders.reverse_cipher import ReverseDecoder
 ###########################
-from HystrixBox.parsers import create_decrypter_parser, create_file_parser, create_string_parser, create_zip_extract_parser, \
+from parsers import create_decrypter_parser, create_file_parser, create_string_parser, create_zip_extract_parser, \
     create_stego_lsb_parser, create_extractor_parser, DECODERS_MAP, EXTRACTOR_MAP, \
     create_email_analyzer_parser
-from HystrixBox.Tools.email_analyzer import email_analyzer
-from HystrixBox.Tools.fileType.get_file_extension import get_file_extension
+from Tools.email_analyzer import email_analyzer
+from Tools.fileType.get_file_extension import get_file_extension
 ###########################
-from HystrixBox.Tools.recursive_decompression import extract_recursive
-from HystrixBox.Tools.strings import strings
-from HystrixBox.evaluator import evaluate
-from HystrixBox.personal_parser import ParserExceptionError
+from Tools.recursive_decompression import extract_recursive
+from Tools.strings import strings
+from evaluator import evaluate
+from personal_parser import ParserExceptionError
 
 ###########################
 

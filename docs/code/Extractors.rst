@@ -2,7 +2,7 @@
 Extractor
 =========
 
-.. autoclass:: HystrixBox.Extractors.Extractor
+.. autoclass:: Extractors.Extractor
    :members:
    :undoc-members:
    :show-inheritance:
@@ -10,23 +10,23 @@ Extractor
 Email Extractor
 ~~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Extractors.EmailExtractor
+.. autoclass:: Extractors.EmailExtractor
    :show-inheritance:
 
 Ip Extractor
 ~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Extractors.IPExtractor
+.. autoclass:: Extractors.IPExtractor
    :show-inheritance:
 
 Md5 (Hash) Extractor
 ~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Extractors.MD5Extractor
+.. autoclass:: Extractors.MD5Extractor
    :show-inheritance:
 
 URL Extractor
 ~~~~~~~~~~~~~
 
-.. autoclass:: HystrixBox.Extractors.URLExtractor
+.. autoclass:: Extractors.URLExtractor
    :show-inheritance:

@@ -4,13 +4,13 @@ Used in Ultimate Forensics Tool.
 
 """
 
-from HystrixBox.Tools.fileType.applications import *
-from HystrixBox.Tools.fileType.archives import *
-from HystrixBox.Tools.fileType.audio import *
-from HystrixBox.Tools.fileType.font import *
-from HystrixBox.Tools.fileType.get_file_extension import get_file_extension, get_header
-from HystrixBox.Tools.fileType.images import *
-from HystrixBox.Tools.fileType.video import *
+from Tools.fileType.applications import *
+from Tools.fileType.archives import *
+from Tools.fileType.audio import *
+from Tools.fileType.font import *
+from Tools.fileType.get_file_extension import get_file_extension, get_header
+from Tools.fileType.images import *
+from Tools.fileType.video import *
 
 __all__ = ['Extension', 'get_file_extension', 'get_header',
            'Pcap', 'Pdf', 'Exe', 'Elf', 'Psd', 'Flash', 'Office',

@@ -1,6 +1,6 @@
 import re
 
-from HystrixBox.Decoders.decoder import Decoder
+from Decoders.decoder import Decoder
 
 PRINTABLE_ASCII_VALUES = '^(3[2-9]|[4-9][0-9]|1[01][0-9]|12[0-6])$'
 
